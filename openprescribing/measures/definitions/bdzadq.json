@@ -44,9 +44,9 @@
     "p.bnf_code NOT LIKE '0401040%'         --Other hypnotics and anxiolytics \n"
   ],
   "authored_by": "richard.croker@phc.ox.ac.uk",
-  "checked_by": "",
-  "date_reviewed": "",
-  "next_review": "",
+  "checked_by": "andrew.brown@phc.ox.ac.uk",
+  "date_reviewed": "2025-01-20",
+  "next_review": "2027-01-20",
   "measure_complexity": "medium",
   "measure_type": "custom",
   "radar_exclude": false
