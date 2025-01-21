@@ -1,4 +1,4 @@
-Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,Really equivalent?
+"Code","Name","Alternative code","Formulation","Alternative name","Alternative formulation","Really equivalent?"
 0101010I0AAABAB,Magnesium oxide 100mg capsules,0101010I0AAAEAE,Oral capsule,Magnesium oxide 100mg tablets,Oral tablet,Y
 0101010I0AAACAC,Magnesium oxide 160mg capsules,0101010I0AAALAL,Oral capsule,Magnesium oxide 160mg tablets,Oral tablet,Y
 0101010I0AAAEAE,Magnesium oxide 100mg tablets,0101010I0AAABAB,Oral tablet,Magnesium oxide 100mg capsules,Oral capsule,Y
@@ -167,6 +167,7 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0106040M0AAAHAH,Macrogol compound oral liquid NPF sugar free,0106040M0AAABAB,Oral solution sugar free,Macrogol compound half-strength oral powder sachets NPF sugar free,Powder for oral solution sugar free,Y
 0106040N0AAAAAA,Phosphates enema (Formula B) 128ml long tube,0106040N0AAABAB,Enema,Phosphates enema (Formula B) 128ml standard tube,Enema,Y
 0106040N0AAABAB,Phosphates enema (Formula B) 128ml standard tube,0106040N0AAAAAA,Enema,Phosphates enema (Formula B) 128ml long tube,Enema,Y
+0106040R0AAAFAF,Sodium citrate compound 5ml enema,21430000101,,Relaxit Micro-enema 5ml,,Y
 0107010N0AAAHAH,Zinc oxide 6.6% / Lidocaine 0.7% ointment,0107010N0AAAJAJ,Rectal ointment,Zinc oxide 6.6% / Lidocaine 0.7% rectal cream,Rectal cream,Y
 0107010N0AAAJAJ,Zinc oxide 6.6% / Lidocaine 0.7% rectal cream,0107010N0AAAHAH,Rectal cream,Zinc oxide 6.6% / Lidocaine 0.7% ointment,Rectal ointment,Y
 0109010G0AAABAB,Chenodeoxycholic acid 250mg capsules,0109010G0AAACAC,Oral capsule,Chenodeoxycholic acid 250mg tablets,Oral tablet,Y
@@ -285,6 +286,7 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0205010V0AAAFAF,Iloprost 20micrograms/1ml nebuliser liquid ampoules with device,0205010V0AAADAD,Nebuliser liquid,Iloprost 20micrograms/1ml nebuliser liquid ampoules,Nebuliser liquid,Y
 0205010Y0AAABAB,Sildenafil 10mg/ml oral suspension sugar free,0704050Z0AAAHAH,Oral suspension sugar free,Sildenafil 50mg/5ml oral solution,Oral solution,Y
 0205010Y0AAABAB,Sildenafil 10mg/ml oral suspension sugar free,0704050Z0AAAHAH,Oral suspension sugar free,Sildenafil 50mg/5ml oral suspension,Oral suspension,Y
+0205010Z0BBAAAA,Adcirca 20mg tablets,0704050R0AAABAB,,Tadalafil 20mg tablets,,Y
 0205040D0AAACAC,Doxazosin 4mg tablets,0205040D0AAAFAF,Oral tablet,Doxazosin 4mg capsules,Oral capsule,Y
 0205040D0AAAFAF,Doxazosin 4mg capsules,0205040D0AAACAC,Oral capsule,Doxazosin 4mg tablets,Oral tablet,Y
 0205040D0AAAXAX,Doxazosin 4mg/5ml oral solution,0205040D0AAAYAY,Oral solution,Doxazosin 4mg/5ml oral suspension,Oral suspension,Y
@@ -352,8 +354,8 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0206010K0AAAUAU,Isosorbide mononitrate 50mg modified-release tablets,0206010K0AAAFAF,Modified-release tablet,Isosorbide mononitrate 50mg modified-release capsules,Modified-release capsule,Y
 0206010K0AABBBB,Isosorbide mononitrate 20mg/5ml oral suspension,0206010K0AAALAL,Oral suspension,Isosorbide mononitrate 20mg/5ml oral solution,Oral solution,Y
 0206020A0AAACAC,Amlodipine 5mg/5ml oral suspension,0206020A0AAALAL,Oral suspension,Amlodipine 5mg/5ml oral solution sugar free,Oral solution sugar free,Y
-0206020A0AAACAC,Amlodipine 5mg/5ml oral solution,0206020A0AAALAL,Oral solution,Amlodipine 5mg/5ml oral solution sugar free,Oral solution sugar free,Y
 0206020A0AAACAC,Amlodipine 5mg/5ml oral suspension,0206020A0AAAUAU,Oral suspension,Amlodipine 5mg/5ml oral suspension sugar free,Oral suspension sugar free,Y
+0206020A0AAACAC,Amlodipine 5mg/5ml oral solution,0206020A0AAALAL,Oral solution,Amlodipine 5mg/5ml oral solution sugar free,Oral solution sugar free,Y
 0206020A0AAACAC,Amlodipine 5mg/5ml oral solution,0206020A0AAAUAU,Oral solution,Amlodipine 5mg/5ml oral suspension sugar free,Oral suspension sugar free,Y
 0206020A0AAADAD,Amlodipine 10mg/5ml oral suspension,0206020A0AAATAT,Oral suspension,Amlodipine 10mg/5ml oral solution sugar free,Oral solution sugar free,Y
 0206020A0AAADAD,Amlodipine 10mg/5ml oral solution,0206020A0AAATAT,Oral solution,Amlodipine 10mg/5ml oral solution sugar free,Oral solution sugar free,Y
@@ -474,7 +476,9 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0301011R0AACCCC,Salbutamol 100micrograms/dose dry powder inhalation cartridge,0301011R0AACBCB,Inhalation powder,Salbutamol 100micrograms/dose dry powder inhalation cartridge with device,Inhalation powder,Y
 0301011R0AACCCC,Salbutamol 100micrograms/dose dry powder inhalation cartridge,0301011R0AABZBZ,Inhalation powder,Salbutamol 100micrograms/dose dry powder inhaler,Inhalation powder,Y
 0301011R0AACDCD,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose ampoules,0301011R0AAAXAX,Nebuliser liquid,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,Nebuliser liquid,Y
+0301011R0AACDCD,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose ampoules,0301011R0CBAAAX,,Brodilaten 2.5mg/2.5ml nebuliser solution unit dose ampoules,,Y
 0301011R0AACECE,Salbutamol 5mg/2.5ml nebuliser liquid unit dose ampoules,0301011R0AABDBD,Nebuliser liquid,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,Nebuliser liquid,Y
+0301011R0CBAAAX,Brodilaten 2.5mg/2.5ml nebuliser solution unit dose ampoules,0301011R0AACDCD,,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose ampoules,,Y
 0301011Z0AAAAAA,Olodaterol 2.5micrograms/dose solution for inhalation cartridge with device CFC free,0301011Z0AAABAB,Inhalation solution,Olodaterol 2.5micrograms/dose inhalation solution cartridge CFC free,Inhalation solution,Y
 0301011Z0AAABAB,Olodaterol 2.5micrograms/dose inhalation solution cartridge CFC free,0301011Z0AAAAAA,Inhalation solution,Olodaterol 2.5micrograms/dose solution for inhalation cartridge with device CFC free,Inhalation solution,Y
 0301020Q0AAACAC,Tiotropium bromide 2.5micrograms/dose solution for inhalation cartridge with device CFC free,0301020Q0AAAEAE,Inhalation solution,Tiotropium bromide 2.5micrograms/dose inhalation solution cartridge CFC free,Inhalation solution,Y
@@ -660,10 +664,8 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 040201060AAAIAI,Olanzapine 2.5mg/5ml oral solution,040201060AABABA,Oral solution,Olanzapine 2.5mg/5ml oral suspension,Oral suspension,Y
 040201060AAAKAK,Olanzapine 15mg oral lyophilisates sugar free,040201060AAALAL,Oral lyophilisate sugar free,Olanzapine 15mg tablets,Oral tablet,Y
 040201060AAAKAK,Olanzapine 15mg oral lyophilisates sugar free,040201060AAAUAU,Oral lyophilisate sugar free,Olanzapine 15mg orodispersible tablets sugar free,Orodispersible tablet sugar free,Y
-040201060AAAKAK,Olanzapine 15mg oral lyophilisates sugar free,040201060AAAYAY,Oral lyophilisate sugar free,Olanzapine 15mg orodispersible tablets,Orodispersible tablet,Y
 040201060AAALAL,Olanzapine 15mg tablets,040201060AAAKAK,Oral tablet,Olanzapine 15mg oral lyophilisates sugar free,Oral lyophilisate sugar free,Y
 040201060AAALAL,Olanzapine 15mg tablets,040201060AAAUAU,Oral tablet,Olanzapine 15mg orodispersible tablets sugar free,Orodispersible tablet sugar free,Y
-040201060AAALAL,Olanzapine 15mg tablets,040201060AAAYAY,Oral tablet,Olanzapine 15mg orodispersible tablets,Orodispersible tablet,Y
 040201060AAAPAP,Olanzapine 20mg oral lyophilisates sugar free,040201060AAAQAQ,Oral lyophilisate sugar free,Olanzapine 20mg tablets,Oral tablet,Y
 040201060AAAPAP,Olanzapine 20mg oral lyophilisates sugar free,040201060AAAVAV,Oral lyophilisate sugar free,Olanzapine 20mg orodispersible tablets sugar free,Orodispersible tablet sugar free,Y
 040201060AAAPAP,Olanzapine 20mg oral lyophilisates sugar free,040201060AAAZAZ,Oral lyophilisate sugar free,Olanzapine 20mg orodispersible tablets,Orodispersible tablet,Y
@@ -678,7 +680,6 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 040201060AAATAT,Olanzapine 10mg orodispersible tablets sugar free,040201060AAAXAX,Orodispersible tablet sugar free,Olanzapine 10mg orodispersible tablets,Orodispersible tablet,Y
 040201060AAAUAU,Olanzapine 15mg orodispersible tablets sugar free,040201060AAAKAK,Orodispersible tablet sugar free,Olanzapine 15mg oral lyophilisates sugar free,Oral lyophilisate sugar free,Y
 040201060AAAUAU,Olanzapine 15mg orodispersible tablets sugar free,040201060AAALAL,Orodispersible tablet sugar free,Olanzapine 15mg tablets,Oral tablet,Y
-040201060AAAUAU,Olanzapine 15mg orodispersible tablets sugar free,040201060AAAYAY,Orodispersible tablet sugar free,Olanzapine 15mg orodispersible tablets,Orodispersible tablet,Y
 040201060AAAVAV,Olanzapine 20mg orodispersible tablets sugar free,040201060AAAPAP,Orodispersible tablet sugar free,Olanzapine 20mg oral lyophilisates sugar free,Oral lyophilisate sugar free,Y
 040201060AAAVAV,Olanzapine 20mg orodispersible tablets sugar free,040201060AAAQAQ,Orodispersible tablet sugar free,Olanzapine 20mg tablets,Oral tablet,Y
 040201060AAAVAV,Olanzapine 20mg orodispersible tablets sugar free,040201060AAAZAZ,Orodispersible tablet sugar free,Olanzapine 20mg orodispersible tablets,Orodispersible tablet,Y
@@ -688,9 +689,6 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 040201060AAAXAX,Olanzapine 10mg orodispersible tablets,040201060AAACAC,Orodispersible tablet,Olanzapine 10mg tablets,Oral tablet,Y
 040201060AAAXAX,Olanzapine 10mg orodispersible tablets,040201060AAAFAF,Orodispersible tablet,Olanzapine 10mg oral lyophilisates sugar free,Oral lyophilisate sugar free,Y
 040201060AAAXAX,Olanzapine 10mg orodispersible tablets,040201060AAATAT,Orodispersible tablet,Olanzapine 10mg orodispersible tablets sugar free,Orodispersible tablet sugar free,Y
-040201060AAAYAY,Olanzapine 15mg orodispersible tablets,040201060AAAKAK,Orodispersible tablet,Olanzapine 15mg oral lyophilisates sugar free,Oral lyophilisate sugar free,Y
-040201060AAAYAY,Olanzapine 15mg orodispersible tablets,040201060AAALAL,Orodispersible tablet,Olanzapine 15mg tablets,Oral tablet,Y
-040201060AAAYAY,Olanzapine 15mg orodispersible tablets,040201060AAAUAU,Orodispersible tablet,Olanzapine 15mg orodispersible tablets sugar free,Orodispersible tablet sugar free,Y
 040201060AAAZAZ,Olanzapine 20mg orodispersible tablets,040201060AAAPAP,Orodispersible tablet,Olanzapine 20mg oral lyophilisates sugar free,Oral lyophilisate sugar free,Y
 040201060AAAZAZ,Olanzapine 20mg orodispersible tablets,040201060AAAQAQ,Orodispersible tablet,Olanzapine 20mg tablets,Oral tablet,Y
 040201060AAAZAZ,Olanzapine 20mg orodispersible tablets,040201060AAAVAV,Orodispersible tablet,Olanzapine 20mg orodispersible tablets sugar free,Orodispersible tablet sugar free,Y
@@ -1004,10 +1002,22 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0407020A0AAAJAJ,Fentanyl 400microgram lozenges,0407020A0AABEBE,Lozenge,Fentanyl 400microgram buccal tablets sugar free,Buccal tablet sugar free,Y
 0407020A0AAAKAK,Fentanyl 600microgram lozenges,0407020A0AABFBF,Lozenge,Fentanyl 600microgram buccal tablets sugar free,Buccal tablet sugar free,Y
 0407020A0AAALAL,Fentanyl 800microgram lozenges,0407020A0AABGBG,Lozenge,Fentanyl 800microgram buccal tablets sugar free,Buccal tablet sugar free,Y
+0407020A0AAAZAZ,Fentanyl 400microgram sublingual tablets sugar free,0407020A0BYAICD,,Iremia 400microgram sublingual tablets,,Y
+0407020A0AABBBB,Fentanyl 800microgram sublingual tablets sugar free,0407020A0BYALCG,,Iremia 800microgram sublingual tablets,,Y
 0407020A0AABDBD,Fentanyl 200microgram buccal tablets sugar free,0407020A0AAAIAI,Buccal tablet sugar free,Fentanyl 200microgram lozenges,Lozenge,Y
 0407020A0AABEBE,Fentanyl 400microgram buccal tablets sugar free,0407020A0AAAJAJ,Buccal tablet sugar free,Fentanyl 400microgram lozenges,Lozenge,Y
 0407020A0AABFBF,Fentanyl 600microgram buccal tablets sugar free,0407020A0AAAKAK,Buccal tablet sugar free,Fentanyl 600microgram lozenges,Lozenge,Y
 0407020A0AABGBG,Fentanyl 800microgram buccal tablets sugar free,0407020A0AAALAL,Buccal tablet sugar free,Fentanyl 800microgram lozenges,Lozenge,Y
+0407020A0AABXBX,Fentanyl 133microgram sublingual tablets sugar free,0407020A0BYAGCB,,Iremia 133microgram sublingual tablets,,Y
+0407020A0AABYBY,Fentanyl 533microgram sublingual tablets sugar free,0407020A0BYAJCE,,Iremia 533microgram sublingual tablets,,Y
+0407020A0AABZBZ,Fentanyl 267microgram sublingual tablets sugar free,0407020A0BYAHCC,,Iremia 267microgram sublingual tablets,,Y
+0407020A0AACHCH,Fentanyl 67microgram sublingual tablets sugar free,0407020A0BYAKCF,,Iremia 67microgram sublingual tablets,,Y
+0407020A0BYAGCB,Iremia 133microgram sublingual tablets,0407020A0AABXBX,,Fentanyl 133microgram sublingual tablets sugar free,,Y
+0407020A0BYAHCC,Iremia 267microgram sublingual tablets,0407020A0AABZBZ,,Fentanyl 267microgram sublingual tablets sugar free,,Y
+0407020A0BYAICD,Iremia 400microgram sublingual tablets,0407020A0AAAZAZ,,Fentanyl 400microgram sublingual tablets sugar free,,Y
+0407020A0BYAJCE,Iremia 533microgram sublingual tablets,0407020A0AABYBY,,Fentanyl 533microgram sublingual tablets sugar free,,Y
+0407020A0BYAKCF,Iremia 67microgram sublingual tablets,0407020A0AACHCH,,Fentanyl 67microgram sublingual tablets sugar free,,Y
+0407020A0BYALCG,Iremia 800microgram sublingual tablets,0407020A0AABBBB,,Fentanyl 800microgram sublingual tablets sugar free,,Y
 0407020ADAAAAAA,Oxycodone 5mg/5ml oral solution sugar free,0407020ADAAAJAJ,Oral solution sugar free,Oxycodone 5mg/5ml oral solution,Oral solution,Y
 0407020ADAAACAC,Oxycodone 5mg capsules,0407020ADAAATAT,Oral capsule,Oxycodone 5mg tablets,Oral tablet,Y
 0407020ADAAADAD,Oxycodone 10mg capsules,0407020ADAAAUAU,Oral capsule,Oxycodone 10mg tablets,Oral tablet,Y
@@ -1026,6 +1036,8 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0407020AHAAACAC,Tapentadol 150mg modified-release capsules,0407020AGAAAEAE,Modified-release capsule,Tapentadol 150mg modified-release tablets,Modified-release tablet,Y
 0407020AHAAADAD,Tapentadol 200mg modified-release capsules,0407020AGAAAFAF,Modified-release capsule,Tapentadol 200mg modified-release tablets,Modified-release tablet,Y
 0407020AHAAAEAE,Tapentadol 250mg modified-release capsules,0407020AGAAAGAG,Modified-release capsule,Tapentadol 250mg modified-release tablets,Modified-release tablet,Y
+0407020B0AAADAD,Buprenorphine 400microgram sublingual tablets sugar free,0410030A0BBAAAC,,Subutex 0.4mg sublingual tablets,,Y
+0407020B0AAADAD,Buprenorphine 400microgram sublingual tablets sugar free,0410030A0BCAAAC,,Prefibin 0.4mg sublingual tablets,,Y
 0407020M0AAAEAE,Methadone 5mg tablets,0407020M0AABUBU,Oral tablet,Methadone 5mg capsules,Oral capsule,Y
 0407020M0AABIBI,Methadone 30mg capsules,0407020M0AABJBJ,Oral capsule,Methadone 30mg tablets,Oral tablet,Y
 0407020M0AABJBJ,Methadone 30mg tablets,0407020M0AABIBI,Oral tablet,Methadone 30mg capsules,Oral capsule,Y
@@ -1152,8 +1164,8 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0408010F0AABEBE,Clonazepam 500micrograms/5ml oral suspension,0408010F0AACQCQ,Oral suspension,Clonazepam 500micrograms/5ml oral solution sugar free,Oral solution sugar free,Y
 0408010F0AABSBS,Clonazepam 2mg/5ml oral suspension,0408010F0AACRCR,Oral suspension,Clonazepam 2mg/5ml oral solution sugar free,Oral solution sugar free,Y
 0408010F0AACACA,Clonazepam 12.5mg/5ml oral suspension,0408010F0AAAAAA,Oral suspension,Clonazepam 2.5mg/ml drops sugar free,Oral drops sugar free,Y
-0408010F0AACACA,Clonazepam 12.5mg/5ml oral solution,0408010F0AAAAAA,Oral solution,Clonazepam 2.5mg/ml drops sugar free,Oral drops sugar free,Y
 0408010F0AACACA,Clonazepam 12.5mg/5ml oral suspension,0408010F0AADCDC,Oral suspension,Clonazepam 2.5mg/ml drops,Oral drops,Y
+0408010F0AACACA,Clonazepam 12.5mg/5ml oral solution,0408010F0AAAAAA,Oral solution,Clonazepam 2.5mg/ml drops sugar free,Oral drops sugar free,Y
 0408010F0AACACA,Clonazepam 12.5mg/5ml oral solution,0408010F0AADCDC,Oral solution,Clonazepam 2.5mg/ml drops,Oral drops,Y
 0408010F0AACQCQ,Clonazepam 500micrograms/5ml oral solution sugar free,0408010F0AABEBE,Oral solution sugar free,Clonazepam 500micrograms/5ml oral suspension,Oral suspension,Y
 0408010F0AACRCR,Clonazepam 2mg/5ml oral solution sugar free,0408010F0AABSBS,Oral solution sugar free,Clonazepam 2mg/5ml oral suspension,Oral suspension,Y
@@ -1256,6 +1268,10 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0410020B0AABDBD,Nicotine 4mg medicated chewing gum sugar free,0410020B0AAAZAZ,Medicated chewing-gum sugar free,Nicotine 4mg lozenges sugar free,Lozenge sugar free,Y
 0410020D0AAAAAA,Nicotine bitartrate 2mg lozenges sugar free,0410020B0AAAYAY,Lozenge sugar free,Nicotine 2mg lozenges sugar free,Lozenge sugar free,Y
 0410020D0AAAAAA,Nicotine bitartrate 2mg lozenges sugar free,0410020B0AABABA,Lozenge sugar free,Nicotine 2mg medicated chewing gum sugar free,Medicated chewing-gum sugar free,Y
+0410030A0BBAAAC,Subutex 0.4mg sublingual tablets,0407020B0AAADAD,,Buprenorphine 400microgram sublingual tablets sugar free,,Y
+0410030A0BBAAAC,Subutex 0.4mg sublingual tablets,0410030A0BCAAAC,,Prefibin 0.4mg sublingual tablets,,Y
+0410030A0BCAAAC,Prefibin 0.4mg sublingual tablets,0407020B0AAADAD,,Buprenorphine 400microgram sublingual tablets sugar free,,Y
+0410030A0BCAAAC,Prefibin 0.4mg sublingual tablets,0410030A0BBAAAC,,Subutex 0.4mg sublingual tablets,,Y
 0410030C0AAAAAA,Methadone 1mg/ml oral solution,0410030C0AAAFAF,Oral solution,Methadone 1mg/ml oral solution sugar free,Oral solution sugar free,Y
 0410030C0AAAAAA,Methadone 1mg/ml oral solution,0410030C0AAAJAJ,Oral solution,Methadone 1mg/ml oral suspension sugar free,Oral suspension sugar free,Y
 0410030C0AAAFAF,Methadone 1mg/ml oral solution sugar free,0410030C0AAAAAA,Oral solution sugar free,Methadone 1mg/ml oral solution,Oral solution,Y
@@ -1298,6 +1314,8 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0501013K0AAAIAI,Co-amoxiclav 250mg/62mg/5ml oral suspension,0501013K0AAAGAG,Oral suspension,Co-amoxiclav 250mg/62mg/5ml oral suspension sugar free,Oral suspension sugar free,Y
 0501013K0AAAKAK,Co-amoxiclav 400mg/57mg/5ml oral suspension sugar free,0501013K0AAAPAP,Oral suspension sugar free,Co-amoxiclav 400mg/57mg/5ml oral suspension,Oral suspension,Y
 0501013K0AAAPAP,Co-amoxiclav 400mg/57mg/5ml oral suspension,0501013K0AAAKAK,Oral suspension,Co-amoxiclav 400mg/57mg/5ml oral suspension sugar free,Oral suspension sugar free,Y
+0501013K0AAAPAP,Co-amoxiclav 400mg/57mg/5ml oral suspension,0501013K0BBAMAK,,Augmentin-Duo 400/57 oral suspension,,Y
+0501013K0BBAMAK,Augmentin-Duo 400/57 oral suspension,0501013K0AAAPAP,,Co-amoxiclav 400mg/57mg/5ml oral suspension,,Y
 0501021L0AAAAAA,Cefalexin 250mg capsules,0501021L0AAAGAG,Oral capsule,Cefalexin 250mg tablets,Oral tablet,Y
 0501021L0AAABAB,Cefalexin 500mg capsules,0501021L0AAAHAH,Oral capsule,Cefalexin 500mg tablets,Oral tablet,Y
 0501021L0AAACAC,Cefalexin 125mg/5ml oral suspension,0501021L0AAANAN,Oral suspension,Cefalexin 125mg/5ml oral suspension sugar free,Oral suspension sugar free,Y
@@ -1536,6 +1554,7 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0604011D0AAAWAW,Ethinylestradiol 2microgram capsules,0604011D0AAALAL,Oral capsule,Ethinylestradiol 2microgram tablets,Oral tablet,Y
 0604012S0AAAEAE,Progesterone 200mg pessaries,0604012S0AABZBZ,Pessary,Progesterone micronised 200mg vaginal capsules,Vaginal capsule,Y
 0604012S0AABZBZ,Progesterone micronised 200mg vaginal capsules,0604012S0AAAEAE,Vaginal capsule,Progesterone 200mg pessaries,Pessary,Y
+0604020D0BBAAAA,Androcur 50mg tablets,0803042E0AAAAAA,,Cyproterone 50mg tablets,,Y
 0604020K0AABRBR,Testosterone 20mg/g transdermal gel (23mg per actuation) with applicator,0604020K0AABUBU,Transdermal gel,Testosterone 20mg/g transdermal gel (23mg per actuation) refill,Transdermal gel,Y
 0604020K0AABUBU,Testosterone 20mg/g transdermal gel (23mg per actuation) refill,0604020K0AABRBR,Transdermal gel,Testosterone 20mg/g transdermal gel (23mg per actuation) with applicator,Transdermal gel,Y
 0604030Q0AAAAAA,Prasterone 25mg capsules,0604030Q0AAAIAI,Oral capsule,Prasterone 25mg tablets,Oral tablet,Y
@@ -1597,6 +1616,7 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0704050B0AAAIAI,Alprostadil 10microgram powder and solvent for solution for injection vials,0704050B0AABJBJ,Powder and solvent for solution for injection,Alprostadil 10microgram powder and solvent for solution for injection pre-filled disposable devices,Powder and solvent for solution for injection,Y
 0704050B0AABJBJ,Alprostadil 10microgram powder and solvent for solution for injection pre-filled disposable devices,0704050B0AAAIAI,Powder and solvent for solution for injection,Alprostadil 10microgram powder and solvent for solution for injection vials,Powder and solvent for solution for injection,Y
 0704050B0AABKBK,Alprostadil 20microgram powder and solvent for solution for injection pre-filled disposable devices,0704050B0AAAAAA,Powder and solvent for solution for injection,Alprostadil 20microgram powder and solvent for solution for injection vials,Powder and solvent for solution for injection,Y
+0704050R0AAABAB,Tadalafil 20mg tablets,0205010Z0BBAAAA,,Adcirca 20mg tablets,,Y
 0704050Z0AAAFAF,Sildenafil 25mg/5ml oral solution,0704050Z0AAALAL,Oral solution,Sildenafil 25mg/5ml oral suspension,Oral suspension,Y
 0704050Z0AAAGAG,Sildenafil 10mg/5ml oral solution,0704050Z0AAAKAK,Oral solution,Sildenafil 10mg/5ml oral suspension,Oral suspension,Y
 0704050Z0AAAHAH,Sildenafil 50mg/5ml oral solution,0205010Y0AAABAB,Oral solution,Sildenafil 10mg/ml oral suspension sugar free,Oral suspension sugar free,Y
@@ -1648,6 +1668,7 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0802040M0AAANAN,Interferon beta-1a 12million units/0.5ml solution for injection pre-filled disposable devices,0802040M0AAAGAG,Solution for injection,Interferon beta-1a 12million units/0.5ml solution for injection pre-filled syringes,Solution for injection,Y
 0803041S0AAAHAH,Tamoxifen 10mg/5ml oral solution,0803041S0AAAJAJ,Oral solution,Tamoxifen 10mg/5ml oral solution sugar free,Oral solution sugar free,Y
 0803041S0AAAJAJ,Tamoxifen 10mg/5ml oral solution sugar free,0803041S0AAAHAH,Oral solution sugar free,Tamoxifen 10mg/5ml oral solution,Oral solution,Y
+0803042E0AAAAAA,Cyproterone 50mg tablets,0604020D0BBAAAA,,Androcur 50mg tablets,,Y
 0803043N0AAAAAA,Octreotide 50micrograms/1ml solution for injection ampoules,0803043N0AAANAN,Solution for injection,Octreotide 50micrograms/1ml solution for injection pre-filled syringes,Solution for injection,Y
 0803043N0AAABAB,Octreotide 100micrograms/1ml solution for injection ampoules,0803043N0AAALAL,Solution for injection,Octreotide 100micrograms/1ml solution for injection vials,Solution for injection,Y
 0803043N0AAABAB,Octreotide 100micrograms/1ml solution for injection ampoules,0803043N0AAAPAP,Solution for injection,Octreotide 100micrograms/1ml solution for injection pre-filled syringes,Solution for injection,Y
@@ -1666,9 +1687,7 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 0901011F0AAAIAI,Ferrous fumarate 140mg/5ml oral solution sugar free,0901011F0AAACAC,Oral solution sugar free,Ferrous fumarate 140mg/5ml oral solution,Oral solution,Y
 0901011P0AABPBP,Ferrous sulfate 60mg/5ml oral suspension,0901011P0AACKCK,Oral suspension,Ferrous sulfate 60mg/5ml oral solution,Oral solution,Y
 0901011P0AACKCK,Ferrous sulfate 60mg/5ml oral solution,0901011P0AABPBP,Oral solution,Ferrous sulfate 60mg/5ml oral suspension,Oral suspension,Y
-0901012K0AAAAAA,Iron dextran 100mg/2ml solution for injection ampoules,0901012P0AAAAAA,Solution for injection,Ferric carboxymaltose 100mg/2ml dispersion for injection vials,Dispersion for injection,Y
 0901012K0AAAEAE,Iron dextran 500mg/10ml solution for injection ampoules,0901012P0AAABAB,Solution for injection,Ferric carboxymaltose 500mg/10ml dispersion for injection vials,Dispersion for injection,Y
-0901012P0AAAAAA,Ferric carboxymaltose 100mg/2ml dispersion for injection vials,0901012K0AAAAAA,Dispersion for injection,Iron dextran 100mg/2ml solution for injection ampoules,Solution for injection,Y
 0901012P0AAABAB,Ferric carboxymaltose 500mg/10ml dispersion for injection vials,0901012K0AAAEAE,Dispersion for injection,Iron dextran 500mg/10ml solution for injection ampoules,Solution for injection,Y
 0901020G0AAA3A3,Folic acid 5mg/5ml oral solution sugar free,0901020G0AACCCC,Oral solution sugar free,Folic acid 5mg/5ml oral solution,Oral solution,Y
 0901020G0AAA3A3,Folic acid 5mg/5ml oral solution sugar free,0901020G0AACCCC,Oral solution sugar free,Folic acid 5mg/5ml oral suspension,Oral suspension,Y
@@ -2097,6 +2116,8 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 1106000ABAAACAC,Dorzolamide 20mg/ml / Timolol 5mg/ml eye drops preservative free,1106000ABAAAAAA,Eye drops preservative free,Dorzolamide 20mg/ml / Timolol 5mg/ml eye drops,Eye drops,Y
 1106000ADAAAAAA,Latanoprost 50micrograms/ml / Timolol 5mg/ml eye drops,1106000ADAAACAC,Eye drops,Latanoprost 50micrograms/ml / Timolol 5mg/ml eye drops preservative free,Eye drops preservative free,Y
 1106000ADAAACAC,Latanoprost 50micrograms/ml / Timolol 5mg/ml eye drops preservative free,1106000ADAAAAAA,Eye drops preservative free,Latanoprost 50micrograms/ml / Timolol 5mg/ml eye drops,Eye drops,Y
+1106000ADAAACAC,Latanoprost 50micrograms/ml / Timolol 5mg/ml eye drops preservative free,1106000ADBEAAAA,,Vizilatan Duo eye drops,,Y
+1106000ADBEAAAA,Vizilatan Duo eye drops,1106000ADAAACAC,,Latanoprost 50micrograms/ml / Timolol 5mg/ml eye drops preservative free,,Y
 1106000AFAAAAAA,Bimatoprost 300micrograms/ml eye drops,1106000AFAAADAD,Eye drops,Bimatoprost 300micrograms/ml eye drops preservative free,Eye drops preservative free,Y
 1106000AFAAADAD,Bimatoprost 300micrograms/ml eye drops preservative free,1106000AFAAAAAA,Eye drops preservative free,Bimatoprost 300micrograms/ml eye drops,Eye drops,Y
 1106000AIAAAAAA,Bimatoprost 300micrograms/ml / Timolol 5mg/ml eye drops,1106000AIAAABAB,Eye drops,Bimatoprost 300micrograms/ml / Timolol 5mg/ml eye drops 0.4ml unit dose preservative free,Eye drops preservative free,Y
@@ -2139,6 +2160,18 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 1108010A0AAAEAE,Mercaptamine 0.55% eye drops preservative free,1108010A0AAACAC,Eye drops preservative free,Mercaptamine 0.55% eye drops,Eye drops,Y
 1108010AAAAAAAA,Ciclosporin 2% eye drops,1108010AAAAAHAH,Eye drops,Ciclosporin 2% eye drops preservative free,Eye drops preservative free,Y
 1108010AAAAAHAH,Ciclosporin 2% eye drops preservative free,1108010AAAAAAAA,Eye drops preservative free,Ciclosporin 2% eye drops,Eye drops,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000704,,Xailin 0.2% eye gel,,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000712,,Carbomer 0.2% eye gel,,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000952,,Aacomer 0.2% eye gel,,Y
+1108010B0AAABAB,Carbomer '980' 0.2% eye drops,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+1108010B0AAACAC,Carbomer '980' 0.2% eye drops 0.6ml unit dose preservative free,21300000707,,Ocu-Lube Carbomer 0.2% eye gel 0.6ml unit dose preservative free,,Y
+1108010B0AAACAC,Carbomer '980' 0.2% eye drops 0.6ml unit dose preservative free,21300000969,,Puroptics Carbomer 0.2% eye gel 0.6ml unit dose preservative free,,Y
+1108010B0AAACAC,Carbomer '980' 0.2% eye drops 0.6ml unit dose preservative free,21300000974,,Ocufresh Carbomer 0.2% lubricating eye gel 0.6ml unit dose preservative free,,Y
 1108010C0AAAAAA,Acetylcysteine 0.5% eye drops,1108010C0AAAIAI,Eye drops,Acetylcysteine 0.5% eye drops preservative free,Eye drops preservative free,Y
 1108010C0AAADAD,Acetylcysteine 5% eye drops,1108010C0AAAHAH,Eye drops,Acetylcysteine 5% eye drops preservative free,Eye drops preservative free,Y
 1108010C0AAAEAE,Acetylcysteine 10% eye drops,1108010C0AABABA,Eye drops,Acetylcysteine 10% eye drops preservative free,Eye drops preservative free,Y
@@ -2146,17 +2179,51 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 1108010C0AAAIAI,Acetylcysteine 0.5% eye drops preservative free,1108010C0AAAAAA,Eye drops preservative free,Acetylcysteine 0.5% eye drops,Eye drops,Y
 1108010C0AABABA,Acetylcysteine 10% eye drops preservative free,1108010C0AAAEAE,Eye drops preservative free,Acetylcysteine 10% eye drops,Eye drops,Y
 1108010F0AAAAAA,Hypromellose 0.3% eye drops,1108010F0AAANAN,Eye drops,Hypromellose 0.3% eye drops preservative free,Eye drops,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+1108010F0AAAAAA,Hypromellose 0.3% eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
 1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,1108010F0AAAAAA,Eye drops,Hypromellose 0.3% eye drops,Eye drops,Y
+1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,21300000119,,Tear-Lac Hypromellose 0.3% eye drops preservative free,,Y
+1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,21300000158,,Hypromellose 0.3% eye drops preservative free,,Y
+1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,21300000159,,PF Drops Hypromellose 0.3% eye drops preservative free,,Y
+1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,21300000162,,Hypromol 0.3% eye drops preservative free,,Y
+1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,21300000176,,Evolve Hypromellose 0.3% eye drops preservative free,,Y
+1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,21300000181,,Ocu-Lube 0.3% eye drops preservative free,,Y
+1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,21300000973,,Ocufresh Hypromellose 0.3% eye drops preservative free,,Y
+1108010F0AAANAN,Hypromellose 0.3% eye drops preservative free,21300000980,,AddTear Hypromellose 0.3% eye drops preservative free,,Y
 1108010F0AABZBZ,Hypromellose 0.25% eye drops,1108010F0AACACA,Eye drops,Hypromellose 0.25% eye drops preservative free,Eye drops preservative free,Y
 1108010F0AACACA,Hypromellose 0.25% eye drops preservative free,1108010F0AABZBZ,Eye drops preservative free,Hypromellose 0.25% eye drops,Eye drops,Y
 1108010K0AAA1A1,Sodium chloride 0.9% eye drops preservative free,1108010K0AAAAAA,Eye drops preservative free,Sodium chloride 0.9% eye drops,Eye drops,Y
+1108010K0AAA6A6,Sodium chloride 5% eye drops preservative free,21300000133,,PF Drops Sodium Chloride 5% eye drops preservative free,,Y
+1108010K0AAA6A6,Sodium chloride 5% eye drops preservative free,21300000175,,ODM5 5% eye drops preservative free,,Y
+1108010K0AAA6A6,Sodium chloride 5% eye drops preservative free,21300000197,,SodiEye 5% eye drops preservative free,,Y
+1108010K0AAA6A6,Sodium chloride 5% eye drops preservative free,21300000199,,Aeon 5% eye drops preservative free,,Y
+1108010K0AAA6A6,Sodium chloride 5% eye drops preservative free,21300000957,,AcuSal 5% eye drops preservative free,,Y
+1108010K0AAA6A6,Sodium chloride 5% eye drops preservative free,21300000964,,Natklor 5% eye drops preservative free,,Y
+1108010K0AAA6A6,Sodium chloride 5% eye drops preservative free,21300000976,,DROPtonic 5% eye drops preservative free,,Y
 1108010K0AAAAAA,Sodium chloride 0.9% eye drops,1108010K0AAA1A1,Eye drops,Sodium chloride 0.9% eye drops preservative free,Eye drops preservative free,Y
+1108010K0AAABAB,Sodium chloride 5% eye drops,21300000129,,Hypersal 5% eye drops,,Y
+1108010K0AAABAB,Sodium chloride 5% eye drops,21300000130,,Sodium chloride 5% eye drops,,Y
+1108010K0AAABAB,Sodium chloride 5% eye drops,21300000944,,AabChlor Sodium Chloride 5% eye drops,,Y
+1108010K0AAABAB,Sodium chloride 5% eye drops,21300000951,,AacEdem Sodium Chloride 5% eye drops,,Y
 1108010K0AAAWAW,Sodium chloride 0.5% eye drops,1108010K0AACCCC,Eye drops,Sodium chloride 0.5% eye drops preservative free,Eye drops preservative free,Y
+1108010K0AAAYAY,Sodium chloride 0.9% eye drops 0.5ml unit dose preservative free,21300000942,,AddLube Sodium Chloride 0.9% eye drops 0.5ml unit dose preservative free,,Y
 1108010K0AACCCC,Sodium chloride 0.5% eye drops preservative free,1108010K0AAAWAW,Eye drops preservative free,Sodium chloride 0.5% eye drops,Eye drops,Y
 1108010Q0AAAAAA,Polyvinyl alcohol 1.4% eye drops,1108010Q0AAAIAI,Eye drops,Polyvinyl alcohol 1.4% eye drops preservative free,Eye drops preservative free,Y
+1108010Q0AAAAAA,Polyvinyl alcohol 1.4% eye drops,21300000401,,Liquifilm Tears 1.4% eye drops,,Y
+1108010Q0AAAAAA,Polyvinyl alcohol 1.4% eye drops,21300000404,,Sno Tears 1.4% eye drops,,Y
+1108010Q0AAACAC,Polyvinyl alcohol 1.4% eye drops 0.4ml unit dose preservative free,21300000402,,Liquifilm Tears 1.4% eye drops 0.4ml unit dose preservative free,,Y
+1108010Q0AAACAC,Polyvinyl alcohol 1.4% eye drops 0.4ml unit dose preservative free,21300000403,,Refresh Ophthalmic 1.4% eye drops 0.4ml unit dose,,Y
 1108010Q0AAAIAI,Polyvinyl alcohol 1.4% eye drops preservative free,1108010Q0AAAAAA,Eye drops preservative free,Polyvinyl alcohol 1.4% eye drops,Eye drops,Y
 1108030ABAAABAB,Idebenone 150mg capsules,1108030ABAAACAC,Oral capsule,Idebenone 150mg tablets,Oral tablet,Y
 1108030ABAAACAC,Idebenone 150mg tablets,1108030ABAAABAB,Oral tablet,Idebenone 150mg capsules,Oral capsule,Y
+1201010C0AAABAB,Burow's Solution BP (Aluminium acetate 13%) ear drops,21012600113,,Otinova ear spray,,Y
 1202020L0AABNBN,Sodium chloride 7% nebuliser liquid 5ml ampoules,1202020L0AACDCD,Nebuliser liquid,Sodium chloride 7% nebuliser liquid 5ml bottles,Nebuliser liquid,Y
 1202020L0AACDCD,Sodium chloride 7% nebuliser liquid 5ml bottles,1202020L0AABNBN,Nebuliser liquid,Sodium chloride 7% nebuliser liquid 5ml ampoules,Nebuliser liquid,Y
 1202020P0AAABAB,Xylometazoline 0.1% nasal drops,1202020P0AAACAC,Nasal drops,Xylometazoline 0.1% nasal spray,Spray,Y
@@ -2166,8 +2233,43 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 1203010E0AAAAAA,Benzydamine 0.15% mouthwash sugar free,1203010E0AAABAB,Mouthwash sugar free,Benzydamine 0.15% oromucosal spray sugar free,Spray sugar free,Y
 1203010E0AAABAB,Benzydamine 0.15% oromucosal spray sugar free,1203010E0AAAAAA,Spray sugar free,Benzydamine 0.15% mouthwash sugar free,Mouthwash sugar free,Y
 1203030A0AAAAAA,Dichlorobenzyl alcohol 1.2mg / Amylmetacresol 600microgram lozenges,1203030AAAAAAAA,Lozenge,Dichlorobenzyl alcohol 1.2mg / Amylmetacresol 600microgram lozenges sugar free,Lozenge sugar free,Y
+1203030A0BBAEAA,Strepsils Strawberry lozenges sugar free,1203030AAAAAAAA,,Dichlorobenzyl alcohol 1.2mg / Amylmetacresol 600microgram lozenges sugar free,,Y
 1203030AAAAAAAA,Dichlorobenzyl alcohol 1.2mg / Amylmetacresol 600microgram lozenges sugar free,1203030A0AAAAAA,Lozenge sugar free,Dichlorobenzyl alcohol 1.2mg / Amylmetacresol 600microgram lozenges,Lozenge,Y
+1203030AAAAAAAA,Dichlorobenzyl alcohol 1.2mg / Amylmetacresol 600microgram lozenges sugar free,1203030A0BBAEAA,,Strepsils Strawberry lozenges sugar free,,Y
+1203050A0AAABAB,Artificial saliva spray,21210000014,,AS Saliva Orthana spray,,Y
+1203050A0AAABAB,Artificial saliva spray,21210000015,,AS Saliva Orthana spray refill,,Y
+1203050A0AAABAB,Artificial saliva spray,21210000023,,Salivix spray,,Y
+1203050A0AAABAB,Artificial saliva spray,21210000024,,Saliveze mouth spray,,Y
+1301010D0AAAAAA,Cetomacrogol cream (Formula A),21220000312,,KreaMol A cream,,Y
+1301010D0AAAAAA,Cetomacrogol cream (Formula A),21220000315,,Ovelle Cetomacrogol cream (Formula A),,Y
+130201000AAA1A1,Sodium pidolate 2.5% cream,21220000273,,Hydromol 2.5% cream,,Y
+130201000AAA6A6,White soft paraffin 50% / Liquid paraffin 50% ointment,21220000219,,Fifty:50 ointment,,Y
+130201000AAA6A6,White soft paraffin 50% / Liquid paraffin 50% ointment,21220000247,,Pure Health Liquid Paraffin 50% in White Soft Paraffin ointment,,Y
+130201000AAA6A6,White soft paraffin 50% / Liquid paraffin 50% ointment,21220000295,,KreaMoint 50:50 ointment,,Y
+130201000AAA6A6,White soft paraffin 50% / Liquid paraffin 50% ointment,21220000328,,Purosure ointment,,Y
+130201000AACACA,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000230,,Zerodouble gel,,Y
+130201000AACACA,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000251,,Epimax isomol gel,,Y
+130201000AACACA,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000253,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+130201000AACACA,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000260,,MyriBase gel,,Y
+130201000AACACA,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000262,,AproDerm gel,,Y
+130201000AACACA,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000287,,Exmabase gel,,Y
+130201000AACDCD,White soft paraffin 15% / Liquid paraffin light 6% cream,21220000289,,Exmalatum cream,,Y
+130201000AACDCD,White soft paraffin 15% / Liquid paraffin light 6% cream,21220000290,,ExmaQS cream,,Y
+1302010F0AAADAD,Emulsifying ointment,21220000133,,Emulsifying ointment,,Y
+1302010F0AAADAD,Emulsifying ointment,21220000137,,EmulsifEss ointment,,Y
+1302010U0AAAFAF,Urea 10% cream,21220000117,,Flexitol 10% Urea cream,,Y
+1302010U0AAAFAF,Urea 10% cream,21220000278,,Aquadrate 10% cream,,Y
+1302010U0AAAFAF,Urea 10% cream,21220000280,,Hydromol Intensive 10% cream,,Y
+1302010Z0BBAAAA,Eczmol 1% cream,1311020L0AAAFAF,,Chlorhexidine gluconate 1% cream,,Y
+1302011L0AAAAAA,Liquid paraffin light 37.8% / Isopropyl myristate 13% bath additive,21220000128,,Hydromol Bath & Shower emollient,,Y
+1302011L0AAAIAI,Liquid paraffin light 63.4% bath additive,21220000229,,LPL 63.4 bath additive and emollient,,Y
+1302011M0AAAGAG,Liquid paraffin 65% / Acetylated wool alcohols 5% bath oil,21220000227,,Zerolatum Emollient bath additive,,Y
+1303000AAAAAAAA,Menthol 0.5% in Aqueous cream,21220000220,,Arjun 0.5% cream,,Y
 1303000AAAAABAB,Menthol 1% in Aqueous cream,1303000AAAAAMAM,Cutaneous cream,Menthol 1% in Cetomacrogol cream (Formula A),Cutaneous cream,Y
+1303000AAAAABAB,Menthol 1% in Aqueous cream,21220000221,,Arjun 1% cream,,Y
+1303000AAAAABAB,Menthol 1% in Aqueous cream,21220000225,,AquaSoothe 1% cream,,Y
+1303000AAAAACAC,Menthol 2% in Aqueous cream,21220000222,,Arjun 2% cream,,Y
+1303000AAAAACAC,Menthol 2% in Aqueous cream,21220000226,,AquaSoothe 2% cream,,Y
 1303000AAAAAMAM,Menthol 1% in Cetomacrogol cream (Formula A),1303000AAAAABAB,Cutaneous cream,Menthol 1% in Aqueous cream,Cutaneous cream,Y
 1304000F0AABCBC,Betamethasone valerate 0.1% lotion,1304000F0AABDBD,Cutaneous liquid,Betamethasone valerate 0.1% scalp application,Cutaneous liquid,Y
 1304000F0AABDBD,Betamethasone valerate 0.1% scalp application,1304000F0AABCBC,Cutaneous liquid,Betamethasone valerate 0.1% lotion,Cutaneous liquid,Y
@@ -2181,6 +2283,7 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 1305030G0AAABAB,Ixekizumab 80mg/1ml solution for injection pre-filled disposable devices,1305030G0AAAAAA,Solution for injection,Ixekizumab 80mg/1ml solution for injection pre-filled syringes,Solution for injection,Y
 1307000Q0AAAAAA,Silver nitrate 95% caustic pencils,1307000Q0AAAEAE,Stick,Silver nitrate 95% caustic applicators,Stick,Y
 1307000Q0AAAEAE,Silver nitrate 95% caustic applicators,1307000Q0AAAAAA,Stick,Silver nitrate 95% caustic pencils,Stick,Y
+1311020L0AAAFAF,Chlorhexidine gluconate 1% cream,1302010Z0BBAAAA,,Eczmol 1% cream,,Y
 1311040K0AAAFAF,Povidone-Iodine 10% alcoholic solution,1311040K0AAATAT,Cutaneous solution,Povidone-Iodine 10% antiseptic solution,Cutaneous solution,Y
 1311040K0AAATAT,Povidone-Iodine 10% antiseptic solution,1311040K0AAAFAF,Cutaneous solution,Povidone-Iodine 10% alcoholic solution,Cutaneous solution,Y
 1312000G0AAAMAM,Glycopyrronium bromide 1% cream,1312000G0AABABA,Cutaneous cream,Glycopyrronium bromide 1% in Cetomacrogol cream (Formula A),Cutaneous cream,Y
@@ -2191,6 +2294,36 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 1501010L0AAAEAE,Propofol 200mg/20ml emulsion for injection vials,1501010L0AAAAAA,Emulsion for injection,Propofol 200mg/20ml emulsion for injection ampoules,Emulsion for injection,Y
 1501010L0AAAFAF,Propofol 500mg/50ml emulsion for infusion pre-filled syringes,1501010L0AAABAB,Emulsion for infusion,Propofol 500mg/50ml emulsion for infusion vials,Emulsion for infusion,Y
 1501010L0AAAGAG,Propofol 1g/50ml emulsion for infusion pre-filled syringes,1501010L0AAADAD,Emulsion for infusion,Propofol 1g/50ml emulsion for infusion vials,Emulsion for infusion,Y
+1501020R0AAAHAH,Nitrous oxide 50% / Oxygen 50%,1501020R0BCABA0,,Entonox cylinders size F,,Y
+1501020R0AAAHAH,Nitrous oxide 50% / Oxygen 50%,1501020R0BCACA0,,Entonox cylinders size G,,Y
+1501020R0AAAHAH,Nitrous oxide 50% / Oxygen 50%,1501020R0BCAHA0,,Entonox cylinders size EA with integral headset,,Y
+1501020R0AAAHAH,Nitrous oxide 50% / Oxygen 50%,1501020R0BCAIA0,,Entonox cylinders size ED with integral headset,,Y
+1501020R0AAAHAH,Nitrous oxide 50% / Oxygen 50%,1501020R0BCAJA0,,Entonox cylinders size EX with integral headset,,Y
+1501020R0BCABA0,Entonox cylinders size F,1501020R0AAAHAH,,Nitrous oxide 50% / Oxygen 50%,,Y
+1501020R0BCABA0,Entonox cylinders size F,1501020R0BCACA0,,Entonox cylinders size G,,Y
+1501020R0BCABA0,Entonox cylinders size F,1501020R0BCAHA0,,Entonox cylinders size EA with integral headset,,Y
+1501020R0BCABA0,Entonox cylinders size F,1501020R0BCAIA0,,Entonox cylinders size ED with integral headset,,Y
+1501020R0BCABA0,Entonox cylinders size F,1501020R0BCAJA0,,Entonox cylinders size EX with integral headset,,Y
+1501020R0BCACA0,Entonox cylinders size G,1501020R0AAAHAH,,Nitrous oxide 50% / Oxygen 50%,,Y
+1501020R0BCACA0,Entonox cylinders size G,1501020R0BCABA0,,Entonox cylinders size F,,Y
+1501020R0BCACA0,Entonox cylinders size G,1501020R0BCAHA0,,Entonox cylinders size EA with integral headset,,Y
+1501020R0BCACA0,Entonox cylinders size G,1501020R0BCAIA0,,Entonox cylinders size ED with integral headset,,Y
+1501020R0BCACA0,Entonox cylinders size G,1501020R0BCAJA0,,Entonox cylinders size EX with integral headset,,Y
+1501020R0BCAHA0,Entonox cylinders size EA with integral headset,1501020R0AAAHAH,,Nitrous oxide 50% / Oxygen 50%,,Y
+1501020R0BCAHA0,Entonox cylinders size EA with integral headset,1501020R0BCABA0,,Entonox cylinders size F,,Y
+1501020R0BCAHA0,Entonox cylinders size EA with integral headset,1501020R0BCACA0,,Entonox cylinders size G,,Y
+1501020R0BCAHA0,Entonox cylinders size EA with integral headset,1501020R0BCAIA0,,Entonox cylinders size ED with integral headset,,Y
+1501020R0BCAHA0,Entonox cylinders size EA with integral headset,1501020R0BCAJA0,,Entonox cylinders size EX with integral headset,,Y
+1501020R0BCAIA0,Entonox cylinders size ED with integral headset,1501020R0AAAHAH,,Nitrous oxide 50% / Oxygen 50%,,Y
+1501020R0BCAIA0,Entonox cylinders size ED with integral headset,1501020R0BCABA0,,Entonox cylinders size F,,Y
+1501020R0BCAIA0,Entonox cylinders size ED with integral headset,1501020R0BCACA0,,Entonox cylinders size G,,Y
+1501020R0BCAIA0,Entonox cylinders size ED with integral headset,1501020R0BCAHA0,,Entonox cylinders size EA with integral headset,,Y
+1501020R0BCAIA0,Entonox cylinders size ED with integral headset,1501020R0BCAJA0,,Entonox cylinders size EX with integral headset,,Y
+1501020R0BCAJA0,Entonox cylinders size EX with integral headset,1501020R0AAAHAH,,Nitrous oxide 50% / Oxygen 50%,,Y
+1501020R0BCAJA0,Entonox cylinders size EX with integral headset,1501020R0BCABA0,,Entonox cylinders size F,,Y
+1501020R0BCAJA0,Entonox cylinders size EX with integral headset,1501020R0BCACA0,,Entonox cylinders size G,,Y
+1501020R0BCAJA0,Entonox cylinders size EX with integral headset,1501020R0BCAHA0,,Entonox cylinders size EA with integral headset,,Y
+1501020R0BCAJA0,Entonox cylinders size EX with integral headset,1501020R0BCAIA0,,Entonox cylinders size ED with integral headset,,Y
 1501041T0AAAVAV,Midazolam 5mg/ml oral solution sugar free,0408020V0AAAHAH,Oral solution sugar free,Midazolam 25mg/5ml oral suspension,Oral suspension,Y
 1501041T0AAAVAV,Midazolam 5mg/ml oral solution sugar free,0408020V0AAAHAH,Oral solution sugar free,Midazolam 25mg/5ml oral solution,Oral solution,Y
 1501042H0AAAAAA,Parecoxib 40mg powder and solvent for solution for injection vials,1501042H0AAABAB,Powder and solvent for solution for injection,Parecoxib 40mg powder for solution for injection vials,Powder for solution for injection,Y
@@ -2203,9 +2336,1112 @@ Code,Name,Alternative code,Formulation,Alternative name,Alternative formulation,
 1501050X0AAAFAF,Rocuronium bromide 100mg/10ml solution for injection ampoules,1501050X0AAABAB,Solution for injection,Rocuronium bromide 100mg/10ml solution for injection vials,Solution for injection,Y
 1502010F0AAAXAX,Cocaine 10% nasal drops,1502010G0AAARAR,Nasal drops,Cocaine 10% spray,Spray,Y
 1502010G0AAAIAI,Cocaine 10% mouthwash,1502010G0AAARAR,Mouthwash,Cocaine 10% spray,Spray,Y
-1502010G0AAARAR,Cocaine 10% spray,1502010G0AAAIAI,Spray,Cocaine 10% mouthwash,Mouthwash,Y
 1502010G0AAARAR,Cocaine 10% spray,1502010F0AAAXAX,Spray,Cocaine 10% nasal drops,Nasal drops,Y
+1502010G0AAARAR,Cocaine 10% spray,1502010G0AAAIAI,Spray,Cocaine 10% mouthwash,Mouthwash,Y
 1902070E0AAABAB,Activated charcoal 300mg tablets,1902070E0AAAMAM,Oral tablet,Activated charcoal 300mg capsules,Oral capsule,Y
 1902070E0AAAMAM,Activated charcoal 300mg capsules,1902070E0AAABAB,Oral capsule,Activated charcoal 300mg tablets,Oral tablet,Y
 190500000AAACAC,Ammonium sulfate 500mg capsules,190500000AABKBK,Oral capsule,Ammonium sulfate 500mg tablets,Oral tablet,Y
 190500000AABKBK,Ammonium sulfate 500mg tablets,190500000AAACAC,Oral tablet,Ammonium sulfate 500mg capsules,Oral capsule,Y
+20090000211,Tubigrip bandage 6.25cm size B,20090000451,,Elasticated tubular bandage BP 6.25cm size B,,Y
+20090000211,Tubigrip bandage 6.25cm size B,20090000330,,Comfigrip bandage 6.25cm size B,,Y
+20090000211,Tubigrip bandage 6.25cm size B,20090000465,,easiGRIP bandage 6.25cm size B,,Y
+20090000211,Tubigrip bandage 6.25cm size B,20090000672,,CLINIgrip bandage 6.25cm size B,,Y
+20090000211,Tubigrip bandage 6.25cm size B,20090001232,,Surgrip bandage 6.25cm size B,,Y
+20090000213,Tubigrip bandage 6.75cm size C,20090000453,,Elasticated tubular bandage BP 6.75cm size C,,Y
+20090000213,Tubigrip bandage 6.75cm size C,20090000332,,Comfigrip bandage 6.75cm size C,,Y
+20090000213,Tubigrip bandage 6.75cm size C,20090000467,,easiGRIP bandage 6.75cm size C,,Y
+20090000213,Tubigrip bandage 6.75cm size C,20090000674,,CLINIgrip bandage 6.75cm size C,,Y
+20090000213,Tubigrip bandage 6.75cm size C,20090001234,,Surgrip bandage 6.75cm size C,,Y
+20090000215,Tubigrip bandage 7.5cm size D,20090000455,,Elasticated tubular bandage BP 7.5cm size D,,Y
+20090000215,Tubigrip bandage 7.5cm size D,20090000334,,Comfigrip bandage 7.5cm size D,,Y
+20090000215,Tubigrip bandage 7.5cm size D,20090000469,,easiGRIP bandage 7.5cm size D,,Y
+20090000215,Tubigrip bandage 7.5cm size D,20090000676,,CLINIgrip bandage 7.5cm size D,,Y
+20090000215,Tubigrip bandage 7.5cm size D,20090001236,,Surgrip bandage 7.5cm size D,,Y
+20090000217,Tubigrip bandage 8.75cm size E,20090000457,,Elasticated tubular bandage BP 8.75cm size E,,Y
+20090000217,Tubigrip bandage 8.75cm size E,20090000336,,Comfigrip bandage 8.75cm size E,,Y
+20090000217,Tubigrip bandage 8.75cm size E,20090000471,,easiGRIP bandage 8.75cm size E,,Y
+20090000217,Tubigrip bandage 8.75cm size E,20090000678,,CLINIgrip bandage 8.75cm size E,,Y
+20090000217,Tubigrip bandage 8.75cm size E,20090001238,,Surgrip bandage 8.75cm size E,,Y
+20090000219,Tubigrip bandage 10cm size F,20090000459,,Elasticated tubular bandage BP 10cm size F,,Y
+20090000219,Tubigrip bandage 10cm size F,20090000338,,Comfigrip bandage 10cm size F,,Y
+20090000219,Tubigrip bandage 10cm size F,20090000473,,easiGRIP bandage 10cm size F,,Y
+20090000219,Tubigrip bandage 10cm size F,20090000680,,CLINIgrip bandage 10cm size F,,Y
+20090000219,Tubigrip bandage 10cm size F,20090001240,,Surgrip bandage 10cm size F,,Y
+20090000221,Tubigrip bandage 12cm size G,20090000461,,Elasticated tubular bandage BP 12cm size G,,Y
+20090000221,Tubigrip bandage 12cm size G,20090000340,,Comfigrip bandage 12cm size G,,Y
+20090000221,Tubigrip bandage 12cm size G,20090000475,,easiGRIP bandage 12cm size G,,Y
+20090000221,Tubigrip bandage 12cm size G,20090000682,,CLINIgrip bandage 12cm size G,,Y
+20090000221,Tubigrip bandage 12cm size G,20090001242,,Surgrip bandage 12cm size G,,Y
+20090000330,Comfigrip bandage 6.25cm size B,20090000451,,Elasticated tubular bandage BP 6.25cm size B,,Y
+20090000330,Comfigrip bandage 6.25cm size B,20090000211,,Tubigrip bandage 6.25cm size B,,Y
+20090000330,Comfigrip bandage 6.25cm size B,20090000465,,easiGRIP bandage 6.25cm size B,,Y
+20090000330,Comfigrip bandage 6.25cm size B,20090000672,,CLINIgrip bandage 6.25cm size B,,Y
+20090000330,Comfigrip bandage 6.25cm size B,20090001232,,Surgrip bandage 6.25cm size B,,Y
+20090000332,Comfigrip bandage 6.75cm size C,20090000453,,Elasticated tubular bandage BP 6.75cm size C,,Y
+20090000332,Comfigrip bandage 6.75cm size C,20090000213,,Tubigrip bandage 6.75cm size C,,Y
+20090000332,Comfigrip bandage 6.75cm size C,20090000467,,easiGRIP bandage 6.75cm size C,,Y
+20090000332,Comfigrip bandage 6.75cm size C,20090000674,,CLINIgrip bandage 6.75cm size C,,Y
+20090000332,Comfigrip bandage 6.75cm size C,20090001234,,Surgrip bandage 6.75cm size C,,Y
+20090000334,Comfigrip bandage 7.5cm size D,20090000455,,Elasticated tubular bandage BP 7.5cm size D,,Y
+20090000334,Comfigrip bandage 7.5cm size D,20090000215,,Tubigrip bandage 7.5cm size D,,Y
+20090000334,Comfigrip bandage 7.5cm size D,20090000469,,easiGRIP bandage 7.5cm size D,,Y
+20090000334,Comfigrip bandage 7.5cm size D,20090000676,,CLINIgrip bandage 7.5cm size D,,Y
+20090000334,Comfigrip bandage 7.5cm size D,20090001236,,Surgrip bandage 7.5cm size D,,Y
+20090000336,Comfigrip bandage 8.75cm size E,20090000457,,Elasticated tubular bandage BP 8.75cm size E,,Y
+20090000336,Comfigrip bandage 8.75cm size E,20090000217,,Tubigrip bandage 8.75cm size E,,Y
+20090000336,Comfigrip bandage 8.75cm size E,20090000471,,easiGRIP bandage 8.75cm size E,,Y
+20090000336,Comfigrip bandage 8.75cm size E,20090000678,,CLINIgrip bandage 8.75cm size E,,Y
+20090000336,Comfigrip bandage 8.75cm size E,20090001238,,Surgrip bandage 8.75cm size E,,Y
+20090000338,Comfigrip bandage 10cm size F,20090000459,,Elasticated tubular bandage BP 10cm size F,,Y
+20090000338,Comfigrip bandage 10cm size F,20090000219,,Tubigrip bandage 10cm size F,,Y
+20090000338,Comfigrip bandage 10cm size F,20090000473,,easiGRIP bandage 10cm size F,,Y
+20090000338,Comfigrip bandage 10cm size F,20090000680,,CLINIgrip bandage 10cm size F,,Y
+20090000338,Comfigrip bandage 10cm size F,20090001240,,Surgrip bandage 10cm size F,,Y
+20090000340,Comfigrip bandage 12cm size G,20090000461,,Elasticated tubular bandage BP 12cm size G,,Y
+20090000340,Comfigrip bandage 12cm size G,20090000221,,Tubigrip bandage 12cm size G,,Y
+20090000340,Comfigrip bandage 12cm size G,20090000475,,easiGRIP bandage 12cm size G,,Y
+20090000340,Comfigrip bandage 12cm size G,20090000682,,CLINIgrip bandage 12cm size G,,Y
+20090000340,Comfigrip bandage 12cm size G,20090001242,,Surgrip bandage 12cm size G,,Y
+20090000451,Elasticated tubular bandage BP 6.25cm size B,20090000211,,Tubigrip bandage 6.25cm size B,,Y
+20090000451,Elasticated tubular bandage BP 6.25cm size B,20090000330,,Comfigrip bandage 6.25cm size B,,Y
+20090000451,Elasticated tubular bandage BP 6.25cm size B,20090000465,,easiGRIP bandage 6.25cm size B,,Y
+20090000451,Elasticated tubular bandage BP 6.25cm size B,20090000672,,CLINIgrip bandage 6.25cm size B,,Y
+20090000451,Elasticated tubular bandage BP 6.25cm size B,20090001232,,Surgrip bandage 6.25cm size B,,Y
+20090000453,Elasticated tubular bandage BP 6.75cm size C,20090000213,,Tubigrip bandage 6.75cm size C,,Y
+20090000453,Elasticated tubular bandage BP 6.75cm size C,20090000332,,Comfigrip bandage 6.75cm size C,,Y
+20090000453,Elasticated tubular bandage BP 6.75cm size C,20090000467,,easiGRIP bandage 6.75cm size C,,Y
+20090000453,Elasticated tubular bandage BP 6.75cm size C,20090000674,,CLINIgrip bandage 6.75cm size C,,Y
+20090000453,Elasticated tubular bandage BP 6.75cm size C,20090001234,,Surgrip bandage 6.75cm size C,,Y
+20090000455,Elasticated tubular bandage BP 7.5cm size D,20090000215,,Tubigrip bandage 7.5cm size D,,Y
+20090000455,Elasticated tubular bandage BP 7.5cm size D,20090000334,,Comfigrip bandage 7.5cm size D,,Y
+20090000455,Elasticated tubular bandage BP 7.5cm size D,20090000469,,easiGRIP bandage 7.5cm size D,,Y
+20090000455,Elasticated tubular bandage BP 7.5cm size D,20090000676,,CLINIgrip bandage 7.5cm size D,,Y
+20090000455,Elasticated tubular bandage BP 7.5cm size D,20090001236,,Surgrip bandage 7.5cm size D,,Y
+20090000457,Elasticated tubular bandage BP 8.75cm size E,20090000217,,Tubigrip bandage 8.75cm size E,,Y
+20090000457,Elasticated tubular bandage BP 8.75cm size E,20090000336,,Comfigrip bandage 8.75cm size E,,Y
+20090000457,Elasticated tubular bandage BP 8.75cm size E,20090000471,,easiGRIP bandage 8.75cm size E,,Y
+20090000457,Elasticated tubular bandage BP 8.75cm size E,20090000678,,CLINIgrip bandage 8.75cm size E,,Y
+20090000457,Elasticated tubular bandage BP 8.75cm size E,20090001238,,Surgrip bandage 8.75cm size E,,Y
+20090000459,Elasticated tubular bandage BP 10cm size F,20090000219,,Tubigrip bandage 10cm size F,,Y
+20090000459,Elasticated tubular bandage BP 10cm size F,20090000338,,Comfigrip bandage 10cm size F,,Y
+20090000459,Elasticated tubular bandage BP 10cm size F,20090000473,,easiGRIP bandage 10cm size F,,Y
+20090000459,Elasticated tubular bandage BP 10cm size F,20090000680,,CLINIgrip bandage 10cm size F,,Y
+20090000459,Elasticated tubular bandage BP 10cm size F,20090001240,,Surgrip bandage 10cm size F,,Y
+20090000461,Elasticated tubular bandage BP 12cm size G,20090000221,,Tubigrip bandage 12cm size G,,Y
+20090000461,Elasticated tubular bandage BP 12cm size G,20090000340,,Comfigrip bandage 12cm size G,,Y
+20090000461,Elasticated tubular bandage BP 12cm size G,20090000475,,easiGRIP bandage 12cm size G,,Y
+20090000461,Elasticated tubular bandage BP 12cm size G,20090000682,,CLINIgrip bandage 12cm size G,,Y
+20090000461,Elasticated tubular bandage BP 12cm size G,20090001242,,Surgrip bandage 12cm size G,,Y
+20090000465,easiGRIP bandage 6.25cm size B,20090000451,,Elasticated tubular bandage BP 6.25cm size B,,Y
+20090000465,easiGRIP bandage 6.25cm size B,20090000211,,Tubigrip bandage 6.25cm size B,,Y
+20090000465,easiGRIP bandage 6.25cm size B,20090000330,,Comfigrip bandage 6.25cm size B,,Y
+20090000465,easiGRIP bandage 6.25cm size B,20090000672,,CLINIgrip bandage 6.25cm size B,,Y
+20090000465,easiGRIP bandage 6.25cm size B,20090001232,,Surgrip bandage 6.25cm size B,,Y
+20090000467,easiGRIP bandage 6.75cm size C,20090000453,,Elasticated tubular bandage BP 6.75cm size C,,Y
+20090000467,easiGRIP bandage 6.75cm size C,20090000213,,Tubigrip bandage 6.75cm size C,,Y
+20090000467,easiGRIP bandage 6.75cm size C,20090000332,,Comfigrip bandage 6.75cm size C,,Y
+20090000467,easiGRIP bandage 6.75cm size C,20090000674,,CLINIgrip bandage 6.75cm size C,,Y
+20090000467,easiGRIP bandage 6.75cm size C,20090001234,,Surgrip bandage 6.75cm size C,,Y
+20090000469,easiGRIP bandage 7.5cm size D,20090000455,,Elasticated tubular bandage BP 7.5cm size D,,Y
+20090000469,easiGRIP bandage 7.5cm size D,20090000215,,Tubigrip bandage 7.5cm size D,,Y
+20090000469,easiGRIP bandage 7.5cm size D,20090000334,,Comfigrip bandage 7.5cm size D,,Y
+20090000469,easiGRIP bandage 7.5cm size D,20090000676,,CLINIgrip bandage 7.5cm size D,,Y
+20090000469,easiGRIP bandage 7.5cm size D,20090001236,,Surgrip bandage 7.5cm size D,,Y
+20090000471,easiGRIP bandage 8.75cm size E,20090000457,,Elasticated tubular bandage BP 8.75cm size E,,Y
+20090000471,easiGRIP bandage 8.75cm size E,20090000217,,Tubigrip bandage 8.75cm size E,,Y
+20090000471,easiGRIP bandage 8.75cm size E,20090000336,,Comfigrip bandage 8.75cm size E,,Y
+20090000471,easiGRIP bandage 8.75cm size E,20090000678,,CLINIgrip bandage 8.75cm size E,,Y
+20090000471,easiGRIP bandage 8.75cm size E,20090001238,,Surgrip bandage 8.75cm size E,,Y
+20090000473,easiGRIP bandage 10cm size F,20090000459,,Elasticated tubular bandage BP 10cm size F,,Y
+20090000473,easiGRIP bandage 10cm size F,20090000219,,Tubigrip bandage 10cm size F,,Y
+20090000473,easiGRIP bandage 10cm size F,20090000338,,Comfigrip bandage 10cm size F,,Y
+20090000473,easiGRIP bandage 10cm size F,20090000680,,CLINIgrip bandage 10cm size F,,Y
+20090000473,easiGRIP bandage 10cm size F,20090001240,,Surgrip bandage 10cm size F,,Y
+20090000475,easiGRIP bandage 12cm size G,20090000461,,Elasticated tubular bandage BP 12cm size G,,Y
+20090000475,easiGRIP bandage 12cm size G,20090000221,,Tubigrip bandage 12cm size G,,Y
+20090000475,easiGRIP bandage 12cm size G,20090000340,,Comfigrip bandage 12cm size G,,Y
+20090000475,easiGRIP bandage 12cm size G,20090000682,,CLINIgrip bandage 12cm size G,,Y
+20090000475,easiGRIP bandage 12cm size G,20090001242,,Surgrip bandage 12cm size G,,Y
+20090000550,Elasticated tubular bandage BP 4.5cm size A,20090000670,,CLINIgrip bandage 4.5cm size A,,Y
+20090000552,Elasticated tubular bandage BP 17.5cm size J,20090000684,,CLINIgrip bandage 17.5cm size J,,Y
+20090000670,CLINIgrip bandage 4.5cm size A,20090000550,,Elasticated tubular bandage BP 4.5cm size A,,Y
+20090000672,CLINIgrip bandage 6.25cm size B,20090000451,,Elasticated tubular bandage BP 6.25cm size B,,Y
+20090000672,CLINIgrip bandage 6.25cm size B,20090000211,,Tubigrip bandage 6.25cm size B,,Y
+20090000672,CLINIgrip bandage 6.25cm size B,20090000330,,Comfigrip bandage 6.25cm size B,,Y
+20090000672,CLINIgrip bandage 6.25cm size B,20090000465,,easiGRIP bandage 6.25cm size B,,Y
+20090000672,CLINIgrip bandage 6.25cm size B,20090001232,,Surgrip bandage 6.25cm size B,,Y
+20090000674,CLINIgrip bandage 6.75cm size C,20090000453,,Elasticated tubular bandage BP 6.75cm size C,,Y
+20090000674,CLINIgrip bandage 6.75cm size C,20090000213,,Tubigrip bandage 6.75cm size C,,Y
+20090000674,CLINIgrip bandage 6.75cm size C,20090000332,,Comfigrip bandage 6.75cm size C,,Y
+20090000674,CLINIgrip bandage 6.75cm size C,20090000467,,easiGRIP bandage 6.75cm size C,,Y
+20090000674,CLINIgrip bandage 6.75cm size C,20090001234,,Surgrip bandage 6.75cm size C,,Y
+20090000676,CLINIgrip bandage 7.5cm size D,20090000455,,Elasticated tubular bandage BP 7.5cm size D,,Y
+20090000676,CLINIgrip bandage 7.5cm size D,20090000215,,Tubigrip bandage 7.5cm size D,,Y
+20090000676,CLINIgrip bandage 7.5cm size D,20090000334,,Comfigrip bandage 7.5cm size D,,Y
+20090000676,CLINIgrip bandage 7.5cm size D,20090000469,,easiGRIP bandage 7.5cm size D,,Y
+20090000676,CLINIgrip bandage 7.5cm size D,20090001236,,Surgrip bandage 7.5cm size D,,Y
+20090000678,CLINIgrip bandage 8.75cm size E,20090000457,,Elasticated tubular bandage BP 8.75cm size E,,Y
+20090000678,CLINIgrip bandage 8.75cm size E,20090000217,,Tubigrip bandage 8.75cm size E,,Y
+20090000678,CLINIgrip bandage 8.75cm size E,20090000336,,Comfigrip bandage 8.75cm size E,,Y
+20090000678,CLINIgrip bandage 8.75cm size E,20090000471,,easiGRIP bandage 8.75cm size E,,Y
+20090000678,CLINIgrip bandage 8.75cm size E,20090001238,,Surgrip bandage 8.75cm size E,,Y
+20090000680,CLINIgrip bandage 10cm size F,20090000459,,Elasticated tubular bandage BP 10cm size F,,Y
+20090000680,CLINIgrip bandage 10cm size F,20090000219,,Tubigrip bandage 10cm size F,,Y
+20090000680,CLINIgrip bandage 10cm size F,20090000338,,Comfigrip bandage 10cm size F,,Y
+20090000680,CLINIgrip bandage 10cm size F,20090000473,,easiGRIP bandage 10cm size F,,Y
+20090000680,CLINIgrip bandage 10cm size F,20090001240,,Surgrip bandage 10cm size F,,Y
+20090000682,CLINIgrip bandage 12cm size G,20090000461,,Elasticated tubular bandage BP 12cm size G,,Y
+20090000682,CLINIgrip bandage 12cm size G,20090000221,,Tubigrip bandage 12cm size G,,Y
+20090000682,CLINIgrip bandage 12cm size G,20090000340,,Comfigrip bandage 12cm size G,,Y
+20090000682,CLINIgrip bandage 12cm size G,20090000475,,easiGRIP bandage 12cm size G,,Y
+20090000682,CLINIgrip bandage 12cm size G,20090001242,,Surgrip bandage 12cm size G,,Y
+20090000684,CLINIgrip bandage 17.5cm size J,20090000552,,Elasticated tubular bandage BP 17.5cm size J,,Y
+20090001232,Surgrip bandage 6.25cm size B,20090000451,,Elasticated tubular bandage BP 6.25cm size B,,Y
+20090001232,Surgrip bandage 6.25cm size B,20090000211,,Tubigrip bandage 6.25cm size B,,Y
+20090001232,Surgrip bandage 6.25cm size B,20090000330,,Comfigrip bandage 6.25cm size B,,Y
+20090001232,Surgrip bandage 6.25cm size B,20090000465,,easiGRIP bandage 6.25cm size B,,Y
+20090001232,Surgrip bandage 6.25cm size B,20090000672,,CLINIgrip bandage 6.25cm size B,,Y
+20090001234,Surgrip bandage 6.75cm size C,20090000453,,Elasticated tubular bandage BP 6.75cm size C,,Y
+20090001234,Surgrip bandage 6.75cm size C,20090000213,,Tubigrip bandage 6.75cm size C,,Y
+20090001234,Surgrip bandage 6.75cm size C,20090000332,,Comfigrip bandage 6.75cm size C,,Y
+20090001234,Surgrip bandage 6.75cm size C,20090000467,,easiGRIP bandage 6.75cm size C,,Y
+20090001234,Surgrip bandage 6.75cm size C,20090000674,,CLINIgrip bandage 6.75cm size C,,Y
+20090001236,Surgrip bandage 7.5cm size D,20090000455,,Elasticated tubular bandage BP 7.5cm size D,,Y
+20090001236,Surgrip bandage 7.5cm size D,20090000215,,Tubigrip bandage 7.5cm size D,,Y
+20090001236,Surgrip bandage 7.5cm size D,20090000334,,Comfigrip bandage 7.5cm size D,,Y
+20090001236,Surgrip bandage 7.5cm size D,20090000469,,easiGRIP bandage 7.5cm size D,,Y
+20090001236,Surgrip bandage 7.5cm size D,20090000676,,CLINIgrip bandage 7.5cm size D,,Y
+20090001238,Surgrip bandage 8.75cm size E,20090000457,,Elasticated tubular bandage BP 8.75cm size E,,Y
+20090001238,Surgrip bandage 8.75cm size E,20090000217,,Tubigrip bandage 8.75cm size E,,Y
+20090001238,Surgrip bandage 8.75cm size E,20090000336,,Comfigrip bandage 8.75cm size E,,Y
+20090001238,Surgrip bandage 8.75cm size E,20090000471,,easiGRIP bandage 8.75cm size E,,Y
+20090001238,Surgrip bandage 8.75cm size E,20090000678,,CLINIgrip bandage 8.75cm size E,,Y
+20090001240,Surgrip bandage 10cm size F,20090000459,,Elasticated tubular bandage BP 10cm size F,,Y
+20090001240,Surgrip bandage 10cm size F,20090000219,,Tubigrip bandage 10cm size F,,Y
+20090001240,Surgrip bandage 10cm size F,20090000338,,Comfigrip bandage 10cm size F,,Y
+20090001240,Surgrip bandage 10cm size F,20090000473,,easiGRIP bandage 10cm size F,,Y
+20090001240,Surgrip bandage 10cm size F,20090000680,,CLINIgrip bandage 10cm size F,,Y
+20090001242,Surgrip bandage 12cm size G,20090000461,,Elasticated tubular bandage BP 12cm size G,,Y
+20090001242,Surgrip bandage 12cm size G,20090000221,,Tubigrip bandage 12cm size G,,Y
+20090001242,Surgrip bandage 12cm size G,20090000340,,Comfigrip bandage 12cm size G,,Y
+20090001242,Surgrip bandage 12cm size G,20090000475,,easiGRIP bandage 12cm size G,,Y
+20090001242,Surgrip bandage 12cm size G,20090000682,,CLINIgrip bandage 12cm size G,,Y
+20100000525,Leukofix tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000525,Leukofix tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000525,Leukofix tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000525,Leukofix tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000525,Leukofix tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000525,Leukofix tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000525,Leukofix tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000525,Leukofix tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000525,Leukofix tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000526,Leukofix tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000527,Leukofix tape 5cm,20100000553,,Permeable non-woven synthetic adhesive tape 5cm,,Y
+20100000527,Leukofix tape 5cm,20100000533,,Micropore tape 5cm,,Y
+20100000527,Leukofix tape 5cm,20100000538,,Clinipore tape 5cm,,Y
+20100000527,Leukofix tape 5cm,20100000543,,Scanpor tape 5cm,,Y
+20100000527,Leukofix tape 5cm,20100000563,,Leukopor tape 5cm,,Y
+20100000527,Leukofix tape 5cm,20100000732,,Transpore tape 5cm,,Y
+20100000527,Leukofix tape 5cm,20100000754,,A+E Microporous tape 5cm,,Y
+20100000527,Leukofix tape 5cm,20100000762,,Empore tape 5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000528,Blue Dot Microporous tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000529,Blue Dot Silk tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000530,Blue Dot Silk tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000531,Micropore tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000531,Micropore tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000531,Micropore tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000531,Micropore tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000531,Micropore tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000531,Micropore tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000531,Micropore tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000531,Micropore tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000531,Micropore tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000532,Micropore tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000532,Micropore tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000533,Micropore tape 5cm,20100000553,,Permeable non-woven synthetic adhesive tape 5cm,,Y
+20100000533,Micropore tape 5cm,20100000527,,Leukofix tape 5cm,,Y
+20100000533,Micropore tape 5cm,20100000538,,Clinipore tape 5cm,,Y
+20100000533,Micropore tape 5cm,20100000543,,Scanpor tape 5cm,,Y
+20100000533,Micropore tape 5cm,20100000563,,Leukopor tape 5cm,,Y
+20100000533,Micropore tape 5cm,20100000732,,Transpore tape 5cm,,Y
+20100000533,Micropore tape 5cm,20100000754,,A+E Microporous tape 5cm,,Y
+20100000533,Micropore tape 5cm,20100000762,,Empore tape 5cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000536,Clinipore tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000537,Clinipore tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000538,Clinipore tape 5cm,20100000553,,Permeable non-woven synthetic adhesive tape 5cm,,Y
+20100000538,Clinipore tape 5cm,20100000527,,Leukofix tape 5cm,,Y
+20100000538,Clinipore tape 5cm,20100000533,,Micropore tape 5cm,,Y
+20100000538,Clinipore tape 5cm,20100000543,,Scanpor tape 5cm,,Y
+20100000538,Clinipore tape 5cm,20100000563,,Leukopor tape 5cm,,Y
+20100000538,Clinipore tape 5cm,20100000732,,Transpore tape 5cm,,Y
+20100000538,Clinipore tape 5cm,20100000754,,A+E Microporous tape 5cm,,Y
+20100000538,Clinipore tape 5cm,20100000762,,Empore tape 5cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000541,Scanpor tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000542,Scanpor tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000543,Scanpor tape 5cm,20100000553,,Permeable non-woven synthetic adhesive tape 5cm,,Y
+20100000543,Scanpor tape 5cm,20100000527,,Leukofix tape 5cm,,Y
+20100000543,Scanpor tape 5cm,20100000533,,Micropore tape 5cm,,Y
+20100000543,Scanpor tape 5cm,20100000538,,Clinipore tape 5cm,,Y
+20100000543,Scanpor tape 5cm,20100000563,,Leukopor tape 5cm,,Y
+20100000543,Scanpor tape 5cm,20100000732,,Transpore tape 5cm,,Y
+20100000543,Scanpor tape 5cm,20100000754,,A+E Microporous tape 5cm,,Y
+20100000543,Scanpor tape 5cm,20100000762,,Empore tape 5cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000546,Mediplast tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000547,Mediplast tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000551,Permeable non-woven synthetic adhesive tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000552,Permeable non-woven synthetic adhesive tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000553,Permeable non-woven synthetic adhesive tape 5cm,20100000527,,Leukofix tape 5cm,,Y
+20100000553,Permeable non-woven synthetic adhesive tape 5cm,20100000533,,Micropore tape 5cm,,Y
+20100000553,Permeable non-woven synthetic adhesive tape 5cm,20100000538,,Clinipore tape 5cm,,Y
+20100000553,Permeable non-woven synthetic adhesive tape 5cm,20100000543,,Scanpor tape 5cm,,Y
+20100000553,Permeable non-woven synthetic adhesive tape 5cm,20100000563,,Leukopor tape 5cm,,Y
+20100000553,Permeable non-woven synthetic adhesive tape 5cm,20100000732,,Transpore tape 5cm,,Y
+20100000553,Permeable non-woven synthetic adhesive tape 5cm,20100000754,,A+E Microporous tape 5cm,,Y
+20100000553,Permeable non-woven synthetic adhesive tape 5cm,20100000762,,Empore tape 5cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000561,Leukopor tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000562,Leukopor tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000563,Leukopor tape 5cm,20100000553,,Permeable non-woven synthetic adhesive tape 5cm,,Y
+20100000563,Leukopor tape 5cm,20100000527,,Leukofix tape 5cm,,Y
+20100000563,Leukopor tape 5cm,20100000533,,Micropore tape 5cm,,Y
+20100000563,Leukopor tape 5cm,20100000538,,Clinipore tape 5cm,,Y
+20100000563,Leukopor tape 5cm,20100000543,,Scanpor tape 5cm,,Y
+20100000563,Leukopor tape 5cm,20100000732,,Transpore tape 5cm,,Y
+20100000563,Leukopor tape 5cm,20100000754,,A+E Microporous tape 5cm,,Y
+20100000563,Leukopor tape 5cm,20100000762,,Empore tape 5cm,,Y
+20100000732,Transpore tape 5cm,20100000553,,Permeable non-woven synthetic adhesive tape 5cm,,Y
+20100000732,Transpore tape 5cm,20100000527,,Leukofix tape 5cm,,Y
+20100000732,Transpore tape 5cm,20100000533,,Micropore tape 5cm,,Y
+20100000732,Transpore tape 5cm,20100000538,,Clinipore tape 5cm,,Y
+20100000732,Transpore tape 5cm,20100000543,,Scanpor tape 5cm,,Y
+20100000732,Transpore tape 5cm,20100000563,,Leukopor tape 5cm,,Y
+20100000732,Transpore tape 5cm,20100000754,,A+E Microporous tape 5cm,,Y
+20100000732,Transpore tape 5cm,20100000762,,Empore tape 5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000751,A+E Medical Securing tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000752,A+E Microporous tape 1.25cm,20100000760,,Empore tape 1.25cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000753,A+E Microporous tape 2.5cm,20100000761,,Empore tape 2.5cm,,Y
+20100000754,A+E Microporous tape 5cm,20100000553,,Permeable non-woven synthetic adhesive tape 5cm,,Y
+20100000754,A+E Microporous tape 5cm,20100000527,,Leukofix tape 5cm,,Y
+20100000754,A+E Microporous tape 5cm,20100000533,,Micropore tape 5cm,,Y
+20100000754,A+E Microporous tape 5cm,20100000538,,Clinipore tape 5cm,,Y
+20100000754,A+E Microporous tape 5cm,20100000543,,Scanpor tape 5cm,,Y
+20100000754,A+E Microporous tape 5cm,20100000563,,Leukopor tape 5cm,,Y
+20100000754,A+E Microporous tape 5cm,20100000732,,Transpore tape 5cm,,Y
+20100000754,A+E Microporous tape 5cm,20100000762,,Empore tape 5cm,,Y
+20100000760,Empore tape 1.25cm,20100000551,,Permeable non-woven synthetic adhesive tape 1.25cm,,Y
+20100000760,Empore tape 1.25cm,20100000525,,Leukofix tape 1.25cm,,Y
+20100000760,Empore tape 1.25cm,20100000529,,Blue Dot Silk tape 1.25cm,,Y
+20100000760,Empore tape 1.25cm,20100000531,,Micropore tape 1.25cm,,Y
+20100000760,Empore tape 1.25cm,20100000536,,Clinipore tape 1.25cm,,Y
+20100000760,Empore tape 1.25cm,20100000541,,Scanpor tape 1.25cm,,Y
+20100000760,Empore tape 1.25cm,20100000546,,Mediplast tape 1.25cm,,Y
+20100000760,Empore tape 1.25cm,20100000561,,Leukopor tape 1.25cm,,Y
+20100000760,Empore tape 1.25cm,20100000752,,A+E Microporous tape 1.25cm,,Y
+20100000761,Empore tape 2.5cm,20100000552,,Permeable non-woven synthetic adhesive tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000526,,Leukofix tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000528,,Blue Dot Microporous tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000530,,Blue Dot Silk tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000532,,Micropore tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000537,,Clinipore tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000542,,Scanpor tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000547,,Mediplast tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000562,,Leukopor tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000751,,A+E Medical Securing tape 2.5cm,,Y
+20100000761,Empore tape 2.5cm,20100000753,,A+E Microporous tape 2.5cm,,Y
+20100000762,Empore tape 5cm,20100000553,,Permeable non-woven synthetic adhesive tape 5cm,,Y
+20100000762,Empore tape 5cm,20100000527,,Leukofix tape 5cm,,Y
+20100000762,Empore tape 5cm,20100000533,,Micropore tape 5cm,,Y
+20100000762,Empore tape 5cm,20100000538,,Clinipore tape 5cm,,Y
+20100000762,Empore tape 5cm,20100000543,,Scanpor tape 5cm,,Y
+20100000762,Empore tape 5cm,20100000563,,Leukopor tape 5cm,,Y
+20100000762,Empore tape 5cm,20100000732,,Transpore tape 5cm,,Y
+20100000762,Empore tape 5cm,20100000754,,A+E Microporous tape 5cm,,Y
+21012600113,Otinova ear spray,1201010C0AAABAB,,Burow's Solution BP (Aluminium acetate 13%) ear drops,,Y
+21120000001,Rossmax peak flow meter low range,21120000121,,Peak flow meter low range,,Y
+21120000001,Rossmax peak flow meter low range,21120000131,,Mini-Wright peak flow meter low range,,Y
+21120000001,Rossmax peak flow meter low range,21120000137,,nSpire Pocket Peak peak flow meter low range,,Y
+21120000001,Rossmax peak flow meter low range,21120000162,,Medi peak flow meter low range,,Y
+21120000001,Rossmax peak flow meter low range,21120000164,,Easy peak flow meter low range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000002,Rossmax peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000120,Peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000121,Peak flow meter low range,21120000001,,Rossmax peak flow meter low range,,Y
+21120000121,Peak flow meter low range,21120000131,,Mini-Wright peak flow meter low range,,Y
+21120000121,Peak flow meter low range,21120000137,,nSpire Pocket Peak peak flow meter low range,,Y
+21120000121,Peak flow meter low range,21120000162,,Medi peak flow meter low range,,Y
+21120000121,Peak flow meter low range,21120000164,,Easy peak flow meter low range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000130,Mini-Wright peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000131,Mini-Wright peak flow meter low range,21120000121,,Peak flow meter low range,,Y
+21120000131,Mini-Wright peak flow meter low range,21120000001,,Rossmax peak flow meter low range,,Y
+21120000131,Mini-Wright peak flow meter low range,21120000137,,nSpire Pocket Peak peak flow meter low range,,Y
+21120000131,Mini-Wright peak flow meter low range,21120000162,,Medi peak flow meter low range,,Y
+21120000131,Mini-Wright peak flow meter low range,21120000164,,Easy peak flow meter low range,,Y
+21120000132,AirZone peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000132,AirZone peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000135,nSpire PiKo-1 peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000136,nSpire Pocket Peak peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000137,nSpire Pocket Peak peak flow meter low range,21120000121,,Peak flow meter low range,,Y
+21120000137,nSpire Pocket Peak peak flow meter low range,21120000001,,Rossmax peak flow meter low range,,Y
+21120000137,nSpire Pocket Peak peak flow meter low range,21120000131,,Mini-Wright peak flow meter low range,,Y
+21120000137,nSpire Pocket Peak peak flow meter low range,21120000162,,Medi peak flow meter low range,,Y
+21120000137,nSpire Pocket Peak peak flow meter low range,21120000164,,Easy peak flow meter low range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000140,MicroPeak peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000145,Vitalograph peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000146,Vitalograph Child peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000149,Vitalograph myPEF peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000155,Fyne Dynamics Pinnacle peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000160,Philips Respironics PersonalBest peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000161,Medi peak flow meter standard range,21120000163,,Easy peak flow meter standard range,,Y
+21120000162,Medi peak flow meter low range,21120000121,,Peak flow meter low range,,Y
+21120000162,Medi peak flow meter low range,21120000001,,Rossmax peak flow meter low range,,Y
+21120000162,Medi peak flow meter low range,21120000131,,Mini-Wright peak flow meter low range,,Y
+21120000162,Medi peak flow meter low range,21120000137,,nSpire Pocket Peak peak flow meter low range,,Y
+21120000162,Medi peak flow meter low range,21120000164,,Easy peak flow meter low range,,Y
+21120000163,Easy peak flow meter standard range,21120000120,,Peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000002,,Rossmax peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000130,,Mini-Wright peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000132,,AirZone peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000135,,nSpire PiKo-1 peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000136,,nSpire Pocket Peak peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000140,,MicroPeak peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000145,,Vitalograph peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000146,,Vitalograph Child peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000149,,Vitalograph myPEF peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000155,,Fyne Dynamics Pinnacle peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000160,,Philips Respironics PersonalBest peak flow meter standard range,,Y
+21120000163,Easy peak flow meter standard range,21120000161,,Medi peak flow meter standard range,,Y
+21120000164,Easy peak flow meter low range,21120000121,,Peak flow meter low range,,Y
+21120000164,Easy peak flow meter low range,21120000001,,Rossmax peak flow meter low range,,Y
+21120000164,Easy peak flow meter low range,21120000131,,Mini-Wright peak flow meter low range,,Y
+21120000164,Easy peak flow meter low range,21120000137,,nSpire Pocket Peak peak flow meter low range,,Y
+21120000164,Easy peak flow meter low range,21120000162,,Medi peak flow meter low range,,Y
+21210000014,AS Saliva Orthana spray,1203050A0AAABAB,,Artificial saliva spray,,Y
+21210000014,AS Saliva Orthana spray,21210000015,,AS Saliva Orthana spray refill,,Y
+21210000014,AS Saliva Orthana spray,21210000023,,Salivix spray,,Y
+21210000014,AS Saliva Orthana spray,21210000024,,Saliveze mouth spray,,Y
+21210000015,AS Saliva Orthana spray refill,1203050A0AAABAB,,Artificial saliva spray,,Y
+21210000015,AS Saliva Orthana spray refill,21210000014,,AS Saliva Orthana spray,,Y
+21210000015,AS Saliva Orthana spray refill,21210000023,,Salivix spray,,Y
+21210000015,AS Saliva Orthana spray refill,21210000024,,Saliveze mouth spray,,Y
+21210000023,Salivix spray,1203050A0AAABAB,,Artificial saliva spray,,Y
+21210000023,Salivix spray,21210000014,,AS Saliva Orthana spray,,Y
+21210000023,Salivix spray,21210000015,,AS Saliva Orthana spray refill,,Y
+21210000023,Salivix spray,21210000024,,Saliveze mouth spray,,Y
+21210000024,Saliveze mouth spray,1203050A0AAABAB,,Artificial saliva spray,,Y
+21210000024,Saliveze mouth spray,21210000014,,AS Saliva Orthana spray,,Y
+21210000024,Saliveze mouth spray,21210000015,,AS Saliva Orthana spray refill,,Y
+21210000024,Saliveze mouth spray,21210000023,,Salivix spray,,Y
+21220000117,Flexitol 10% Urea cream,1302010U0AAAFAF,,Urea 10% cream,,Y
+21220000117,Flexitol 10% Urea cream,21220000278,,Aquadrate 10% cream,,Y
+21220000117,Flexitol 10% Urea cream,21220000280,,Hydromol Intensive 10% cream,,Y
+21220000128,Hydromol Bath & Shower emollient,1302011L0AAAAAA,,Liquid paraffin light 37.8% / Isopropyl myristate 13% bath additive,,Y
+21220000133,Emulsifying ointment,1302010F0AAADAD,,Emulsifying ointment,,Y
+21220000133,Emulsifying ointment,21220000137,,EmulsifEss ointment,,Y
+21220000137,EmulsifEss ointment,1302010F0AAADAD,,Emulsifying ointment,,Y
+21220000137,EmulsifEss ointment,21220000133,,Emulsifying ointment,,Y
+21220000219,Fifty:50 ointment,130201000AAA6A6,,White soft paraffin 50% / Liquid paraffin 50% ointment,,Y
+21220000219,Fifty:50 ointment,21220000247,,Pure Health Liquid Paraffin 50% in White Soft Paraffin ointment,,Y
+21220000219,Fifty:50 ointment,21220000295,,KreaMoint 50:50 ointment,,Y
+21220000219,Fifty:50 ointment,21220000328,,Purosure ointment,,Y
+21220000220,Arjun 0.5% cream,1303000AAAAAAAA,,Menthol 0.5% in Aqueous cream,,Y
+21220000221,Arjun 1% cream,1303000AAAAABAB,,Menthol 1% in Aqueous cream,,Y
+21220000221,Arjun 1% cream,21220000225,,AquaSoothe 1% cream,,Y
+21220000222,Arjun 2% cream,1303000AAAAACAC,,Menthol 2% in Aqueous cream,,Y
+21220000222,Arjun 2% cream,21220000226,,AquaSoothe 2% cream,,Y
+21220000225,AquaSoothe 1% cream,1303000AAAAABAB,,Menthol 1% in Aqueous cream,,Y
+21220000225,AquaSoothe 1% cream,21220000221,,Arjun 1% cream,,Y
+21220000226,AquaSoothe 2% cream,1303000AAAAACAC,,Menthol 2% in Aqueous cream,,Y
+21220000226,AquaSoothe 2% cream,21220000222,,Arjun 2% cream,,Y
+21220000227,Zerolatum Emollient bath additive,1302011M0AAAGAG,,Liquid paraffin 65% / Acetylated wool alcohols 5% bath oil,,Y
+21220000229,LPL 63.4 bath additive and emollient,1302011L0AAAIAI,,Liquid paraffin light 63.4% bath additive,,Y
+21220000230,Zerodouble gel,130201000AACACA,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000230,Zerodouble gel,21220000251,,Epimax isomol gel,,Y
+21220000230,Zerodouble gel,21220000253,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000230,Zerodouble gel,21220000260,,MyriBase gel,,Y
+21220000230,Zerodouble gel,21220000262,,AproDerm gel,,Y
+21220000230,Zerodouble gel,21220000287,,Exmabase gel,,Y
+21220000247,Pure Health Liquid Paraffin 50% in White Soft Paraffin ointment,130201000AAA6A6,,White soft paraffin 50% / Liquid paraffin 50% ointment,,Y
+21220000247,Pure Health Liquid Paraffin 50% in White Soft Paraffin ointment,21220000219,,Fifty:50 ointment,,Y
+21220000247,Pure Health Liquid Paraffin 50% in White Soft Paraffin ointment,21220000295,,KreaMoint 50:50 ointment,,Y
+21220000247,Pure Health Liquid Paraffin 50% in White Soft Paraffin ointment,21220000328,,Purosure ointment,,Y
+21220000251,Epimax isomol gel,130201000AACACA,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000251,Epimax isomol gel,21220000230,,Zerodouble gel,,Y
+21220000251,Epimax isomol gel,21220000253,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000251,Epimax isomol gel,21220000260,,MyriBase gel,,Y
+21220000251,Epimax isomol gel,21220000262,,AproDerm gel,,Y
+21220000251,Epimax isomol gel,21220000287,,Exmabase gel,,Y
+21220000253,Isopropyl myristate 15% / Liquid paraffin 15% gel,130201000AACACA,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000253,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000230,,Zerodouble gel,,Y
+21220000253,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000251,,Epimax isomol gel,,Y
+21220000253,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000260,,MyriBase gel,,Y
+21220000253,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000262,,AproDerm gel,,Y
+21220000253,Isopropyl myristate 15% / Liquid paraffin 15% gel,21220000287,,Exmabase gel,,Y
+21220000260,MyriBase gel,130201000AACACA,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000260,MyriBase gel,21220000230,,Zerodouble gel,,Y
+21220000260,MyriBase gel,21220000251,,Epimax isomol gel,,Y
+21220000260,MyriBase gel,21220000253,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000260,MyriBase gel,21220000262,,AproDerm gel,,Y
+21220000260,MyriBase gel,21220000287,,Exmabase gel,,Y
+21220000262,AproDerm gel,130201000AACACA,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000262,AproDerm gel,21220000230,,Zerodouble gel,,Y
+21220000262,AproDerm gel,21220000251,,Epimax isomol gel,,Y
+21220000262,AproDerm gel,21220000253,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000262,AproDerm gel,21220000260,,MyriBase gel,,Y
+21220000262,AproDerm gel,21220000287,,Exmabase gel,,Y
+21220000273,Hydromol 2.5% cream,130201000AAA1A1,,Sodium pidolate 2.5% cream,,Y
+21220000278,Aquadrate 10% cream,1302010U0AAAFAF,,Urea 10% cream,,Y
+21220000278,Aquadrate 10% cream,21220000117,,Flexitol 10% Urea cream,,Y
+21220000278,Aquadrate 10% cream,21220000280,,Hydromol Intensive 10% cream,,Y
+21220000280,Hydromol Intensive 10% cream,1302010U0AAAFAF,,Urea 10% cream,,Y
+21220000280,Hydromol Intensive 10% cream,21220000117,,Flexitol 10% Urea cream,,Y
+21220000280,Hydromol Intensive 10% cream,21220000278,,Aquadrate 10% cream,,Y
+21220000287,Exmabase gel,130201000AACACA,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000287,Exmabase gel,21220000230,,Zerodouble gel,,Y
+21220000287,Exmabase gel,21220000251,,Epimax isomol gel,,Y
+21220000287,Exmabase gel,21220000253,,Isopropyl myristate 15% / Liquid paraffin 15% gel,,Y
+21220000287,Exmabase gel,21220000260,,MyriBase gel,,Y
+21220000287,Exmabase gel,21220000262,,AproDerm gel,,Y
+21220000289,Exmalatum cream,130201000AACDCD,,White soft paraffin 15% / Liquid paraffin light 6% cream,,Y
+21220000289,Exmalatum cream,21220000290,,ExmaQS cream,,Y
+21220000290,ExmaQS cream,130201000AACDCD,,White soft paraffin 15% / Liquid paraffin light 6% cream,,Y
+21220000290,ExmaQS cream,21220000289,,Exmalatum cream,,Y
+21220000295,KreaMoint 50:50 ointment,130201000AAA6A6,,White soft paraffin 50% / Liquid paraffin 50% ointment,,Y
+21220000295,KreaMoint 50:50 ointment,21220000219,,Fifty:50 ointment,,Y
+21220000295,KreaMoint 50:50 ointment,21220000247,,Pure Health Liquid Paraffin 50% in White Soft Paraffin ointment,,Y
+21220000295,KreaMoint 50:50 ointment,21220000328,,Purosure ointment,,Y
+21220000312,KreaMol A cream,1301010D0AAAAAA,,Cetomacrogol cream (Formula A),,Y
+21220000312,KreaMol A cream,21220000315,,Ovelle Cetomacrogol cream (Formula A),,Y
+21220000315,Ovelle Cetomacrogol cream (Formula A),1301010D0AAAAAA,,Cetomacrogol cream (Formula A),,Y
+21220000315,Ovelle Cetomacrogol cream (Formula A),21220000312,,KreaMol A cream,,Y
+21220000328,Purosure ointment,130201000AAA6A6,,White soft paraffin 50% / Liquid paraffin 50% ointment,,Y
+21220000328,Purosure ointment,21220000219,,Fifty:50 ointment,,Y
+21220000328,Purosure ointment,21220000247,,Pure Health Liquid Paraffin 50% in White Soft Paraffin ointment,,Y
+21220000328,Purosure ointment,21220000295,,KreaMoint 50:50 ointment,,Y
+21300000114,Mandanol eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000114,Mandanol eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+21300000114,Mandanol eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+21300000114,Mandanol eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+21300000114,Mandanol eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+21300000114,Mandanol eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+21300000114,Mandanol eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+21300000114,Mandanol eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+21300000114,Mandanol eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+21300000117,Lumecare Hypromellose 0.3% eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
+21300000119,Tear-Lac Hypromellose 0.3% eye drops preservative free,1108010F0AAANAN,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000119,Tear-Lac Hypromellose 0.3% eye drops preservative free,21300000158,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000119,Tear-Lac Hypromellose 0.3% eye drops preservative free,21300000159,,PF Drops Hypromellose 0.3% eye drops preservative free,,Y
+21300000119,Tear-Lac Hypromellose 0.3% eye drops preservative free,21300000162,,Hypromol 0.3% eye drops preservative free,,Y
+21300000119,Tear-Lac Hypromellose 0.3% eye drops preservative free,21300000176,,Evolve Hypromellose 0.3% eye drops preservative free,,Y
+21300000119,Tear-Lac Hypromellose 0.3% eye drops preservative free,21300000181,,Ocu-Lube 0.3% eye drops preservative free,,Y
+21300000119,Tear-Lac Hypromellose 0.3% eye drops preservative free,21300000973,,Ocufresh Hypromellose 0.3% eye drops preservative free,,Y
+21300000119,Tear-Lac Hypromellose 0.3% eye drops preservative free,21300000980,,AddTear Hypromellose 0.3% eye drops preservative free,,Y
+21300000129,Hypersal 5% eye drops,1108010K0AAABAB,,Sodium chloride 5% eye drops,,Y
+21300000129,Hypersal 5% eye drops,21300000130,,Sodium chloride 5% eye drops,,Y
+21300000129,Hypersal 5% eye drops,21300000944,,AabChlor Sodium Chloride 5% eye drops,,Y
+21300000129,Hypersal 5% eye drops,21300000951,,AacEdem Sodium Chloride 5% eye drops,,Y
+21300000130,Sodium chloride 5% eye drops,1108010K0AAABAB,,Sodium chloride 5% eye drops,,Y
+21300000130,Sodium chloride 5% eye drops,21300000129,,Hypersal 5% eye drops,,Y
+21300000130,Sodium chloride 5% eye drops,21300000944,,AabChlor Sodium Chloride 5% eye drops,,Y
+21300000130,Sodium chloride 5% eye drops,21300000951,,AacEdem Sodium Chloride 5% eye drops,,Y
+21300000133,PF Drops Sodium Chloride 5% eye drops preservative free,1108010K0AAA6A6,,Sodium chloride 5% eye drops preservative free,,Y
+21300000133,PF Drops Sodium Chloride 5% eye drops preservative free,21300000175,,ODM5 5% eye drops preservative free,,Y
+21300000133,PF Drops Sodium Chloride 5% eye drops preservative free,21300000197,,SodiEye 5% eye drops preservative free,,Y
+21300000133,PF Drops Sodium Chloride 5% eye drops preservative free,21300000199,,Aeon 5% eye drops preservative free,,Y
+21300000133,PF Drops Sodium Chloride 5% eye drops preservative free,21300000957,,AcuSal 5% eye drops preservative free,,Y
+21300000133,PF Drops Sodium Chloride 5% eye drops preservative free,21300000964,,Natklor 5% eye drops preservative free,,Y
+21300000133,PF Drops Sodium Chloride 5% eye drops preservative free,21300000976,,DROPtonic 5% eye drops preservative free,,Y
+21300000158,Hypromellose 0.3% eye drops preservative free,1108010F0AAANAN,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000158,Hypromellose 0.3% eye drops preservative free,21300000119,,Tear-Lac Hypromellose 0.3% eye drops preservative free,,Y
+21300000158,Hypromellose 0.3% eye drops preservative free,21300000159,,PF Drops Hypromellose 0.3% eye drops preservative free,,Y
+21300000158,Hypromellose 0.3% eye drops preservative free,21300000162,,Hypromol 0.3% eye drops preservative free,,Y
+21300000158,Hypromellose 0.3% eye drops preservative free,21300000176,,Evolve Hypromellose 0.3% eye drops preservative free,,Y
+21300000158,Hypromellose 0.3% eye drops preservative free,21300000181,,Ocu-Lube 0.3% eye drops preservative free,,Y
+21300000158,Hypromellose 0.3% eye drops preservative free,21300000973,,Ocufresh Hypromellose 0.3% eye drops preservative free,,Y
+21300000158,Hypromellose 0.3% eye drops preservative free,21300000980,,AddTear Hypromellose 0.3% eye drops preservative free,,Y
+21300000159,PF Drops Hypromellose 0.3% eye drops preservative free,1108010F0AAANAN,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000159,PF Drops Hypromellose 0.3% eye drops preservative free,21300000119,,Tear-Lac Hypromellose 0.3% eye drops preservative free,,Y
+21300000159,PF Drops Hypromellose 0.3% eye drops preservative free,21300000158,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000159,PF Drops Hypromellose 0.3% eye drops preservative free,21300000162,,Hypromol 0.3% eye drops preservative free,,Y
+21300000159,PF Drops Hypromellose 0.3% eye drops preservative free,21300000176,,Evolve Hypromellose 0.3% eye drops preservative free,,Y
+21300000159,PF Drops Hypromellose 0.3% eye drops preservative free,21300000181,,Ocu-Lube 0.3% eye drops preservative free,,Y
+21300000159,PF Drops Hypromellose 0.3% eye drops preservative free,21300000973,,Ocufresh Hypromellose 0.3% eye drops preservative free,,Y
+21300000159,PF Drops Hypromellose 0.3% eye drops preservative free,21300000980,,AddTear Hypromellose 0.3% eye drops preservative free,,Y
+21300000162,Hypromol 0.3% eye drops preservative free,1108010F0AAANAN,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000162,Hypromol 0.3% eye drops preservative free,21300000119,,Tear-Lac Hypromellose 0.3% eye drops preservative free,,Y
+21300000162,Hypromol 0.3% eye drops preservative free,21300000158,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000162,Hypromol 0.3% eye drops preservative free,21300000159,,PF Drops Hypromellose 0.3% eye drops preservative free,,Y
+21300000162,Hypromol 0.3% eye drops preservative free,21300000176,,Evolve Hypromellose 0.3% eye drops preservative free,,Y
+21300000162,Hypromol 0.3% eye drops preservative free,21300000181,,Ocu-Lube 0.3% eye drops preservative free,,Y
+21300000162,Hypromol 0.3% eye drops preservative free,21300000973,,Ocufresh Hypromellose 0.3% eye drops preservative free,,Y
+21300000162,Hypromol 0.3% eye drops preservative free,21300000980,,AddTear Hypromellose 0.3% eye drops preservative free,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+21300000169,Xailin Hydrate 0.3% eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
+21300000175,ODM5 5% eye drops preservative free,1108010K0AAA6A6,,Sodium chloride 5% eye drops preservative free,,Y
+21300000175,ODM5 5% eye drops preservative free,21300000133,,PF Drops Sodium Chloride 5% eye drops preservative free,,Y
+21300000175,ODM5 5% eye drops preservative free,21300000197,,SodiEye 5% eye drops preservative free,,Y
+21300000175,ODM5 5% eye drops preservative free,21300000199,,Aeon 5% eye drops preservative free,,Y
+21300000175,ODM5 5% eye drops preservative free,21300000957,,AcuSal 5% eye drops preservative free,,Y
+21300000175,ODM5 5% eye drops preservative free,21300000964,,Natklor 5% eye drops preservative free,,Y
+21300000175,ODM5 5% eye drops preservative free,21300000976,,DROPtonic 5% eye drops preservative free,,Y
+21300000176,Evolve Hypromellose 0.3% eye drops preservative free,1108010F0AAANAN,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000176,Evolve Hypromellose 0.3% eye drops preservative free,21300000119,,Tear-Lac Hypromellose 0.3% eye drops preservative free,,Y
+21300000176,Evolve Hypromellose 0.3% eye drops preservative free,21300000158,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000176,Evolve Hypromellose 0.3% eye drops preservative free,21300000159,,PF Drops Hypromellose 0.3% eye drops preservative free,,Y
+21300000176,Evolve Hypromellose 0.3% eye drops preservative free,21300000162,,Hypromol 0.3% eye drops preservative free,,Y
+21300000176,Evolve Hypromellose 0.3% eye drops preservative free,21300000181,,Ocu-Lube 0.3% eye drops preservative free,,Y
+21300000176,Evolve Hypromellose 0.3% eye drops preservative free,21300000973,,Ocufresh Hypromellose 0.3% eye drops preservative free,,Y
+21300000176,Evolve Hypromellose 0.3% eye drops preservative free,21300000980,,AddTear Hypromellose 0.3% eye drops preservative free,,Y
+21300000181,Ocu-Lube 0.3% eye drops preservative free,1108010F0AAANAN,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000181,Ocu-Lube 0.3% eye drops preservative free,21300000119,,Tear-Lac Hypromellose 0.3% eye drops preservative free,,Y
+21300000181,Ocu-Lube 0.3% eye drops preservative free,21300000158,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000181,Ocu-Lube 0.3% eye drops preservative free,21300000159,,PF Drops Hypromellose 0.3% eye drops preservative free,,Y
+21300000181,Ocu-Lube 0.3% eye drops preservative free,21300000162,,Hypromol 0.3% eye drops preservative free,,Y
+21300000181,Ocu-Lube 0.3% eye drops preservative free,21300000176,,Evolve Hypromellose 0.3% eye drops preservative free,,Y
+21300000181,Ocu-Lube 0.3% eye drops preservative free,21300000973,,Ocufresh Hypromellose 0.3% eye drops preservative free,,Y
+21300000181,Ocu-Lube 0.3% eye drops preservative free,21300000980,,AddTear Hypromellose 0.3% eye drops preservative free,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+21300000188,Ocufresh Hypromellose 0.3% eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
+21300000197,SodiEye 5% eye drops preservative free,1108010K0AAA6A6,,Sodium chloride 5% eye drops preservative free,,Y
+21300000197,SodiEye 5% eye drops preservative free,21300000133,,PF Drops Sodium Chloride 5% eye drops preservative free,,Y
+21300000197,SodiEye 5% eye drops preservative free,21300000175,,ODM5 5% eye drops preservative free,,Y
+21300000197,SodiEye 5% eye drops preservative free,21300000199,,Aeon 5% eye drops preservative free,,Y
+21300000197,SodiEye 5% eye drops preservative free,21300000957,,AcuSal 5% eye drops preservative free,,Y
+21300000197,SodiEye 5% eye drops preservative free,21300000964,,Natklor 5% eye drops preservative free,,Y
+21300000197,SodiEye 5% eye drops preservative free,21300000976,,DROPtonic 5% eye drops preservative free,,Y
+21300000199,Aeon 5% eye drops preservative free,1108010K0AAA6A6,,Sodium chloride 5% eye drops preservative free,,Y
+21300000199,Aeon 5% eye drops preservative free,21300000133,,PF Drops Sodium Chloride 5% eye drops preservative free,,Y
+21300000199,Aeon 5% eye drops preservative free,21300000175,,ODM5 5% eye drops preservative free,,Y
+21300000199,Aeon 5% eye drops preservative free,21300000197,,SodiEye 5% eye drops preservative free,,Y
+21300000199,Aeon 5% eye drops preservative free,21300000957,,AcuSal 5% eye drops preservative free,,Y
+21300000199,Aeon 5% eye drops preservative free,21300000964,,Natklor 5% eye drops preservative free,,Y
+21300000199,Aeon 5% eye drops preservative free,21300000976,,DROPtonic 5% eye drops preservative free,,Y
+21300000308,Teardew 0.3% eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000308,Teardew 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+21300000308,Teardew 0.3% eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+21300000308,Teardew 0.3% eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+21300000308,Teardew 0.3% eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+21300000308,Teardew 0.3% eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+21300000308,Teardew 0.3% eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+21300000308,Teardew 0.3% eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+21300000308,Teardew 0.3% eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
+21300000401,Liquifilm Tears 1.4% eye drops,1108010Q0AAAAAA,,Polyvinyl alcohol 1.4% eye drops,,Y
+21300000401,Liquifilm Tears 1.4% eye drops,21300000404,,Sno Tears 1.4% eye drops,,Y
+21300000402,Liquifilm Tears 1.4% eye drops 0.4ml unit dose preservative free,1108010Q0AAACAC,,Polyvinyl alcohol 1.4% eye drops 0.4ml unit dose preservative free,,Y
+21300000402,Liquifilm Tears 1.4% eye drops 0.4ml unit dose preservative free,21300000403,,Refresh Ophthalmic 1.4% eye drops 0.4ml unit dose,,Y
+21300000403,Refresh Ophthalmic 1.4% eye drops 0.4ml unit dose,1108010Q0AAACAC,,Polyvinyl alcohol 1.4% eye drops 0.4ml unit dose preservative free,,Y
+21300000403,Refresh Ophthalmic 1.4% eye drops 0.4ml unit dose,21300000402,,Liquifilm Tears 1.4% eye drops 0.4ml unit dose preservative free,,Y
+21300000404,Sno Tears 1.4% eye drops,1108010Q0AAAAAA,,Polyvinyl alcohol 1.4% eye drops,,Y
+21300000404,Sno Tears 1.4% eye drops,21300000401,,Liquifilm Tears 1.4% eye drops,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,21300000704,,Xailin 0.2% eye gel,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,21300000712,,Carbomer 0.2% eye gel,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,21300000952,,Aacomer 0.2% eye gel,,Y
+21300000700,Lumecare Carbomer 0.2% eye gel,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,21300000704,,Xailin 0.2% eye gel,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,21300000712,,Carbomer 0.2% eye gel,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,21300000952,,Aacomer 0.2% eye gel,,Y
+21300000701,Ocufresh Carbomer 0.2% lubricating eye gel,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,21300000704,,Xailin 0.2% eye gel,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,21300000712,,Carbomer 0.2% eye gel,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,21300000952,,Aacomer 0.2% eye gel,,Y
+21300000702,Clinitas Carbomer 0.2% eye gel,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,21300000704,,Xailin 0.2% eye gel,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,21300000712,,Carbomer 0.2% eye gel,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,21300000952,,Aacomer 0.2% eye gel,,Y
+21300000703,Artelac Nighttime 0.2% eye gel,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+21300000704,Xailin 0.2% eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000704,Xailin 0.2% eye gel,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+21300000704,Xailin 0.2% eye gel,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+21300000704,Xailin 0.2% eye gel,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+21300000704,Xailin 0.2% eye gel,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+21300000704,Xailin 0.2% eye gel,21300000712,,Carbomer 0.2% eye gel,,Y
+21300000704,Xailin 0.2% eye gel,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+21300000704,Xailin 0.2% eye gel,21300000952,,Aacomer 0.2% eye gel,,Y
+21300000704,Xailin 0.2% eye gel,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+21300000707,Ocu-Lube Carbomer 0.2% eye gel 0.6ml unit dose preservative free,1108010B0AAACAC,,Carbomer '980' 0.2% eye drops 0.6ml unit dose preservative free,,Y
+21300000707,Ocu-Lube Carbomer 0.2% eye gel 0.6ml unit dose preservative free,21300000969,,Puroptics Carbomer 0.2% eye gel 0.6ml unit dose preservative free,,Y
+21300000707,Ocu-Lube Carbomer 0.2% eye gel 0.6ml unit dose preservative free,21300000974,,Ocufresh Carbomer 0.2% lubricating eye gel 0.6ml unit dose preservative free,,Y
+21300000712,Carbomer 0.2% eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000712,Carbomer 0.2% eye gel,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+21300000712,Carbomer 0.2% eye gel,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+21300000712,Carbomer 0.2% eye gel,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+21300000712,Carbomer 0.2% eye gel,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+21300000712,Carbomer 0.2% eye gel,21300000704,,Xailin 0.2% eye gel,,Y
+21300000712,Carbomer 0.2% eye gel,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+21300000712,Carbomer 0.2% eye gel,21300000952,,Aacomer 0.2% eye gel,,Y
+21300000712,Carbomer 0.2% eye gel,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+21300000937,AaproMel 0.3% eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000937,AaproMel 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+21300000937,AaproMel 0.3% eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+21300000937,AaproMel 0.3% eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+21300000937,AaproMel 0.3% eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+21300000937,AaproMel 0.3% eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+21300000937,AaproMel 0.3% eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+21300000937,AaproMel 0.3% eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+21300000937,AaproMel 0.3% eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
+21300000942,AddLube Sodium Chloride 0.9% eye drops 0.5ml unit dose preservative free,1108010K0AAAYAY,,Sodium chloride 0.9% eye drops 0.5ml unit dose preservative free,,Y
+21300000944,AabChlor Sodium Chloride 5% eye drops,1108010K0AAABAB,,Sodium chloride 5% eye drops,,Y
+21300000944,AabChlor Sodium Chloride 5% eye drops,21300000129,,Hypersal 5% eye drops,,Y
+21300000944,AabChlor Sodium Chloride 5% eye drops,21300000130,,Sodium chloride 5% eye drops,,Y
+21300000944,AabChlor Sodium Chloride 5% eye drops,21300000951,,AacEdem Sodium Chloride 5% eye drops,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,21300000704,,Xailin 0.2% eye gel,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,21300000712,,Carbomer 0.2% eye gel,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,21300000952,,Aacomer 0.2% eye gel,,Y
+21300000946,AaCarb Carbomer 0.2% eye gel,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+21300000950,AacuLose Hypromellose 0.3% eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
+21300000951,AacEdem Sodium Chloride 5% eye drops,1108010K0AAABAB,,Sodium chloride 5% eye drops,,Y
+21300000951,AacEdem Sodium Chloride 5% eye drops,21300000129,,Hypersal 5% eye drops,,Y
+21300000951,AacEdem Sodium Chloride 5% eye drops,21300000130,,Sodium chloride 5% eye drops,,Y
+21300000951,AacEdem Sodium Chloride 5% eye drops,21300000944,,AabChlor Sodium Chloride 5% eye drops,,Y
+21300000952,Aacomer 0.2% eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000952,Aacomer 0.2% eye gel,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+21300000952,Aacomer 0.2% eye gel,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+21300000952,Aacomer 0.2% eye gel,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+21300000952,Aacomer 0.2% eye gel,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+21300000952,Aacomer 0.2% eye gel,21300000704,,Xailin 0.2% eye gel,,Y
+21300000952,Aacomer 0.2% eye gel,21300000712,,Carbomer 0.2% eye gel,,Y
+21300000952,Aacomer 0.2% eye gel,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+21300000952,Aacomer 0.2% eye gel,21300000968,,Puroptics Carbomer 0.2% eye gel,,Y
+21300000957,AcuSal 5% eye drops preservative free,1108010K0AAA6A6,,Sodium chloride 5% eye drops preservative free,,Y
+21300000957,AcuSal 5% eye drops preservative free,21300000133,,PF Drops Sodium Chloride 5% eye drops preservative free,,Y
+21300000957,AcuSal 5% eye drops preservative free,21300000175,,ODM5 5% eye drops preservative free,,Y
+21300000957,AcuSal 5% eye drops preservative free,21300000197,,SodiEye 5% eye drops preservative free,,Y
+21300000957,AcuSal 5% eye drops preservative free,21300000199,,Aeon 5% eye drops preservative free,,Y
+21300000957,AcuSal 5% eye drops preservative free,21300000964,,Natklor 5% eye drops preservative free,,Y
+21300000957,AcuSal 5% eye drops preservative free,21300000976,,DROPtonic 5% eye drops preservative free,,Y
+21300000964,Natklor 5% eye drops preservative free,1108010K0AAA6A6,,Sodium chloride 5% eye drops preservative free,,Y
+21300000964,Natklor 5% eye drops preservative free,21300000133,,PF Drops Sodium Chloride 5% eye drops preservative free,,Y
+21300000964,Natklor 5% eye drops preservative free,21300000175,,ODM5 5% eye drops preservative free,,Y
+21300000964,Natklor 5% eye drops preservative free,21300000197,,SodiEye 5% eye drops preservative free,,Y
+21300000964,Natklor 5% eye drops preservative free,21300000199,,Aeon 5% eye drops preservative free,,Y
+21300000964,Natklor 5% eye drops preservative free,21300000957,,AcuSal 5% eye drops preservative free,,Y
+21300000964,Natklor 5% eye drops preservative free,21300000976,,DROPtonic 5% eye drops preservative free,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,1108010B0AAABAB,,Carbomer '980' 0.2% eye drops,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,21300000700,,Lumecare Carbomer 0.2% eye gel,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,21300000701,,Ocufresh Carbomer 0.2% lubricating eye gel,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,21300000702,,Clinitas Carbomer 0.2% eye gel,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,21300000703,,Artelac Nighttime 0.2% eye gel,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,21300000704,,Xailin 0.2% eye gel,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,21300000712,,Carbomer 0.2% eye gel,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,21300000946,,AaCarb Carbomer 0.2% eye gel,,Y
+21300000968,Puroptics Carbomer 0.2% eye gel,21300000952,,Aacomer 0.2% eye gel,,Y
+21300000969,Puroptics Carbomer 0.2% eye gel 0.6ml unit dose preservative free,1108010B0AAACAC,,Carbomer '980' 0.2% eye drops 0.6ml unit dose preservative free,,Y
+21300000969,Puroptics Carbomer 0.2% eye gel 0.6ml unit dose preservative free,21300000707,,Ocu-Lube Carbomer 0.2% eye gel 0.6ml unit dose preservative free,,Y
+21300000969,Puroptics Carbomer 0.2% eye gel 0.6ml unit dose preservative free,21300000974,,Ocufresh Carbomer 0.2% lubricating eye gel 0.6ml unit dose preservative free,,Y
+21300000973,Ocufresh Hypromellose 0.3% eye drops preservative free,1108010F0AAANAN,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000973,Ocufresh Hypromellose 0.3% eye drops preservative free,21300000119,,Tear-Lac Hypromellose 0.3% eye drops preservative free,,Y
+21300000973,Ocufresh Hypromellose 0.3% eye drops preservative free,21300000158,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000973,Ocufresh Hypromellose 0.3% eye drops preservative free,21300000159,,PF Drops Hypromellose 0.3% eye drops preservative free,,Y
+21300000973,Ocufresh Hypromellose 0.3% eye drops preservative free,21300000162,,Hypromol 0.3% eye drops preservative free,,Y
+21300000973,Ocufresh Hypromellose 0.3% eye drops preservative free,21300000176,,Evolve Hypromellose 0.3% eye drops preservative free,,Y
+21300000973,Ocufresh Hypromellose 0.3% eye drops preservative free,21300000181,,Ocu-Lube 0.3% eye drops preservative free,,Y
+21300000973,Ocufresh Hypromellose 0.3% eye drops preservative free,21300000980,,AddTear Hypromellose 0.3% eye drops preservative free,,Y
+21300000974,Ocufresh Carbomer 0.2% lubricating eye gel 0.6ml unit dose preservative free,1108010B0AAACAC,,Carbomer '980' 0.2% eye drops 0.6ml unit dose preservative free,,Y
+21300000974,Ocufresh Carbomer 0.2% lubricating eye gel 0.6ml unit dose preservative free,21300000707,,Ocu-Lube Carbomer 0.2% eye gel 0.6ml unit dose preservative free,,Y
+21300000974,Ocufresh Carbomer 0.2% lubricating eye gel 0.6ml unit dose preservative free,21300000969,,Puroptics Carbomer 0.2% eye gel 0.6ml unit dose preservative free,,Y
+21300000976,DROPtonic 5% eye drops preservative free,1108010K0AAA6A6,,Sodium chloride 5% eye drops preservative free,,Y
+21300000976,DROPtonic 5% eye drops preservative free,21300000133,,PF Drops Sodium Chloride 5% eye drops preservative free,,Y
+21300000976,DROPtonic 5% eye drops preservative free,21300000175,,ODM5 5% eye drops preservative free,,Y
+21300000976,DROPtonic 5% eye drops preservative free,21300000197,,SodiEye 5% eye drops preservative free,,Y
+21300000976,DROPtonic 5% eye drops preservative free,21300000199,,Aeon 5% eye drops preservative free,,Y
+21300000976,DROPtonic 5% eye drops preservative free,21300000957,,AcuSal 5% eye drops preservative free,,Y
+21300000976,DROPtonic 5% eye drops preservative free,21300000964,,Natklor 5% eye drops preservative free,,Y
+21300000979,Ocufresh-C 0.3% eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000979,Ocufresh-C 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+21300000979,Ocufresh-C 0.3% eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+21300000979,Ocufresh-C 0.3% eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+21300000979,Ocufresh-C 0.3% eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+21300000979,Ocufresh-C 0.3% eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+21300000979,Ocufresh-C 0.3% eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+21300000979,Ocufresh-C 0.3% eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+21300000979,Ocufresh-C 0.3% eye drops,21300000985,,Puroptics Hypromellose 0.3% eye drops,,Y
+21300000980,AddTear Hypromellose 0.3% eye drops preservative free,1108010F0AAANAN,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000980,AddTear Hypromellose 0.3% eye drops preservative free,21300000119,,Tear-Lac Hypromellose 0.3% eye drops preservative free,,Y
+21300000980,AddTear Hypromellose 0.3% eye drops preservative free,21300000158,,Hypromellose 0.3% eye drops preservative free,,Y
+21300000980,AddTear Hypromellose 0.3% eye drops preservative free,21300000159,,PF Drops Hypromellose 0.3% eye drops preservative free,,Y
+21300000980,AddTear Hypromellose 0.3% eye drops preservative free,21300000162,,Hypromol 0.3% eye drops preservative free,,Y
+21300000980,AddTear Hypromellose 0.3% eye drops preservative free,21300000176,,Evolve Hypromellose 0.3% eye drops preservative free,,Y
+21300000980,AddTear Hypromellose 0.3% eye drops preservative free,21300000181,,Ocu-Lube 0.3% eye drops preservative free,,Y
+21300000980,AddTear Hypromellose 0.3% eye drops preservative free,21300000973,,Ocufresh Hypromellose 0.3% eye drops preservative free,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,1108010F0AAAAAA,,Hypromellose 0.3% eye drops,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,21300000114,,Mandanol eye drops,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,21300000117,,Lumecare Hypromellose 0.3% eye drops,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,21300000169,,Xailin Hydrate 0.3% eye drops,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,21300000188,,Ocufresh Hypromellose 0.3% eye drops,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,21300000308,,Teardew 0.3% eye drops,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,21300000937,,AaproMel 0.3% eye drops,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,21300000950,,AacuLose Hypromellose 0.3% eye drops,,Y
+21300000985,Puroptics Hypromellose 0.3% eye drops,21300000979,,Ocufresh-C 0.3% eye drops,,Y
+21430000101,Relaxit Micro-enema 5ml,0106040R0AAAFAF,,Sodium citrate compound 5ml enema,,Y
