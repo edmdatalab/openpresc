@@ -41,16 +41,6 @@
         "source_id": "pcn_details",
         "command": "org_codes --pcn"
     },
-    "fetch_prescribing_metadata_chemicals": {
-        "type": "auto_fetch",
-        "source_id": "prescribing_metadata",
-        "command": "fetch_prescribing_metadata chemicals"
-    },
-    "fetch_prescribing_metadata_addresses": {
-        "type": "auto_fetch",
-        "source_id": "prescribing_metadata",
-        "command": "fetch_prescribing_metadata addresses"
-    },
     "fetch_nhs_postcode_file": {
         "type": "auto_fetch",
         "source_id": "nhs_postcode_file",
@@ -141,24 +131,6 @@
             "import_practice_details"
         ]
     },
-    "import_hscic_chemicals": {
-        "type": "import",
-        "source_id": "prescribing_metadata",
-        "command": "import_hscic_chemicals --chem_file T*CHEM*.CSV",
-        "dependencies": [
-            "fetch_prescribing_metadata_chemicals"
-        ]
-    },
-    "import_hscic_practices": {
-        "type": "import",
-        "source_id": "prescribing_metadata",
-        "command": "import_practices --hscic_address T*ADDR*.CSV",
-        "dependencies": [
-            "fetch_prescribing_metadata_addresses",
-            "import_ccg_details",
-            "import_practice_details"
-        ]
-    },
     "convert_hscic_prescribing": {
         "type": "convert",
         "source_id": "prescribing",
@@ -172,7 +144,6 @@
         "source_id": "dispensing_practices",
         "command": "import_practice_dispensing_status --filename dispensing_practices*.csv",
         "dependencies": [
-            "import_hscic_practices",
             "import_practice_details"
         ]
     },
@@ -182,7 +153,6 @@
         "command": "import_list_sizes --filename gp-reg-pat-prac-quin-age.csv",
         "dependencies": [
             "fetch_patient_list_size",
-            "import_hscic_practices",
             "import_practice_details",
             "import_patient_list_weightings"
         ]
@@ -201,7 +171,6 @@
         "dependencies": [
             "convert_hscic_prescribing",
             "import_patient_list_size",
-            "import_hscic_practices",
             "import_ccg_details",
             "import_practice_details"
         ]
