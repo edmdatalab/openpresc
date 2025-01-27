@@ -4,6 +4,7 @@ from django import template
 from django.contrib.humanize.templatetags.humanize import intcomma
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.utils import timezone
+from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
 register = template.Library()
@@ -98,3 +99,15 @@ def fancy_join(lst, sep=", ", final_sep=" and "):
 @register.filter
 def username_from_email(email):
     return email.split("@")[0]
+
+
+@register.simple_tag(takes_context=True)
+def dashboard_measure_uri(context, measure):
+    return format_html(
+        "{}&tags={}#{}",
+        context["dashboard_uri"],
+        # It doesn't matter which tag we chose, it just needs to be one that the target
+        # measure has so we know it will appear on the linked dashboard
+        measure.tags[0],
+        measure.id,
+    )

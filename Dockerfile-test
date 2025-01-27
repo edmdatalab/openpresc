@@ -1,4 +1,4 @@
-FROM ghcr.io/ebmdatalab/openprescribing-py312-base:latest
+FROM ghcr.io/bennettoxford/openprescribing-py312-base:latest
 
 RUN wget -qO- https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz | tar xvz -C /usr/bin
 RUN apt-get update && apt-get install -y firefox-esr xvfb

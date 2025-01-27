@@ -1,7 +1,7 @@
 {
   "name": "Anxiolytics and Hypnotics: Average Daily Quantity per item",
   "title": "Anxiolytics and Hypnotics: Average Daily Quantity per item ",
-  "description": "Number of average daily quantities (ADQs) per item for anxiolytics and hypnotics",
+  "description": "Number of average daily quantities (ADQs) per item for oral anxiolytics and hypnotics",
   "numerator_short": "Anxiolytics and Hypnotics ADQ",
   "denominator_short": "Prescription items",
   "y_label": "ADQ per item",
@@ -9,9 +9,9 @@
     "Anxiolytics and Hypnotics are drugs that are prescribed for short-term treatment of conditions such as",
     "anxiety and sleep problems. <a href='https://www.rcpsych.ac.uk/expertadvice/treatments/benzodiazepines.aspx'> The Royal College of Psychiatrists states</a> ",
     "that \"around 4 in every 10 people who take them every day for more than 6 weeks will become addicted\" ",
-    "and therefore they should not be prescribed for longer than 4 weeks.  This measure shows the mean Average Daily Quantity (ADQ) given per prescription, ",
+    "and therefore they should not be prescribed for longer than 4 weeks.  This measure shows the mean Average Daily Quantity (ADQ) given per prescription for oral drugs, ",
     "for both the older benzodiazepines, such as diazepam and temazepam, and the newer \"Z-drugs\", such as zopiclone.  It excludes items that do not have ",
-    "an ADQ, such as melatonin."
+    "an ADQ, such as melatonin and daridorexant."
   ],
   "tags": [
     "core",
@@ -24,31 +24,29 @@
   "is_cost_based": false,
   "low_is_good": true,
   "numerator_type": "custom",
-  "numerator_columns": "SUM(p.quantity * r.percent_of_adq) AS numerator",
-  "numerator_from": "{hscic}.normalised_prescribing p  LEFT JOIN {hscic}.bdz_adq r  ON concat(substr(p.bnf_code,0,9),substr(p.bnf_code,-2)) = concat(substr(r.bnf_code,0,9),substr(r.bnf_code,-2)) ",
+  "numerator_columns": "SUM(p.total_adq_usage) AS numerator",
+  "numerator_from": "{measures}.vw__bdz_total_adq p",
   "numerator_where": [
     "p.bnf_code LIKE '0401%' AND --Hypnotics and Anxiolytics \n",
+    "p.bnf_code NOT LIKE '0401010S0%' AND   --Potassium bromide \n",
     "p.bnf_code NOT LIKE '0401010AC%' AND   --Sodium Oxybate \n",
     "p.bnf_code NOT LIKE '0401010AD%' AND   --Melatonin \n",
-    "p.bnf_code NOT LIKE '0401020K0%AD' AND --Diazepam_Soln 5mg/2.5ml Rectal Tube \n",
-    "p.bnf_code NOT LIKE '0401020K0%AE' AND --Diazepam_Soln 10mg/2.5ml Rectal Tube \n",
-    "p.bnf_code NOT LIKE '0401020K0%BQ'     --Diazepam_Soln 2.5mg/1.25ml Rectal Tube"
+    "p.bnf_code NOT LIKE '0401040%'         --Other hypnotics and anxiolytics \n"
   ],
   "denominator_type": "custom",
-  "denominator_columns": "SUM(items) AS denominator",
-  "denominator_from": "{hscic}.normalised_prescribing p ",
+  "denominator_columns": "SUM(p.items) AS denominator",
+  "denominator_from": "{measures}.vw__bdz_total_adq p",
   "denominator_where": [
     "p.bnf_code LIKE '0401%' AND --Hypnotics and Anxiolytics \n",
+    "p.bnf_code NOT LIKE '0401010S0%' AND   --Potassium bromide \n",
     "p.bnf_code NOT LIKE '0401010AC%' AND   --Sodium Oxybate \n",
     "p.bnf_code NOT LIKE '0401010AD%' AND   --Melatonin \n",
-    "p.bnf_code NOT LIKE '0401020K0%AD' AND --Diazepam_Soln 5mg/2.5ml Rectal Tube \n",
-    "p.bnf_code NOT LIKE '0401020K0%AE' AND --Diazepam_Soln 10mg/2.5ml Rectal Tube \n",
-    "p.bnf_code NOT LIKE '0401020K0%BQ'     --Diazepam_Soln 2.5mg/1.25ml Rectal Tube"
+    "p.bnf_code NOT LIKE '0401040%'         --Other hypnotics and anxiolytics \n"
   ],
   "authored_by": "richard.croker@phc.ox.ac.uk",
   "checked_by": "andrew.brown@phc.ox.ac.uk",
-  "date_reviewed": "2024-02-12",
-  "next_review": "2025-02-12",
+  "date_reviewed": "2025-01-20",
+  "next_review": "2027-01-20",
   "measure_complexity": "medium",
   "measure_type": "custom",
   "radar_exclude": false

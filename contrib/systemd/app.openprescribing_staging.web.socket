@@ -1,5 +1,0 @@
-[Socket]
-ListenStream=/webapps/openprescribing_staging/run/gunicorn.sock
-
-[Install]
-WantedBy=sockets.target

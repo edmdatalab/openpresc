@@ -115,15 +115,6 @@
         "data_dir": "prescribing_v2",
         "core_data": true
     },
-    "prescribing_metadata": {
-        "title": "GP Practice Prescribing metadata",
-        "description": "Metadata for joining with prescribing data",
-        "publisher": "Health & Social Care Information Centre",
-        "publication_schedule": "end of each month",
-        "publication_lag": "80 - 100 days",
-        "index_url": "http://content.digital.nhs.uk/article/2021/Website-Search?q=presentation+level+data&go=Go&area=both",
-        "core_data": true
-    },
     "qof": {
         "title": "The Quality and Outcomes Framework (QOF) is the annual reward and incentive programme for GPs",
         "description": "The incentives are based on prevalence of certain conditions, and the data is presented at various output levels, including practice and CCG. It runs across a financial year (i.e. April - March)",

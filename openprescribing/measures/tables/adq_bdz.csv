@@ -1,0 +1,18 @@
+chemical_name,chemical_code,adq,adq_unit
+Lorazepam,0401020P0,2.5,mg
+Nitrazepam,0401010R0,5.0,mg
+Zopiclone,0401010Z0,7.5,mg
+Zaleplon,0401010W0,7.5,mg
+Zolpidem tartrate,0401010Y0,10.0,mg
+Diazepam,0401020K0,10.0,mg
+Temazepam,0401010T0,20.0,mg
+Oxazepam,0401020T0,30.0,mg
+Buspirone hydrochloride,0401020B0,30.0,mg
+Chlordiazepoxide hydrochloride,0401020E0,30.0,mg
+Clomethiazole,0401010F0,384.0,mg
+Lormetazepam,0401010P0,1.0,mg
+Loprazolam mesilate,0401010N0,1.0,mg
+Cloral betaine,0401010C0,1414.0,mg
+Clomethiazole edisilate,0401010D0,500.0,mg
+Chloral hydrate,0401010B0,1000.0,mg
+Meprobamate,0401020R0,1200.0,mg

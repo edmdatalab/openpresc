@@ -9,13 +9,11 @@ from requests.exceptions import InvalidJSONError, RequestException
 from .import_measures import BadRequest
 from .import_measures import Command as ImportMeasuresCommand
 from .import_measures import ImportLog, relativedelta
-from .import_measures import upload_supplementary_tables
 
 
 class Command(BaseCommand):
     def handle(self, github_url, **options):
         try:
-            upload_supplementary_tables()
             measure_id = import_preview_measure(github_url)
         except BadRequest as e:
             # We want these errors to be visble to users who run via bennettbot but the only

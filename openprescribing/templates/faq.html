@@ -19,7 +19,9 @@
 <p><a href="#extractdownload">How do I download an extract of the data?</a></p>
 <p><a href="#cite">How do I cite OpenPrescribing?</a></p>
 <p><a href="#timeperiod">What time period does the dataset cover?</a></p>
+<p><a href="#olddata">How can I access data older than available on your website?</a></p>
 <p><a href="#compare">Why do OpenPrescribing figures not always match with other prescribing data analysis platforms?</a></p>
+<p><a href="#subscribe">How do I subscribe/unsubscribe from emails?</a></p>
 
 <h2>Prescribing data</h2>
 <p><a href="#datasource">Where do you get the data from?</a></p>
@@ -73,9 +75,22 @@
 <h3 id="timeperiod">What time period does the dataset cover?</h3>
 <p>We have data from the past 5 years on OpenPrescribing.net, and from 1998 in the <a href="https://openprescribing.net/long_term_trends/">Long Term Trends section</a>.</p>
 
+<h3 id="olddata">How can I access data older than available on your website?</h3>
+<p>Given our limited resources, we do not routinely provide data not accessible through the website. However, you may be able to access this data yourself. The NHS BSA openly publishes the <a href="https://opendata.nhsbsa.net/dataset/english-prescribing-data-epd">English prescribing dataset</a> dating back to January 2014. If data prior to 2014 is required, the <a href="https://www.nhsbsa.nhs.uk/statistical-collections/prescription-cost-analysis-england">Prescription Cost Analysis dataset</a> is accessible from 1998 onward although is not as detailed as the English Prescribing Dataset.</p>
+
 <h3 id="compare">Why do OpenPrescribing figures not always match with other prescribing data analysis platforms?</h3>
 <p>At OpenPrescribing we anticipate that our results will not always be exactly the same as those displayed on alternative data analysis platforms. There are two common reasons for this. Firstly, different platforms may use different underlying datasets. At OpenPrescribing we use two openly available datasets: the <a href="https://www.nhsbsa.nhs.uk/prescription-data/prescribing-data/english-prescribing-data-epd">English Prescribing dataset (EPD)</a> and the <a href="https://www.nhsbsa.nhs.uk/prescription-data/dispensing-data/prescription-cost-analysis-pca-data"> Prescription Cost Analysis (PCA)</a>. Secondly, different platforms will make different choices in their analytic code for preparing the data and displaying it to users.</p>
 <p>All our code used in data preparation, analysis and visualisation is openly available on the Bennett Institute <a href="https://github.com/ebmdatalab/openprescribing"> Github</a> for inspection and re-use by anyone. You can also click on the "<i>view technical details for this measure</i>" link in each measure to show exactly what code we are using to create it.</p>
+
+<h3 id="subscribe">How do I subscribe/unsubscribe from emails?</h3>
+<p>You can subscribe to our monthly prescribing update emails by going to the dashboard for your chosen organisation (for example by using the "Area and Practice Dashboards" option from our navigation bar), then entering your email address under the "Sign up for alerts or updates" section:</p>
+<img src="{% static 'img/subscribe_example.png' %}" alt="Sign up for alerts or updates box example"/>
+<p>From the organisation dashboard you can also navigate to the price concessions dashboard and subscribe for regular price concession data email alerts:</p>
+<img src="{% static 'img/price_concessions_email_box.png' %}" alt="Sign up for price concession alerts box example"/>
+<p>You can also subscribe to our <a href="https://openprescribing.net/contact/">regular OpenPrescribing newsletter updates</a></p>
+<p>You can unsubscribe or manage your alerts by following the link included at the bottom of all our emails:</p>
+<img src="{% static 'img/unsubscribe_link.png' %}" alt="Managed alerts/unsubscribe link example"/>
+
 <h2>Prescribing Dataset</h2>
 
 <h3 id="datasource">Where do you get the data from?</h3>
@@ -94,7 +109,7 @@
 </p>
 <p>
   For more detail see the NHS Digital Practice level prescribing 
-  <a https://digital.nhs.uk/data-and-information/areas-of-interest/prescribing/practice-level-prescribing-in-england-a-summary/practice-level-prescribing-glossary-of-terms#items">glossary of terms</a>
+  <a href="https://digital.nhs.uk/data-and-information/areas-of-interest/prescribing/practice-level-prescribing-in-england-a-summary/practice-level-prescribing-glossary-of-terms#items">glossary of terms</a>
 </p>
 
 <h3 id="prescquantity">What does quantity mean?</h3>
@@ -197,11 +212,9 @@
 
 <p>You can use "list size" which tells you how many patients a practice covers, but this can be problematic, because different practices will have different kinds of patients, some with lots of older people, and so on.</p>
 
-<p>To account for this the NHS uses imperfect but useful "adjusted" denominators called STAR-PUs, which try to account for the age and sex structure of the practice's population. These STAR-PUs are specific to specific disease areas, because they try to account for different rates of usage -- in different age bands of the population - for specific treatment. So for the STAR-PU for cardiovascular disease prevention prescribing, for example, gives you extra points for every man aged 40-50, even more for men aged 50-60, and so on; but less for women in the same bands, and very little for younger people.</p>
-
-<p>Generating these STAR-PUs for each practice, each disease area, and each month, takes coder time, so we currently only have the STAR-PU for antibiotics.</p>
-
 <p>When using the data ourselves we tend to use more thoughtful approaches to try to "bake in" population prevalence or need for a particular condition, or to explore different prescribing patterns. For example, we often use whole classes of drug as the denominator in our analyses, as in the video walkthroughs; or we compare the use of one drug against the use of another. When looking at whether a practice is using a lot of Nexium (an expensive "proton pump inhibitor" pill for treating ulcers) we might look at "Nexium prescribing" versus "all proton pump inhibitor prescribing" (<a href="{% url 'analyse' %}#org=Sub-ICB Location&numIds=0103050E0BB&denomIds=1.3.5">example</a>).</p>
+
+<p>We have removed STAR-PUs as a denominator option on our analysis page and from several of our pre-built antibiotic measures. This decision was made following user consultation, due to concerns about the appropriateness of the STAR-PU weightings, which have not been reviewed since 2013. You can read more about this in our <a href="https://www.bennett.ox.ac.uk/blog/2024/02/star-pus-should-we-still-be-using-them/">blog</a>.</p>
 
 <p>Play around and <a href="mailto:{{ FEEDBACK_MAILTO }}">let us know</a> if you find anything interesting, or develop any interesting methods.</p>
 

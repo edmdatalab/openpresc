@@ -12,7 +12,7 @@ SELECT
   raw_prescribing.ACTUAL_COST AS actual_cost,
   raw_prescribing.QUANTITY AS quantity_per_item,
   raw_prescribing.TOTAL_QUANTITY AS total_quantity,
-  PARSE_DATETIME("%F", REGEXP_REPLACE(raw_prescribing._FILE_NAME, "^.+/(20\\d\\d)_(\\d\\d)/[^/]+$", "\\1-\\2-01")) AS month
+  PARSE_TIMESTAMP("%F", REGEXP_REPLACE(raw_prescribing._FILE_NAME, "^.+/(20\\d\\d)_(\\d\\d)/[^/]+$", "\\1-\\2-01")) AS month
 FROM
   {project}.{hscic}.raw_prescribing_v2 AS raw_prescribing
 LEFT JOIN

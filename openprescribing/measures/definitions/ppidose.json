@@ -1,7 +1,7 @@
 {
   "name": "Higher dose Proton Pump Inhibitors (PPIs)",
-  "title": "Higher dose Proton Prump Inhibitors, compared with prescribing of all PPIs (excluding liquids)",
-  "description": "Prescribing of higher dose Proton Prump Inhibitors compared with prescribing of all PPIs (excluding liquids)",
+  "title": "Higher dose Proton Pump Inhibitors, compared with prescribing of all PPIs (excluding liquids)",
+  "description": "Prescribing of higher dose Proton Pump Inhibitors compared with prescribing of all PPIs (excluding liquids)",
   "numerator_short": "Higher dose PPI items (excluding liquids)",
   "denominator_short": "All PPI items (excluding liquids)",
   "y_label": "Higher dose PPI items vs all PPI items (excluding liquids)",
@@ -10,7 +10,7 @@
     "NICE guidance recommends that the lowest dose is used to treat the symptoms. ",
     "Although PPIs are safe drugs, their use has been associated with an increase in a number of disorders, ",
     "including Clostridium difficile infection and a higher risk of community-aquired pneunmonia. ",
-    "The doses of PPIs are defined in the <a href='https://www.nice.org.uk/guidance/cg184/chapter/appendix-a-dosage-information-on-proton-pump-inhibitors'> NICE guidance</a>."
+    "This measure looks at strengths of PPIs issued that exceed the low doses of PPIs defined in the <a href='https://www.nice.org.uk/guidance/cg184/chapter/appendix-a-dosage-information-on-proton-pump-inhibitors'> NICE guidance</a>."
   ],
   "tags": [
     "core",

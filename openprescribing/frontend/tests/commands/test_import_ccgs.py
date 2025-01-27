@@ -2,12 +2,13 @@ import datetime
 
 from django.core.management import call_command
 from django.test import TestCase
-from frontend.models import PCT, RegionalTeam
+from frontend.models import PCT, STP, RegionalTeam
 
 
 def setUpModule():
     RegionalTeam.objects.create(code="Y54")
     PCT.objects.create(code="00C", name="NHS OLD NAME CCG")
+    STP.objects.create(code="QOP", name="NHS GREATER MANCHESTER INTEGRATED CARE BOARD")
 
 
 def tearDownModule():
@@ -19,7 +20,7 @@ class CommandsTestCase(TestCase):
         call_command("import_ccgs", ccg="frontend/tests/fixtures/commands/eccg.csv")
 
         ccgs = PCT.objects.filter(org_type="CCG")
-        self.assertEqual(ccgs.count(), 3)
+        self.assertEqual(ccgs.count(), 4)
         ccg = PCT.objects.get(code="00C")
         # Check that the CCG's name has not changed
         self.assertEqual(ccg.name, "NHS OLD NAME CCG")
@@ -37,3 +38,7 @@ class CommandsTestCase(TestCase):
 
         # Check that the Sub-ICB Reporting Entity is not imported
         self.assertFalse(PCT.objects.filter(code="Z000X").exists())
+
+        # Check that SICBL which is alone in its ICB inherits name of ICB
+        solo_ccg = PCT.objects.get(code="00T")
+        self.assertEqual(solo_ccg.name, "NHS GREATER MANCHESTER")

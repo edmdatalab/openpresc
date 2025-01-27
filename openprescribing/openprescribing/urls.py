@@ -127,7 +127,7 @@ urlpatterns = [
     path(r"all-england/", all_england_redirects),
     path(
         r"hospitals/",
-        TemplateView.as_view(template_name="all_hospitals.html"),
+        TemplateView.as_view(template_name="hospitals.html"),
         name="hospitals",
     ),
     # Analyse

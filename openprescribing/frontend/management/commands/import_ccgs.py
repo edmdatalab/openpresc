@@ -1,4 +1,5 @@
 import csv
+import itertools
 
 from django.core.management.base import BaseCommand
 from frontend.models import PCT, STP
@@ -44,3 +45,18 @@ class Command(BaseCommand):
             if row[13] == "C":
                 ccg.org_type = "CCG"
             ccg.save()
+        self.update_names()
+
+    def update_names(self):
+        # Any SICBLs which are the only active one in their ICB take the name of the ICB
+        active_ccgs = PCT.objects.filter(
+            org_type="CCG", close_date__isnull=True, stp_id__isnull=False
+        )
+        for stp_id, ccgs in itertools.groupby(
+            active_ccgs.order_by("stp_id"), key=lambda i: i.stp_id
+        ):
+            ccgs = list(ccgs)
+            if len(ccgs) == 1:
+                ccg = ccgs[0]
+                ccg.name = ccg.stp.name.replace(" INTEGRATED CARE BOARD", "")
+                ccg.save()

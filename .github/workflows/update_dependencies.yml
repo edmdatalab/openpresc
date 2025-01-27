@@ -1,0 +1,31 @@
+name: Update python dependencies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  "5 3 * * MON"
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - uses: actions/create-github-app-token@v1
+      id: generate-token
+      with:
+        app-id: ${{ vars.CREATE_PR_APP_ID }}
+        private-key: ${{ secrets.CREATE_PR_APP_PRIVATE_KEY }}
+
+    - uses: bennettoxford/update-dependencies-action@v1
+      with:
+        token: ${{ steps.generate-token.outputs.token }}
+        automerge: false
+        pr_title: "Update python dependencies"
+        update_command: |
+          pip install pip-tools && \
+          pip-compile -U requirements.dev.in && \
+          pip-compile -U requirements.in

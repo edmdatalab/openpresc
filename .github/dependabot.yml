@@ -1,22 +1,10 @@
 version: 2
+
 updates:
-- package-ecosystem: pip
-  directory: "/"
-  schedule:
-    interval: daily
-  rebase-strategy: "disabled"
-  open-pull-requests-limit: 99
-  allow:
-  - dependency-type: direct
-  - dependency-type: indirect
-  ignore:
-  # We're just not interested in messing around with updates to this module
-  # (changes to its capitalisation rules break our tests)
-  - dependency-name: titlecase
-    versions:
-    - "> 0.12.0"
-  # Version 4.2 is the latest Django LTS version, we want patch updates to that
-  # but no major version updates until we manually upgrade to the next LTS
-  - dependency-name: django
-    versions:
-    - ">= 4.3"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore: "

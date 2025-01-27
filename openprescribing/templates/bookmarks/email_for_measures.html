@@ -17,16 +17,16 @@
       {% for measure in stats.worst %}
         {% if forloop.first %}
           <p>Over the last three months, we found that this {{ bookmark.org_type }} was in the worst 10% on
-          <a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a>:<br>
-          <a href="{{ dashboard_uri }}#{{measure.id}}"><img src="cid:{{ still_bad_image }}"></a><br>
+          <a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a>:<br>
+          <a href="{% dashboard_measure_uri measure %}"><img src="cid:{{ still_bad_image }}"></a><br>
         {% elif stats.worst|length == 2 %}
-          It was also in the worst 10% on <a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a>.
+          It was also in the worst 10% on <a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a>.
         {% else %}
           {% if forloop.counter == 2 %}
             It was also in the worst 10% on:
             <ul>
           {% endif %}
-              <li><a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a></li>
+              <li><a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a></li>
           {% if forloop.last %}
             </ul>
           {% endif %}
@@ -39,16 +39,16 @@
     <p>
       {% for d in stats.most_changing.declines %}
         {% if forloop.counter == 1 %}
-          In comparison with other {{ bookmark.org_type }}s, we found that this {{ bookmark.org_type }} slipped {{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a>:<br>
-        <a href="{{ dashboard_uri }}#{{d.measure.id}}"><img src="cid:{{ getting_worse_image }}"></a><br>
+          In comparison with other {{ bookmark.org_type }}s, we found that this {{ bookmark.org_type }} slipped {{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a>:<br>
+        <a href="{% dashboard_measure_uri d.measure %}"><img src="cid:{{ getting_worse_image }}"></a><br>
         {% elif stats.most_changing.declines|length == 2 %}
-          It also slipped {{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a>.
+          It also slipped {{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a>.
         {% else %}
           {% if forloop.counter == 2 %}
            It also slipped:
            <ul>
           {% endif %}
-            <li>{{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a></li>
+            <li>{{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a></li>
           {% if forloop.last %}
            </ul>
           {% endif %}
@@ -63,14 +63,14 @@
     <p>We looked at all the measures where this organisation could have saved at least £1,000 in the last six months.
 
     {% if stats.top_savings.possible_savings|length_is:1 %}
-      We found that if it had prescribed in line with the average {{ bookmark.org_type }}, it could have saved about <b>£{{ stats.top_savings.possible_savings.0.1|roundpound }}</b> on <a href="{{ dashboard_uri }}#{{stats.top_savings.possible_savings.0.0.id}}">{{stats.top_savings.possible_savings.0.0.name}}</a>.</p>
+      We found that if it had prescribed in line with the average {{ bookmark.org_type }}, it could have saved about <b>£{{ stats.top_savings.possible_savings.0.1|roundpound }}</b> on <a href="{% dashboard_measure_uri stats.top_savings.possible_savings.0.0 %}">{{stats.top_savings.possible_savings.0.0.name}}</a>.</p>
     {% else %}
       </p>
       <p>These add up to around <b>£{{total_possible_savings|roundpound}}</b> of potential savings. If it had prescribed in line with the average {{ bookmark.org_type }}, it could have saved about:</p>
 
       <ul>
         {% for measure, saving in stats.top_savings.possible_savings %}
-        <li><b>£{{saving|roundpound}}</b> on <a href="{{ dashboard_uri }}#{{measure.id}}">{{measure.name}}</a></li>
+        <li><b>£{{saving|roundpound}}</b> on <a href="{% dashboard_measure_uri measure %}">{{measure.name}}</a></li>
         {% endfor %}
       </ul>
     {% endif %}
@@ -79,7 +79,7 @@
   {% if stats.top_savings.possible_top_savings_total > 5000 %}
     <h3>Best-case possible savings</h3>
       <p>We compared this {{ bookmark.org_type }}'s spending with the best-performing 10% on all the areas we track.  If it prescribed as well as those {{ bookmark.org_type }}s, it could save around <b>£{{stats.top_savings.possible_top_savings_total|roundpound}}</b>.
-      <a href="{{ dashboard_uri }}&sortBySavings=1">Here's a list of measures, sorted by potential cost savings</a>.
+      <a href="{{ dashboard_uri }}&tags=cost&sortBySavings=1">Here's a list of measures, sorted by potential cost savings</a>.
     </p>
   {% endif %}
 
@@ -88,15 +88,15 @@
     {% for measure in stats.best %}
       {% if forloop.first %}
         <p>Over the last three months, we found that this {{ bookmark.org_type }} was in the best 10% on
-        <a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a>.
+        <a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a>.
       {% elif stats.best|length == 2 %}
-        It was also in the best 10% on <a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a>.</p>
+        It was also in the best 10% on <a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a>.</p>
       {% else %}
         {% if forloop.counter == 2 %}</p>
           It was also in the best 10% on:
           <ul>
         {% endif %}
-            <li><a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a></li>
+            <li><a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a></li>
         {% if forloop.last %}
           </ul>
         {% endif %}
@@ -108,16 +108,16 @@
     <h3 class="better">Prescribing measures which are getting better</h3>
       {% for d in stats.most_changing.improvements %}
         {% if forloop.counter == 1 %}
-          <p>In comparison with other {{ bookmark.org_type }}s, we found that this {{ bookmark.org_type }} improved {{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a>.
+          <p>In comparison with other {{ bookmark.org_type }}s, we found that this {{ bookmark.org_type }} improved {{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a>.
         {% elif stats.most_changing.improvements|length == 2 %}
-          It also improved {{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a>.</p>
+          It also improved {{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a>.</p>
         {% else %}
           {% if forloop.counter == 2 %}
            </p>
            It also improved:
            <ul>
           {% endif %}
-            <li>{{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a></li>
+            <li>{{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a></li>
           {% if forloop.last %}
            </ul>
           {% endif %}
@@ -133,16 +133,16 @@
       {% for measure in stats.interesting %}
         {% if forloop.first %}
           <p>Over the last three months, we found that this {{ bookmark.org_type }} deviated a long way from the median {{ bookmark.org_type }} on
-          <a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a>:<br>
-          <a href="{{ dashboard_uri }}#{{measure.id}}"><img src="cid:{{ interesting_image }}"></a><br>
+          <a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a>:<br>
+          <a href="{% dashboard_measure_uri measure %}"><img src="cid:{{ interesting_image }}"></a><br>
         {% elif stats.interesting|length == 2 %}
-          It was also an outlier on <a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a>.
+          It was also an outlier on <a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a>.
         {% else %}
           {% if forloop.counter == 2 %}
             It was also an outlier on:
             <ul>
           {% endif %}
-              <li><a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a></li>
+              <li><a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a></li>
           {% if forloop.last %}
             </ul>
           {% endif %}
@@ -153,16 +153,16 @@
   {% if stats.most_changing_interesting %}
       {% for d in stats.most_changing_interesting %}
         {% if forloop.counter == 1 %}
-          <p>We found that over the last {{ d.period }} months this {{ bookmark.org_type }} moved {{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a>.
+          <p>We found that over the last {{ d.period }} months this {{ bookmark.org_type }} moved {{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a>.
         {% elif stats.most_changing.improvements|length == 2 %}
-          It also changed {{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a>.</p>
+          It also changed {{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a>.</p>
         {% else %}
           {% if forloop.counter == 2 %}
            </p>
            It also changed:
            <ul>
           {% endif %}
-            <li>{{d.from|deltawords:d.to}} on <a href="{{ dashboard_uri }}#{{d.measure.id}}">{{ d.measure.name }}</a></li>
+            <li>{{d.from|deltawords:d.to}} on <a href="{% dashboard_measure_uri d.measure %}">{{ d.measure.name }}</a></li>
           {% if forloop.last %}
            </ul>
           {% endif %}
@@ -173,12 +173,12 @@
   {% if stats.top_savings.achieved_savings %}
    <h3 class="better">Achieved savings</h3>
    {% if stats.top_savings.achieved_savings|length == 1 %}
-    <p>By prescribing <a href="{{ dashboard_uri }}#{{measure.id}}">{{ stats.top_savings.achieved_savings.0.0.name }}</a> better than the median, this {{bookmark.org_type }} saved around <b>£{{stats.top_savings.achieved_savings.0.1|roundpound}}</b> over the past 6 months. </p>
+    <p>By prescribing <a href="{% dashboard_measure_uri stats.top_savings.achieved_savings.0.0 %}">{{ stats.top_savings.achieved_savings.0.0.name }}</a> better than the median, this {{bookmark.org_type }} saved around <b>£{{stats.top_savings.achieved_savings.0.1|roundpound}}</b> over the past 6 months. </p>
     {% else %}
     Over the past 6 months, by prescribing better than the median, this {{bookmark.org_type }} saved around:
      <ul>
      {% for measure, saving in stats.top_savings.achieved_savings %}
-       <li><b>£{{saving|roundpound}}</b> on <a href="{{ dashboard_uri }}#{{measure.id}}">{{ measure.name }}</a>
+       <li><b>£{{saving|roundpound}}</b> on <a href="{% dashboard_measure_uri measure %}">{{ measure.name }}</a>
         </li>
      {% endfor %}
      </ul>

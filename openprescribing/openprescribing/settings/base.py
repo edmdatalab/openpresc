@@ -342,9 +342,10 @@ GRAB_HOST = "https://openprescribing.net"
 
 # For sending messages to Slack
 # Webhook URLs for posting to different channels can be configured at
-# https://api.slack.com/apps/A6B85C8KC/incoming-webhooks
+# https://api.slack.com/apps/A03UM1N45JN/incoming-webhooks
 SLACK_TECHNOISE_POST_KEY = utils.get_env_setting("SLACK_TECHNOISE_POST_KEY", default="")
 SLACK_TEAM_POST_KEY = utils.get_env_setting("SLACK_TEAM_POST_KEY", default="")
+SLACK_OP_POST_KEY = utils.get_env_setting("SLACK_OP_POST_KEY", default="")
 SLACK_SENDING_ACTIVE = True
 
 

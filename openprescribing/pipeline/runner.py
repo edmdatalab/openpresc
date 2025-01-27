@@ -453,7 +453,8 @@ def run_all(year, month, under_test=False):
     )
 
     if not under_test:
-        notify_slack(msg)
+        # Notify the openprescribing slack channel
+        notify_slack(msg, channel="op")
 
 
 def in_progress():

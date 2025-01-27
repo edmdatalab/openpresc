@@ -4,7 +4,7 @@ services:
     image: postgis/postgis:16-3.4
     env_file: environment-docker
   test:
-    image: ghcr.io/ebmdatalab/openprescribing-py312-test:latest
+    image: ghcr.io/bennettoxford/openprescribing-py312-test:latest
     command: /bin/bash -c './scripts/docker_setup.sh test && cd openprescribing && make test'
     env_file: environment-docker
     environment:
@@ -35,7 +35,7 @@ services:
       - db-test
 
   test-production:
-    image: ghcr.io/ebmdatalab/openprescribing-py312-base:latest
+    image: ghcr.io/bennettoxford/openprescribing-py312-base:latest
     command: /bin/bash -c './scripts/docker_setup.sh production && cd openprescribing && python manage.py check --deploy --settings openprescribing.settings.production'
     env_file: environment-docker
     environment:
@@ -64,7 +64,7 @@ services:
     image: postgis/postgis:16-3.4
     env_file: environment-docker
   dev:
-    image: ghcr.io/ebmdatalab/openprescribing-py312-test:latest
+    image: ghcr.io/bennettoxford/openprescribing-py312-test:latest
     command: /bin/bash -c './scripts/docker_setup.sh local &&  cd openprescribing && /bin/bash -l'
     env_file: environment-docker
     ports:

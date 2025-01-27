@@ -367,9 +367,10 @@ def spending_by_org(request, format=None, org_type=None):
 
 def _get_org_type_and_orgs(org_type, org_ids):
     org_type = utils.translate_org_type(org_type)
+    select_all_orgs = not org_ids
 
     # If no org parameters are supplied then we sum over absolutely everything
-    if org_type is None and not org_ids:
+    if org_type is None and select_all_orgs:
         return "all_practices", [AllEngland()]
 
     # Some special case handling for practices
@@ -397,7 +398,7 @@ def _get_org_type_and_orgs(org_type, org_ids):
         raise ValidationError(detail="Error: unrecognised org_type parameter")
 
     # Filter and sort
-    if org_ids:
+    if not select_all_orgs:
         orgs = orgs.filter(code__in=org_ids)
     orgs = orgs.order_by("code")
 

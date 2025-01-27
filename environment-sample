@@ -40,6 +40,7 @@ GUNICORN_LOG_LEVEL=warn
 
 SLACK_TECHNOISE_POST_KEY=slack_technoise_post_key
 SLACK_TEAM_POST_KEY=slack_team_post_key
+SLACK_OP_POST_KEY=slack_op_post_key
 CF_API_KEY=cf_api_key
 
 # The path to a file containing your credentials for accessing Google Cloud

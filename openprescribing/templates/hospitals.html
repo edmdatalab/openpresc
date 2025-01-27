@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% load template_extras %}
+
+{% block title %}Hospitals{% endblock %}
+{% block active_class %}dashboards{% endblock %}
+
+{% block content %}
+
+  <h1>
+    OpenPrescribing Hospitals – coming soon<br>
+    <small style="text-shadow: none">
+      With the support of the NHS Primary Care and Medicines Analytics Unit we
+      have started to build OpenPrescribing Hospitals.
+    </small>
+  </h1>
+
+  <p>
+    Every month, NHS England publishes processed pharmacy stock control data in
+    the form of the
+    <a href="https://opendata.nhsbsa.net/dataset/secondary-care-medicines-data-indicative-price">
+      Secondary Care Medicines Dataset (SCMD)</a>.
+    The
+    <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fpaulwestrip%2FOpen-Data-Portal-Documentation%2Fmain%2FSecondary%2520Care%2520Medicines%2520Data%2520%2520Release%2520Guidance%2520v003.odt&wdOrigin=BROWSELINK">
+      full technical specification
+    </a>
+    of the SCMD is available to read, but briefly: it is hospital pharmacy
+    stock control data, which is collected and processed by <a href='https://www.rx-info.co.uk' target="_blank"> Rx-info</a>, and is now
+    published on the NHS Business Services Authority website in the
+    <a href="https://www.bennett.ox.ac.uk/blog/2019/08/what-is-the-dm-d-the-nhs-dictionary-of-medicines-and-devices/">
+      NHS dm+d standard</a>.
+    We have been spending time learning more about the data and carefully
+    curating the data ready for use in OpenPrescribing Hospitals.
+  </p>
+
+  <h2>Sneak preview…</h2>
+
+  <p>
+    <img src="{% static 'img/oph_screenshot.png' %}"class="img-responsive" alt="OpenPrescribing Hospitals screenshot">
+    <br>
+  </p>
+
+  <p>
+    We are working hard to include similar features to OpenPrescribing.net including
+    <ul>
+      <li>A custom ‘analyse page’</li>
+      <li>Pre-built curated measures based on NHS England Medicines Optimisation Opportunities / medicines safety topics which we will expand over time</li>
+      <li>A summary of data submitted by NHS Trusts in England</li>
+    </ul>
+    We will share an early version of this tool in the near future and look forward to hearing your feedback.
+
+{% endblock %}

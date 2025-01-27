@@ -1,17 +1,17 @@
 {
   "name": "Anxiolytics and Hypnotics: Average Daily Quantity per 1000 patients",
   "title": "Anxiolytics and Hypnotics: Average Daily Quantity per 1000 patients",
-  "description": "Number of average daily quantities (ADQs) of Anxiolytics and Hypnotics per 1000 patients",
-  "numerator_short": "Anxiolytics and Hypnotics ADQ",
+  "description": "Number of average daily quantities (ADQs) of oral Anxiolytics and Hypnotics per 1000 patients",
+  "numerator_short": "Oral Anxiolytics and Hypnotics ADQ",
   "denominator_short": "1000 Patients",
   "y_label": "ADQ per 1000 patients",
   "why_it_matters": [
     "Anxiolytics and Hypnotics are drugs that are prescribed for short-term treatment of conditions such as",
     "anxiety and sleep problems. <a href='https://www.rcpsych.ac.uk/expertadvice/treatments/benzodiazepines.aspx'> The Royal College of Psychiatrists states</a> ",
     "that \"around 4 in every 10 people who take them every day for more than 6 weeks will become addicted\" ",
-    "and therefore they should not be prescribed for longer than 4 weeks.  This measure shows the Average Daily Quantity (ADQ) of drug given per 1000 registered patients, ",
+    "and therefore they should not be prescribed for longer than 4 weeks.  This measure shows the Average Daily Quantity (ADQ) of oral drugs given per 1000 registered patients, ",
     "for both the older benzodiazepines, such as diazepam and temazepam, and the newer \"Z-drugs\", such as zopiclone. It excludes items that do not have ",
-    "an ADQ, such as melatonin."
+    "an ADQ, such as melatonin and daridorexant."
   ],
   "tags": [
     "core",
@@ -24,23 +24,23 @@
   "is_cost_based": false,
   "low_is_good": true,
   "numerator_type": "custom",
-  "numerator_columns": "SUM(p.quantity * r.percent_of_adq) AS numerator",
-  "numerator_from": "{hscic}.normalised_prescribing p  LEFT JOIN {hscic}.bdz_adq r  ON concat(substr(p.bnf_code,0,9),substr(p.bnf_code,-2)) = concat(substr(r.bnf_code,0,9),substr(r.bnf_code,-2)) ",
+  "numerator_columns": "SUM(p.total_adq_usage) AS numerator",
+  "numerator_from": "{measures}.vw__bdz_total_adq p",
   "numerator_where": [
     "p.bnf_code LIKE '0401%' AND --Hypnotics and Anxiolytics \n",
+    "p.bnf_code NOT LIKE '0401010S0%' AND   --Potassium bromide \n",
     "p.bnf_code NOT LIKE '0401010AC%' AND   --Sodium Oxybate \n",
     "p.bnf_code NOT LIKE '0401010AD%' AND   --Melatonin \n",
-    "p.bnf_code NOT LIKE '0401020K0%AD' AND --Diazepam_Soln 5mg/2.5ml Rectal Tube \n",
-    "p.bnf_code NOT LIKE '0401020K0%AE' AND --Diazepam_Soln 10mg/2.5ml Rectal Tube \n",
-    "p.bnf_code NOT LIKE '0401020K0%BQ'     --Diazepam_Soln 2.5mg/1.25ml Rectal Tube"
+    "p.bnf_code NOT LIKE '0401040%'         --Other hypnotics and anxiolytics \n"
   ],
   "denominator_type": "list_size",
   "no_analyse_url": true,
   "authored_by": "richard.croker@phc.ox.ac.uk",
   "checked_by": "andrew.brown@phc.ox.ac.uk",
-  "date_reviewed": "2024-02-12",
-  "next_review": "2025-02-12",
+  "date_reviewed": "2025-01-20",
+  "next_review": "2027-01-20",
   "measure_complexity": "medium",
   "measure_type": "custom",
   "radar_exclude": false
-}
+} 
+ 

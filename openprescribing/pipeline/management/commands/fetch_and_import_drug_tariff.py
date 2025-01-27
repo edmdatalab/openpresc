@@ -94,23 +94,27 @@ def import_month(rows, date):
 
     # The third row is column headings
     header_row = next(rows)
-    headers = ["".join((c or "?").lower().split()) for c in header_row]
-    assert headers == [
+    headers = {"".join((c or "?").lower().split()): n for n, c in enumerate(header_row)}
+    required_headers = {
         "medicine",
         "packsize",
-        "?",
-        "vmpsnomedcode",
         "vmppsnomedcode",
         "drugtariffcategory",
         "basicprice",
-    ]
+    }
+    missing_headers = required_headers - headers.keys()
+    assert not missing_headers, (
+        f"Missing required headers: {missing_headers}\n"
+        f"Headers: {headers}\n"
+        f"Original headers: {header_row}"
+    )
 
     with transaction.atomic():
         for row in rows:
             if all(v is None for v in row):
                 continue
 
-            d = dict(zip(headers, row))
+            d = {k: row[n] for k, n in headers.items()}
 
             if d["basicprice"] is None:
                 msg = "Missing price for {} Drug Tariff for {}".format(
