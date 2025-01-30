@@ -1,6 +1,7 @@
 import json
 import warnings
 from collections import defaultdict
+from unittest import mock
 
 import numpy
 from django.core.cache import CacheKeyWarning
@@ -69,8 +70,23 @@ class PricePerUnitSavingsTest(TestCase):
         cls._remove_patch = patch_global_matrixstore(
             matrixstore_from_data_factory(factory)
         )
-        # Clear the cache on this memoized function
-        get_substitution_sets.cache_clear()
+        # Bypass the complicated dm+d based SQL which finds appropriate swaps and just
+        # return our list of swaps directly
+        with mock.patch(f"{get_substitution_sets.__module__}.get_swaps", cls.get_swaps):
+            # Clear the cache and the invoke the function to repopulate it
+            get_substitution_sets.cache_clear()
+            get_substitution_sets()
+
+    @classmethod
+    def get_swaps(cls):
+        names = {p["bnf_code"]: p["name"] for p in cls.factory.presentations}
+        for substitution_set in cls.substitution_sets:
+            code = substitution_set[0]
+            other_codes = substitution_set[1:]
+            for other_code in other_codes:
+                # The empty strings are the formulations, which we don't care about for
+                # the purposes of this test
+                yield code, names[code], "", other_code, names[other_code], ""
 
     def test_practice_savings(self):
         # Pick an arbitrary month and practice

@@ -1,61 +1,77 @@
+from pathlib import Path
+from unittest import mock
+
+import frontend.price_per_unit
 from django.test import TestCase
+from dmd.management.commands.translate_bq_sql import rewrite_sql
+from dmd.models import AMP
 from frontend.price_per_unit.substitution_sets import (
-    get_substitution_sets_from_bnf_codes,
+    get_substitution_sets,
     groups_from_pairs,
 )
 
-PRESENTATIONS = {
-    "generic_metformin": "0601022B0AAASAS",
-    "branded_metformin": "0601022B0BJADAS",
-    "generic_inhaler": "0302000C0AABFBF",
-    "gsk_inhaler": "0302000C0BCAEBF",
-    "branded_tramadol_tablet": "040702040BTAAAC",
-    "branded_tramadol_capsule": "040702040BJABAH",
-    "finetest_test_strips": "0601060D0EDAAA0",
-    "element_test_strips": "0601060D0DBAAA0",
-}
 
+class SubstitutionSetsSQLTest(TestCase):
+    fixtures = ["dmd-objs"]
 
-class SubstitutionSetsTest(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        bnf_codes = PRESENTATIONS.values()
-        cls.substitution_sets = get_substitution_sets_from_bnf_codes(
-            bnf_codes, "frontend/tests/fixtures/price_per_unit/formulation_swaps.csv"
+    def test_sql_executes_with_plausible_results(self):
+        # This is not a great test in that it involves loading a big opaque fixture I
+        # don't understand and then running a big blob of opaque SQL I don't understand;
+        # but it still has value in that it confirms that the SQL does execute, that the
+        # surrounding machinery all works, and that the results are vaguely sensible.
+        #
+        # Worrying about whether the SQL does the right thing now comes under the
+        # purview of the clinical informaticians, so I think its reasonable to test only
+        # this much.
+        bnf_codes = set(AMP.objects.values_list("bnf_code", flat=True))
+        with mock.patch(
+            f"{get_substitution_sets.__module__}.get_all_prescribed_bnf_codes"
+        ) as get_bnf_codes:
+            get_bnf_codes.return_value = bnf_codes
+            get_substitution_sets.cache_clear()
+            substitution_sets = get_substitution_sets()
+
+        expected_code = "0204000C0AAAAAA"
+        self.assertEqual(substitution_sets.keys(), {expected_code})
+        substitution_set = substitution_sets[expected_code]
+        self.assertEqual(substitution_set.name, "Acebutolol 100mg capsules")
+        self.assertEqual(
+            substitution_set.presentations,
+            ["0204000C0AAAAAA", "0204000C0BBAAAA"],
         )
-        # Make an inverse mapping of presentations to the set which contains
-        # them
-        cls.presentation_to_set = {}
-        for substitution_set in cls.substitution_sets.values():
-            for presentation in substitution_set.presentations:
-                cls.presentation_to_set[presentation] = substitution_set.id
 
-    def assertSubstitutable(self, presentation_a, presentation_b, invert=False):
-        bnf_code_a = PRESENTATIONS[presentation_a]
-        bnf_code_b = PRESENTATIONS[presentation_b]
-        # Using `object()` as the default makes all missing values compare
-        # non-equal
-        substitution_set_a = self.presentation_to_set.get(bnf_code_a, object())
-        substitution_set_b = self.presentation_to_set.get(bnf_code_b, object())
-        if not invert:
-            self.assertEqual(substitution_set_a, substitution_set_b)
-        else:
-            self.assertNotEqual(substitution_set_a, substitution_set_b)
+    def test_postgres_sql_matches_bigquery_sql(self):
+        module_path = Path(frontend.price_per_unit.__file__).parent
+        postgres_sql = module_path.joinpath("swaps_postgres.sql").read_text()
+        bigquery_sql = module_path.joinpath("swaps_bigquery.sql").read_text()
+        expected_sql = rewrite_sql(bigquery_sql)
 
-    def assertNotSubstitutable(self, presentation_a, presentation_b):
-        self.assertSubstitutable(presentation_a, presentation_b, invert=True)
+        header = "\n".join(
+            ln
+            for ln in postgres_sql.splitlines()[:3]
+            if "Rewritten from BigQuery" in ln or "translate_bq_sql" in ln
+        )
+        expected_sql = header + ("\n\n" if header else "") + expected_sql
 
-    def test_substituting_generic_for_brand(self):
-        self.assertSubstitutable("generic_metformin", "branded_metformin")
-
-    def test_excluded_presentations_ignored(self):
-        self.assertNotSubstitutable("generic_inhaler", "gsk_inhaler")
-
-    def test_substituting_branded_capsule_for_branded_tablet(self):
-        self.assertSubstitutable("branded_tramadol_tablet", "branded_tramadol_capsule")
-
-    def test_substituting_glucose_test_strips(self):
-        self.assertSubstitutable("finetest_test_strips", "element_test_strips")
+        matches = postgres_sql == expected_sql
+        # We don't use assertEqual because we don't want unittest to try to generate a
+        # diff here: it won't be helpful. Instead we output the entire expected SQL so
+        # the clinical informatics team have the possibiity of self-serving this by
+        # copying it from CI logs. This obviously isn't a great workflow, but it's
+        # better than nothing.
+        self.assertTrue(
+            matches,
+            f"\nThe Postgres SQL which determines PPU swaps no longer matches the"
+            f" equivalent BigQuery SQL.\n"
+            f"\n"
+            f"You can either use the `translate_bq_sql` management command to update"
+            f" this, or copy the SQL below to `swap_postgres.sql`:"
+            f"\n"
+            f"\n"
+            f"------------------------------------\n"
+            f"{expected_sql}\n"
+            f"------------------------------------\n",
+        )
 
 
 class GroupsFromPairsTest(TestCase):
