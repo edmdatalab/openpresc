@@ -567,8 +567,16 @@ class TestPPUViews(TestCase):
     fixtures = ["orgs", "importlog", "practices", "prescriptions", "presentations"]
 
     def setUp(self):
-        get_substitution_sets.cache_clear()
-        get_substitution_sets_by_presentation.cache_clear()
+        with mock.patch(
+            f"{get_substitution_sets.__module__}.get_swaps", self.get_swaps
+        ):
+            get_substitution_sets.cache_clear()
+            get_substitution_sets_by_presentation.cache_clear()
+            get_substitution_sets()
+            get_substitution_sets_by_presentation()
+
+    def get_swaps(self):
+        return [("0204000I0AAALAL", "", "", "0204000I0JKKKAL", "", "")]
 
     def test_practice_price_per_unit(self):
         response = self.client.get("/practice/P87629/price_per_unit/")
