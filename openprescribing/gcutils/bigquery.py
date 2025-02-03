@@ -128,9 +128,13 @@ class Client(object):
             self.gcbq_client.delete_table(table_list_item.reference)
         self.gcbq_client.delete_dataset(self.dataset)
 
-    def create_table(self, table_id, schema):
+    def create_table(self, table_id, schema, time_partitioning=None):
         table_ref = self.dataset.table(table_id)
         table = gcbq.Table(table_ref, schema=schema)
+
+        if time_partitioning:
+            if isinstance(time_partitioning, gcbq.TimePartitioning):
+                table.time_partitioning = time_partitioning
 
         try:
             self.gcbq_client.create_table(table)
@@ -150,9 +154,9 @@ class Client(object):
         table_ref = self.dataset.table(table_id)
         return Table(table_ref, self)
 
-    def get_or_create_table(self, table_id, schema):
+    def get_or_create_table(self, table_id, schema, time_partitioning=None):
         try:
-            table = self.create_table(table_id, schema)
+            table = self.create_table(table_id, schema, time_partitioning)
         except Conflict:
             table = self.get_table(table_id)
         return table
