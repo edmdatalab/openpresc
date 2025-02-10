@@ -112,15 +112,16 @@ def get_substitution_sets():
 
     substitution_sets = []
 
-    for code_group in groups_from_pairs(equivalent_codes):
+    for full_code_group in groups_from_pairs(equivalent_codes):
         # Ignore any codes for which we don't have prescribing data
-        code_group = prescribed_codes.intersection(code_group)
+        code_group = prescribed_codes.intersection(full_code_group)
         if not code_group:
             continue
 
         # Pick a "representative" code whose name we will use as the name for the
-        # substitution set
-        primary_code = get_representative_code(code_group)
+        # substitution set. We need to select this from the full, unfiltered group as
+        # the best name candidate may not actually be a prescribed code.
+        primary_code = get_representative_code(full_code_group)
 
         # Get the unique formulations involved in this substitution set
         formulations_for_group = {
