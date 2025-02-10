@@ -21,6 +21,7 @@ WITH drugs AS (
                 COALESCE(CAST(strnt_dnmtr_uom AS STRING), 'NULL'), '|', -- strength denominator unit
                 COALESCE(CAST(droute.route AS STRING), 'NULL'), '|', -- route
                 COALESCE(CAST(pres_stat AS STRING), 'NULL'), '|', -- prescribing suitable for primary care value
+                COALESCE(CAST(pres_f AS STRING), 'NULL'), '|', -- preservative free flag
                 COALESCE(CASE WHEN formroute.descr NOT LIKE '%.oral%' THEN CAST(udfs AS STRING) ELSE 'NULL' END, 'NULL'), '|', -- if not oral meds, then ensure unit doses are the same (e.g. injections), i.e. so that 10mg/5ml isn't offered for 2mg/1ml
                 COALESCE(CASE WHEN droute.route = 18679011000001101 THEN CAST(formroute.cd AS STRING) ELSE 'NULL' END, 'NULL'), '|', -- if inhalation (route = 18679011000001101), then include type of device (e.g. dry powder, pressurized) so that device swaps aren't offered 
                 CASE WHEN LOWER(formroute.descr) LIKE '%modified-release%' THEN 'MR' ELSE 'NULL' END, '|', -- add 'modified release' flag on match string, so that non modified-release preps aren't matched with standard release
@@ -66,7 +67,6 @@ ON
     vmp.id = amp.vmp
 WHERE
     vmp.bnf_code <> amp.bnf_code -- doesn't pick up AMPs with generic BNF codes, as these aren't in the prescribing data
--- AND CONCAT(SUBSTR(vmp.bnf_code,0,9), SUBSTR(vmp.bnf_code,-2, 2)) != CONCAT(SUBSTR(amp.bnf_code,0,9), SUBSTR(amp.bnf_code,-2, 2))
 AND amp.avail_restrict =1 -- make sure the brand is available for dispensing
 AND vmp.pres_stat = 1
 AND (vmp.non_avail != 1 OR vmp.non_avail is NULL) -- make sure all drugs are available
