@@ -19,11 +19,12 @@ WITH drugs AS (
                 COALESCE(CAST(strnt_nmrtr_uom AS STRING), 'NULL'), '|',  -- strength numerator unit
                 COALESCE(CAST(strnt_dnmtr_val AS STRING), 'NULL'), '|',  -- strength denominator value
                 COALESCE(CAST(strnt_dnmtr_uom AS STRING), 'NULL'), '|', -- strength denominator unit
-                COALESCE(CAST(droute.route AS STRING), 'NULL'), '|',-- route
-                COALESCE(CAST(pres_stat AS STRING), 'NULL'), '|',-- prescribing suitable for primary care value
-                COALESCE(CASE WHEN formroute.descr NOT LIKE '%.oral%' THEN CAST(udfs AS STRING) ELSE 'NULL' END, 'NULL'), '|', -- if not oral meds, then ensure unit doses are the same (e.g. injections)
+                COALESCE(CAST(droute.route AS STRING), 'NULL'), '|', -- route
+                COALESCE(CAST(pres_stat AS STRING), 'NULL'), '|', -- prescribing suitable for primary care value
+                COALESCE(CASE WHEN formroute.descr NOT LIKE '%.oral%' THEN CAST(udfs AS STRING) ELSE 'NULL' END, 'NULL'), '|', -- if not oral meds, then ensure unit doses are the same (e.g. injections), i.e. so that 10mg/5ml isn't offered for 2mg/1ml
+                COALESCE(CASE WHEN droute.route = 18679011000001101 THEN CAST(formroute.cd AS STRING) ELSE 'NULL' END, 'NULL'), '|', -- if inhalation (route = 18679011000001101), then include type of device (e.g. dry powder, pressurized) so that device swaps aren't offered 
                 CASE WHEN LOWER(formroute.descr) LIKE '%modified-release%' THEN 'MR' ELSE 'NULL' END, '|', -- add 'modified release' flag on match string, so that non modified-release preps aren't matched with standard release
-                CASE WHEN LOWER(route.descr) LIKE '%cutaneous%' THEN LEFT(formroute.descr, STRPOS(formroute.descr, '.') - 1)  ELSE 'NULL' END -- add type of formulation to cutaneous prepas
+                CASE WHEN LOWER(route.descr) LIKE '%cutaneous%' THEN LEFT(formroute.descr, STRPOS(formroute.descr, '.') - 1)  ELSE 'NULL' END -- add type of formulation to cutaneous preps, so that e.g. shower gels aren't offered for skin gels
             ),
             ','
             ORDER BY ing, basis_strnt
@@ -50,7 +51,7 @@ WITH drugs AS (
     AND strnt_nmrtr_val IS NOT NULL -- make sure all drugs have a strength
     AND pres_stat = 1 -- must be "suitable for prescribing in primary care", e.g. no cautions on switching preparations
     GROUP BY
-        vmp.id, nm, bnf_code, pres_stat, pres_f, sug_f, route, formroute, udfs, form.descr
+        vmp.id, nm, bnf_code, pres_stat, pres_f, sug_f, route, formroute, udfs, form.descr -- the form.descr is needed for translation to postgres, this won't actually work for testing in BQ - need to change to `form`
 ),
 vmp_amp AS (SELECT
     vmp.nm AS generic_bnf_name,
