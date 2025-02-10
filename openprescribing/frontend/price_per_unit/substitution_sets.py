@@ -103,8 +103,10 @@ def get_substitution_sets():
 
     for code_1, name_1, formulation_1, code_2, name_2, formulation_2 in get_swaps():
         equivalent_codes.append((code_1, code_2))
-        formulations[code_1] = formulation_1
-        formulations[code_2] = formulation_2
+        # Sometimes we get a mixture of empty and populated formulations for the same
+        # code: we never want to overwrite a populated formulation with an empty one
+        formulations[code_1] = formulation_1 or formulations.get(code_1)
+        formulations[code_2] = formulation_2 or formulations.get(code_2)
         names[code_1] = name_1
         names[code_2] = name_2
 
