@@ -53,7 +53,7 @@ class SubstitutionSetsSQLTest(TestCase):
         )
         expected_sql = header + ("\n\n" if header else "") + expected_sql
 
-        matches = postgres_sql == expected_sql
+        matches = postgres_sql.strip() == expected_sql.strip()
         # We don't use assertEqual because we don't want unittest to try to generate a
         # diff here: it won't be helpful. Instead we output the entire expected SQL so
         # the clinical informatics team have the possibiity of self-serving this by
