@@ -137,6 +137,7 @@ bq_dmd_route AS NOT MATERIALIZED (
                 COALESCE(CAST(pres_f AS TEXT), 'NULL'), '|', -- preservative free flag
                 COALESCE(CASE WHEN formroute.descr NOT LIKE '%.oral%' THEN CAST(udfs AS TEXT) ELSE 'NULL' END, 'NULL'), '|', -- if not oral meds, then ensure unit doses are the same (e.g. injections), i.e. so that 10mg/5ml isn't offered for 2mg/1ml
                 COALESCE(CASE WHEN droute.route = 18679011000001101 THEN CAST(formroute.cd AS TEXT) ELSE 'NULL' END, 'NULL'), '|', -- if inhalation (route = 18679011000001101), then include type of device (e.g. dry powder, pressurized) so that device swaps aren't offered 
+                CASE WHEN pres_f = TRUE OR LOWER(nm) LIKE '%preservative free%' THEN 'pf' ELSE 'NULL' END, '|', -- add 'preserative free' flag so that it doesn't match non pf products.  Some pf eye drops don't have correct flag so have included name
                 CASE WHEN LOWER(formroute.descr) LIKE '%modified-release%' THEN 'MR' ELSE 'NULL' END, '|', -- add 'modified release' flag on match string, so that non modified-release preps aren't matched with standard release
                 CASE WHEN LOWER(route.descr) LIKE '%cutaneous%' THEN LEFT(formroute.descr, STRPOS(formroute.descr, '.') - 1)  ELSE 'NULL' END -- add type of formulation to cutaneous preps, so that e.g. shower gels aren't offered for skin gels
             ),
