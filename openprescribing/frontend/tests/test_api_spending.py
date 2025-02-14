@@ -8,6 +8,7 @@ from dmd.models import VMPP
 from frontend.ghost_branded_generics import MIN_GHOST_GENERIC_DELTA
 from frontend.models import Prescription, TariffPrice
 from frontend.tests.data_factory import DataFactory
+from frontend.tests.utils import round_floats
 from matrixstore.tests.decorators import copy_fixtures_to_matrixstore
 
 from .api_test_base import ApiTestBase
@@ -813,7 +814,7 @@ class TestAPISpendingViewsPPUBubble(ApiTestBase):
         # N.B. This is the mean of a *single* value; although there are two
         # values in the raw data one is ignored as it belongs to a
         # non-setting-4 practice
-        self.assertEqual(data["plotline"], 0.0325)
+        self.assertEqual(data["plotline"], 0.030875)
 
     def test_code_without_matches(self):
         url = "/bubble?format=json"
@@ -835,17 +836,17 @@ class TestAPISpendingViewsPPUBubble(ApiTestBase):
             {
                 "series": [
                     {
-                        "y": 0.09,
+                        "y": 0.08,
                         "x": 1,
                         "z": 32,
                         "name": "Chlortalidone 50mg tablets",
-                        "mean_ppu": 0.08875,
+                        "mean_ppu": 0.0843125,
                     }
                 ],
                 "categories": [
                     {"is_generic": True, "name": "Chlortalidone 50mg tablets"}
                 ],
-                "plotline": 0.08875,
+                "plotline": 0.0843125,
             },
         )
 
@@ -856,28 +857,29 @@ class TestAPISpendingViewsPPUBubble(ApiTestBase):
         url = self.api_prefix + url
         response = self.client.get(url, follow=True)
         data = _parse_json_response(response)
+        data = round_floats(data)
         self.assertEqual(
             data,
             {
                 "series": [
                     {
-                        "y": 0.09,
                         "x": 1,
-                        "z": 32,
+                        "y": 0.08,
+                        "z": 32.0,
                         "name": "Chlortalidone 50mg tablets",
-                        "mean_ppu": 0.098,
+                        "mean_ppu": 0.0931,
                     },
                     {
-                        "y": 0.1,
                         "x": 1,
-                        "z": 128,
+                        "y": 0.1,
+                        "z": 128.0,
                         "name": "Chlortalidone 50mg tablets",
-                        "mean_ppu": 0.098,
+                        "mean_ppu": 0.0931,
                     },
                 ],
                 "categories": [
                     {"is_generic": True, "name": "Chlortalidone 50mg tablets"}
                 ],
-                "plotline": 0.08875,
+                "plotline": 0.0843125,
             },
         )
