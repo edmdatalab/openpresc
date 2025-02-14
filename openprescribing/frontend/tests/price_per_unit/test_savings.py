@@ -13,6 +13,7 @@ from frontend.price_per_unit.savings import (
     get_total_savings_for_org,
 )
 from frontend.price_per_unit.substitution_sets import get_substitution_sets
+from frontend.tests.utils import round_floats
 from matrixstore.tests.data_factory import DataFactory
 from matrixstore.tests.matrixstore_factory import (
     matrixstore_from_data_factory,
@@ -316,20 +317,3 @@ def get_target_ppu(prescriptions):
 
 def sum_savings(savings):
     return sum([i["possible_savings"] for i in savings])
-
-
-def round_floats(value):
-    """
-    Round all floating point values found anywhere within the supplied data
-    structure, recursing our way through any nested lists, tuples or dicts
-    """
-    if isinstance(value, float):
-        return round(value, 9)
-    elif isinstance(value, list):
-        return [round_floats(i) for i in value]
-    elif isinstance(value, tuple):
-        return tuple(round_floats(i) for i in value)
-    elif isinstance(value, dict):
-        return {k: round_floats(v) for (k, v) in value.items()}
-    else:
-        return value

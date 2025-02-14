@@ -13,6 +13,7 @@ from frontend.models import (
     TariffPrice,
 )
 from frontend.tests.data_factory import DataFactory
+from frontend.tests.utils import round_floats
 from frontend.views.spending_utils import (
     APPLIANCE_DISCOUNT_PERCENTAGE,
     BRAND_DISCOUNT_PERCENTAGE,
@@ -93,13 +94,13 @@ class TestSpendingViews(TestCase):
         with self.subTest(function="_ncso_spending_for_entity"):
             results = ncso_spending_for_entity(*args, **kwargs)
             expected = recalculate_ncso_spending_for_entity(*args, **kwargs)
-            self.assertEqual(round_floats(results), round_floats(expected))
+            self.assertEqual(round_floats(results, 2), round_floats(expected, 2))
 
     def validate_ncso_spending_breakdown_for_entity(self, *args, **kwargs):
         with self.subTest(function="_ncso_spending_breakdown_for_entity"):
             results = ncso_spending_breakdown_for_entity(*args, **kwargs)
             expected = recalculate_ncso_spending_breakdown_for_entity(*args, **kwargs)
-            self.assertEqual(round_floats(results), round_floats(expected))
+            self.assertEqual(round_floats(results, 2), round_floats(expected, 2))
 
     def test_spending_views(self):
         # Basic smoketest which just checks that the view loads OK and has
@@ -167,19 +168,6 @@ class TestSpendingViews(TestCase):
         url = "/national/england/concessions/"
         response = self.client.get(url)
         self.assertContains(response, "Get email updates")
-
-
-def round_floats(value):
-    if isinstance(value, float):
-        return round(value, 2)
-    elif isinstance(value, list):
-        return [round_floats(i) for i in value]
-    elif isinstance(value, tuple):
-        return tuple(round_floats(i) for i in value)
-    elif isinstance(value, dict):
-        return {k: round_floats(v) for (k, v) in value.items()}
-    else:
-        return value
 
 
 ##############################################################################

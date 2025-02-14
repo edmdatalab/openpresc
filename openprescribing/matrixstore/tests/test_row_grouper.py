@@ -3,6 +3,7 @@ from itertools import product
 
 import numpy
 from django.test import SimpleTestCase
+from frontend.tests.utils import round_floats
 from matrixstore.matrix_ops import finalise_matrix, sparse_matrix
 from matrixstore.row_grouper import RowGrouper
 
@@ -280,20 +281,3 @@ def to_list_of_lists(matrix):
     return [
         [matrix[i, j] for j in range(matrix.shape[1])] for i in range(matrix.shape[0])
     ]
-
-
-def round_floats(value):
-    """
-    Round all floating point values found anywhere within the supplied data
-    structure, recursing our way through any nested lists, tuples or dicts
-    """
-    if isinstance(value, float):
-        return round(value, 9)
-    elif isinstance(value, list):
-        return [round_floats(i) for i in value]
-    elif isinstance(value, tuple):
-        return tuple(round_floats(i) for i in value)
-    elif isinstance(value, dict):
-        return {k: round_floats(v) for (k, v) in value.items()}
-    else:
-        return value
