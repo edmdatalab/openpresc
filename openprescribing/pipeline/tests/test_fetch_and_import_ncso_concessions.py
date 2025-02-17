@@ -19,9 +19,14 @@ class TestFetchAndImportNCSOConcesions(TestCase):
         base_path = Path(settings.APPS_ROOT) / "pipeline/test-data/pages"
         page_content = (base_path / "price_concessions.html").read_text()
         items = list(fetch_ncso.parse_concessions(page_content))
-        self.assertEqual(len(items), 46)
+
+        self.assertEqual(len(items), 47)
+        # Amiloride is a rolled-over concession that appears with an asterisk
+        # in the main concessions table and again in the rolled over table
+        # It is parsed twice but duplicate matches are ignored later
+        self.assertEqual(items[0], items[-1])
         self.assertEqual(
-            items[:3] + items[-3:],
+            items[:3] + items[-4:],
             [
                 {
                     "date": datetime.date(2024, 1, 1),
@@ -58,6 +63,12 @@ class TestFetchAndImportNCSOConcesions(TestCase):
                     "drug": "Zopiclone 7.5mg tablets",
                     "pack_size": "28",
                     "price_pence": 156,
+                },
+                {
+                    "date": datetime.date(2024, 1, 1),
+                    "drug": "Amiloride 5mg tablets",
+                    "pack_size": "28",
+                    "price_pence": 1554,
                 },
             ],
         )
@@ -125,6 +136,27 @@ class TestFetchAndImportNCSOConcesions(TestCase):
         }
         self.assertEqual(
             fetch_ncso.match_concession_vmpp_ids([concession], vmpp_id_to_name),
+            [expected],
+        )
+
+    def test_match_concession_vmpp_ids_duplicates(self):
+        # A duplicate VMPP match is only returned once
+        concession = {
+            "drug": "Amiloride 5mg tablets",
+            "pack_size": "28",
+        }
+        vmpp_id_to_name = {
+            1191111000001100: "Amiloride 5mg tablets 28 tablet",
+        }
+        expected = {
+            "drug": "Amiloride 5mg tablets",
+            "pack_size": "28",
+            "vmpp_id": 1191111000001100,
+        }
+        self.assertEqual(
+            fetch_ncso.match_concession_vmpp_ids(
+                [concession, concession], vmpp_id_to_name
+            ),
             [expected],
         )
 
