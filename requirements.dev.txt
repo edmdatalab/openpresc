@@ -4,13 +4,13 @@
 #
 #    pip-compile requirements.dev.in
 #
-black==24.10.0
+black==25.1.0
     # via -r requirements.dev.in
 click==8.1.8
     # via black
-flake8==7.1.1
+flake8==7.1.2
     # via -r requirements.dev.in
-isort==5.13.2
+isort==6.0.0
     # via -r requirements.dev.in
 mccabe==0.7.0
     # via flake8
