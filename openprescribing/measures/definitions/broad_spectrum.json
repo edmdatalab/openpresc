@@ -30,6 +30,9 @@
   "numerator_bnf_codes_filter": [
     "0501013K0 # Co-Amoxiclav",
     "0501021 # Cephalosporins",
+    "~0501021B0 # Cefadroxil",
+    "~0501021L0 # Cefalexin",
+    "~0501021M0 # Cefradine",
     "050112 # Quinolones"
   ],
   "denominator_type": "bnf_items",
@@ -46,8 +49,8 @@
   "no_analyse_url": false,
   "authored_by": "christopher.wood@phc.ox.ac.uk",
   "checked_by": "richard.croker@phc.ox.ac.uk",
-  "date_reviewed": "2024-08-05",
-  "next_review": "2026-08-05",
+  "date_reviewed": "",
+  "next_review": "",
   "measure_complexity": "low",
   "measure_type": "dmd",
   "radar_exclude": false
