@@ -281,8 +281,6 @@ pyquery==2.0.1
     # via -r requirements.in
 pysocks==1.7.1
     # via urllib3
-pysqlite3-binary==0.5.4
-    # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via
     #   -r requirements.in
@@ -330,6 +328,8 @@ sortedcontainers==2.4.0
     # via trio
 soupsieve==2.6
     # via beautifulsoup4
+sqlean-py==3.47.0
+    # via -r requirements.in
 sqlparse==0.5.3
     # via
     #   django
