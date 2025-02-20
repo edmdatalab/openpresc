@@ -13,8 +13,8 @@ from django.core.exceptions import ImproperlyConfigured
 # this is an experiment for now this is a quick and non-invasive way of trying
 # it out. Longer term we can change our own code to import pysqlite3 directly
 # and do some more targetted monkey patching for DiskCache.
-__import__("pysqlite3")
-sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+__import__("sqlean")
+sys.modules["sqlite3"] = sys.modules.pop("sqlean")
 
 # PATH CONFIGURATION
 # Absolute filesystem path to the Django project directory:
