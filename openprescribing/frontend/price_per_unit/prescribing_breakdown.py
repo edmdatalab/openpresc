@@ -3,6 +3,7 @@ from frontend.models import Presentation
 from matrixstore.db import get_db, get_row_grouper
 from matrixstore.matrix_ops import get_submatrix
 
+from .savings import get_discounts_at_date
 from .substitution_sets import get_substitution_sets
 
 
@@ -33,6 +34,8 @@ def get_prescribing(generic_code, date):
         return {}
     date_slice = slice(date_column, date_column + 1)
 
+    discounts = get_discounts_at_date(bnf_codes, date)
+
     results = db.query(
         """
         SELECT
@@ -49,7 +52,7 @@ def get_prescribing(generic_code, date):
     return {
         bnf_code: (
             get_submatrix(quantity, cols=date_slice),
-            get_submatrix(net_cost, cols=date_slice),
+            get_submatrix(net_cost, cols=date_slice) * discounts[bnf_code],
         )
         for bnf_code, quantity, net_cost in results
     }

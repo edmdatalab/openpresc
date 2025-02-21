@@ -1,4 +1,10 @@
 import numpy
+from django.db import connection
+from frontend.views.spending_utils import (
+    APPLIANCE_DISCOUNT_PERCENTAGE,
+    BRAND_DISCOUNT_PERCENTAGE,
+    GENERIC_DISCOUNT_PERCENTAGE,
+)
 from matrixstore.cachelib import memoize
 from matrixstore.db import get_db, get_row_grouper
 from matrixstore.matrix_ops import get_submatrix, zeros_like
@@ -191,7 +197,7 @@ def get_savings(quantities, net_costs, target_ppu):
 
 # Increment the version number if the logic of this function changes such that
 # the same inputs no longer produce the same outputs
-@memoize(version=1)
+@memoize(version=2)
 def get_quantities_and_net_costs_at_date(db, substitution_set, date):
     """
     Sum quantities and net costs over the supplied list of BNF codes for just
@@ -201,10 +207,12 @@ def get_quantities_and_net_costs_at_date(db, substitution_set, date):
     date_column = db.date_offsets[date]
     date_slice = slice(date_column, date_column + 1)
 
+    discounts = get_discounts_at_date(bnf_codes, date)
+
     results = db.query(
         """
         SELECT
-          quantity, net_cost
+          bnf_code, quantity, net_cost
         FROM
           presentation
         WHERE
@@ -217,7 +225,73 @@ def get_quantities_and_net_costs_at_date(db, substitution_set, date):
 
     quantity_sum = MatrixSum()
     net_cost_sum = MatrixSum()
-    for quantity, net_cost in results:
+    for bnf_code, quantity, net_cost in results:
         quantity_sum.add(get_submatrix(quantity, cols=date_slice))
-        net_cost_sum.add(get_submatrix(net_cost, cols=date_slice))
+        net_cost_slice = get_submatrix(net_cost, cols=date_slice) * discounts[bnf_code]
+        net_cost_sum.add(net_cost_slice)
     return quantity_sum.value(), net_cost_sum.value()
+
+
+DISCOUNTS_FOR_CATEGORY = {
+    category_id: (100 - discount) / 100.0
+    for discount, categories in [
+        (GENERIC_DISCOUNT_PERCENTAGE, [1, 11]),
+        (APPLIANCE_DISCOUNT_PERCENTAGE, [5, 6, 7, 8, 10]),
+    ]
+    for category_id in categories
+}
+
+
+DEFAULT_DISCOUNT = (100 - BRAND_DISCOUNT_PERCENTAGE) / 100.0
+
+
+def get_discounts_at_date(bnf_codes, date):
+    """
+    Return a dictionary mapping BNF codes to the appropriate discount for that
+    presentation on the given date
+    """
+    category_ids = {}
+    concessions = {}
+    with connection.cursor() as cursor:
+        # Given a list of BNF codes find their corresponding drug tariff category and
+        # whether they have a price concession for this month. This query will only
+        # find BNF codes corresponding to VMPPs, not AMPPs, but that's fine because we
+        # don't need to know the category for AMPPs because they all have the default
+        # discount anyone. And, necessarily, AMPPs can't be part of a price concession
+        # so we don't need to worry about that either.
+        cursor.execute(
+            f"""
+            SELECT
+              vmpp.bnf_code AS bnf_code,
+              tariff.tariff_category_id AS category_id,
+              ncso.vmpp_id IS NOT NULL AS has_concession
+            FROM
+              dmd_vmpp AS vmpp
+            JOIN
+              frontend_tariffprice AS tariff
+            ON
+              vmpp.vppid = tariff.vmpp_id AND tariff.date = %s
+            LEFT JOIN
+              frontend_ncsoconcession AS ncso
+            ON
+              ncso.vmpp_id = vmpp.vppid AND ncso.date = %s
+            WHERE
+              vmpp.bnf_code IN ({", ".join(["%s"] * len(bnf_codes))})
+            """,
+            [date, date, *bnf_codes],
+        )
+        for bnf_code, category_id, has_concession in cursor.fetchall():
+            category_ids[bnf_code] = category_id
+            concessions[bnf_code] = has_concession
+    return {
+        bnf_code: (
+            # As above, we expect to frequently get missing keys here and they should
+            # all have the default discount applied
+            DISCOUNTS_FOR_CATEGORY.get(category_ids.get(bnf_code), DEFAULT_DISCOUNT)
+            if not concessions.get(bnf_code)
+            # If there's a price concession for this presentation in this month then we
+            # don't discount the price paid at all
+            else 1.0
+        )
+        for bnf_code in bnf_codes
+    }

@@ -6,18 +6,34 @@ from unittest import mock
 import numpy
 from django.core.cache import CacheKeyWarning
 from django.test import TestCase, override_settings
-from frontend.models import PCT, Practice, Presentation
+from dmd.models import (
+    VMP,
+    VMPP,
+    BasisOfName,
+    DtPaymentCategory,
+    VirtualProductPresStatus,
+)
+from frontend.models import PCT, Practice, Presentation, TariffPrice
 from frontend.price_per_unit.savings import (
     CONFIG_MIN_SAVINGS_FOR_ORG_TYPE,
     CONFIG_TARGET_CENTILE,
     get_total_savings_for_org,
 )
 from frontend.price_per_unit.substitution_sets import get_substitution_sets
+from frontend.tests.utils import round_floats
+from frontend.views.spending_utils import (
+    BRAND_DISCOUNT_PERCENTAGE,
+    GENERIC_DISCOUNT_PERCENTAGE,
+)
 from matrixstore.tests.data_factory import DataFactory
 from matrixstore.tests.matrixstore_factory import (
     matrixstore_from_data_factory,
     patch_global_matrixstore,
 )
+
+GENERIC_DISCOUNT = (100 - GENERIC_DISCOUNT_PERCENTAGE) / 100.0
+BRAND_DISCOUNT = (100 - BRAND_DISCOUNT_PERCENTAGE) / 100.0
+
 
 # The dummy cache backend we use in testing warns that our binary cache keys
 # won't be compatible with memcached, but we really don't care
@@ -36,10 +52,12 @@ class PricePerUnitSavingsTest(TestCase):
         # Create some sets of substitutable presentations, which each consist
         # of a generic plus some branded equivalents
         substitution_sets = []
+        generic_codes = set()
         for i in range(4):
             generic_code = invent_generic_bnf_code(i)
             brands = invent_brands_from_generic_bnf_code(generic_code)
             substitution_sets.append([generic_code] + brands)
+            generic_codes.add(generic_code)
 
         # Create some practices and some prescribing for these presentations
         factory = DataFactory()
@@ -51,6 +69,10 @@ class PricePerUnitSavingsTest(TestCase):
         factory.create_prescribing(
             factory.presentations, factory.practices, factory.months
         )
+
+        # Flag generic/branded prescribing
+        for rx in factory.prescribing:
+            rx["is_generic"] = rx["bnf_code"] in generic_codes
 
         # The DataFactory creates data that can be written to the MatrixStore
         # but doesn't automatically create anything in the database, so we do
@@ -64,6 +86,37 @@ class PricePerUnitSavingsTest(TestCase):
             Presentation.objects.create(
                 bnf_code=presentation["bnf_code"], name=presentation["name"]
             )
+
+        # We need to create some `TariffPrice` objects so our prescribing has the right
+        # payment category and gets the correct discount applied. Creating a TariffPrice
+        # requires creating a VMPP, which requires creating a VMP so we define a minimal
+        # one here.
+        vmp = VMP.objects.create(
+            id=factory.next_id(),
+            nm="",
+            invalid=False,
+            sug_f="False",
+            glu_f="False",
+            pres_f="False",
+            cfc_f="False",
+            basis=BasisOfName.objects.create(cd=factory.next_id(), descr=""),
+            pres_stat=VirtualProductPresStatus.objects.create(
+                cd=factory.next_id(), descr=""
+            ),
+        )
+        # The `cd` field here is signifiant: it needs to be 1 to represent generics
+        generic_category = DtPaymentCategory.objects.create(cd=1, descr="generic")
+        for bnf_code in generic_codes:
+            vmpp = VMPP.objects.create(
+                id=factory.next_id(), bnf_code=bnf_code, vmp=vmp, nm="", invalid=False
+            )
+            for month in factory.months:
+                TariffPrice.objects.create(
+                    date=month[:10],
+                    vmpp=vmpp,
+                    tariff_category=generic_category,
+                    price_pence=0,
+                )
 
         cls.substitution_sets = substitution_sets
         cls.factory = factory
@@ -230,8 +283,11 @@ def get_savings_for_practice(
         net_cost = 0
         for prescription in filtered_prescriptions:
             if prescription["practice"] == practice["code"]:
+                discount = (
+                    GENERIC_DISCOUNT if prescription["is_generic"] else BRAND_DISCOUNT
+                )
                 quantity += prescription["quantity"]
-                net_cost += prescription["net_cost"]
+                net_cost += prescription["net_cost"] * discount
         target_cost = quantity * target_ppu
         saving = net_cost - target_cost
         if saving >= min_saving:
@@ -269,8 +325,11 @@ def get_savings_for_all_england(date, prescriptions, substitution_sets, min_savi
         quantities = defaultdict(float)
         net_costs = defaultdict(float)
         for prescription in filtered_prescriptions:
+            discount = (
+                GENERIC_DISCOUNT if prescription["is_generic"] else BRAND_DISCOUNT
+            )
             quantities[prescription["practice"]] += prescription["quantity"]
-            net_costs[prescription["practice"]] += prescription["net_cost"]
+            net_costs[prescription["practice"]] += prescription["net_cost"] * discount
         saving = 0
         for k in quantities.keys():
             target_cost = quantities[k] * target_ppu
@@ -303,9 +362,10 @@ def get_target_ppu(prescriptions):
     quantity_by_practice = defaultdict(float)
     cost_by_practice = defaultdict(float)
     for prescription in prescriptions:
+        discount = GENERIC_DISCOUNT if prescription["is_generic"] else BRAND_DISCOUNT
         practice = prescription["practice"]
         quantity_by_practice[practice] += prescription["quantity"]
-        cost_by_practice[practice] += prescription["net_cost"]
+        cost_by_practice[practice] += prescription["net_cost"] * discount
     prices_per_unit = []
     for practice, cost in cost_by_practice.items():
         quantity = quantity_by_practice[practice]
@@ -316,20 +376,3 @@ def get_target_ppu(prescriptions):
 
 def sum_savings(savings):
     return sum([i["possible_savings"] for i in savings])
-
-
-def round_floats(value):
-    """
-    Round all floating point values found anywhere within the supplied data
-    structure, recursing our way through any nested lists, tuples or dicts
-    """
-    if isinstance(value, float):
-        return round(value, 9)
-    elif isinstance(value, list):
-        return [round_floats(i) for i in value]
-    elif isinstance(value, tuple):
-        return tuple(round_floats(i) for i in value)
-    elif isinstance(value, dict):
-        return {k: round_floats(v) for (k, v) in value.items()}
-    else:
-        return value
