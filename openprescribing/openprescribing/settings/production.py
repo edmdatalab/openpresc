@@ -7,7 +7,7 @@ from pathlib import Path
 
 from common import utils
 
-from .base import *
+from .base import APPS_ROOT, REPO_ROOT, ANYMAIL, LOCAL_APPS, SITE_NAME
 
 # HOST CONFIGURATION
 # See:

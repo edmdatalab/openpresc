@@ -1,7 +1,20 @@
 import os
 import random
 
-from .base import *
+from common import utils
+from .base import (
+    TEMPLATES,
+    REPO_ROOT,
+    APPS_ROOT,
+    BQ_SCMD_DATASET,
+    BQ_PUBLIC_DATASET,
+    BQ_PRESCRIBING_EXPORT_DATASET,
+    BQ_ARCHIVE_DATASET,
+    BQ_DMD_DATASET,
+    BQ_TMP_EU_DATASET,
+    BQ_MEASURES_DATASET,
+    BQ_HSCIC_DATASET,
+)
 
 DEBUG = True
 TEMPLATES[0]["OPTIONS"]["debug"] = DEBUG

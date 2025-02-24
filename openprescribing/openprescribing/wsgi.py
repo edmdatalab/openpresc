@@ -1,5 +1,8 @@
 import dotenv
 from django.core.wsgi import get_wsgi_application
+import os
+from os.path import abspath, dirname
+from sys import path
 
 """
 WSGI config for openprescribing project.
@@ -16,9 +19,6 @@ middleware here, or combine a Django application with an application of another
 framework.
 
 """
-import os
-from os.path import abspath, dirname
-from sys import path
 
 APPS_ROOT = dirname(dirname(abspath(__file__)))
 path.append(APPS_ROOT)

@@ -1,4 +1,6 @@
-from .test import *
+import os
+from common import utils
+from .test import APPS_ROOT
 
 DATABASES = {
     "default": {

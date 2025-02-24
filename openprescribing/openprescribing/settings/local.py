@@ -5,7 +5,7 @@ from pathlib import Path
 
 from common import utils
 
-from .base import *
+from .base import APPS_ROOT, TEMPLATES, REPO_ROOT, INSTALLED_APPS
 
 # DEBUG CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug

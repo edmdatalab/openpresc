@@ -4,7 +4,7 @@ import os
 
 from common import utils
 
-from .base import *
+from .base import TEMPLATES, REPO_ROOT, APPS_ROOT, BQ_MEASURES_DATASET, ANYMAIL
 
 # DEBUG CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
