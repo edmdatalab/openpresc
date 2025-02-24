@@ -265,14 +265,14 @@ def _measure_by_org(request, org_type):
 
     if parent_org_type is None:
         if org_type == "practice" and org_ids:
-            l = len(org_ids[0])
+            length = len(org_ids[0])
 
-            if l in [3, 5]:
+            if length in [3, 5]:
                 parent_org_type = "pct"
-            elif l == 6:
+            elif length == 6:
                 parent_org_type = "practice"
             else:
-                assert False, l
+                assert False, length
         else:
             parent_org_type = org_type
 

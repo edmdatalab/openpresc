@@ -24,7 +24,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         # At present the only "heuristic" this uses is an explict list of BNF
         # codes, but we expect this to change shortly
-        codes = [_f for _f in [l.strip() for l in BNF_CODES.splitlines()] if _f]
+        codes = [_f for _f in [line.strip() for line in BNF_CODES.splitlines()] if _f]
         query = Presentation.objects
         query.filter(bnf_code__in=codes).update(quantity_means_pack=True)
         query.exclude(bnf_code__in=codes).update(quantity_means_pack=False)

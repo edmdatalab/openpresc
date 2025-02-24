@@ -25,7 +25,6 @@ class ValidateOptionsTestCase(unittest.TestCase):
             "ccg": None,
             "practice": None,
             "recipient_email": None,
-            "url": None,
         }
         for k, v in extra.items():
             default[k] = v
