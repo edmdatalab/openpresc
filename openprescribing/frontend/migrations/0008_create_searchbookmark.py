@@ -8,21 +8,34 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('frontend', '0008_auto_20161121_1236'),
+        ("frontend", "0008_auto_20161121_1236"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='SearchBookmark',
+            name="SearchBookmark",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=200)),
-                ('low_is_good', models.NullBooleanField()),
-                ('url', models.CharField(max_length=200)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-            ]
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=200)),
+                ("low_is_good", models.NullBooleanField()),
+                ("url", models.CharField(max_length=200)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+            ],
         )
     ]

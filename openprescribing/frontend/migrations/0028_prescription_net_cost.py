@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0027_auto_20170616_0925'),
+        ("frontend", "0027_auto_20170616_0925"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='prescription',
-            name='net_cost',
+            model_name="prescription",
+            name="net_cost",
             field=models.FloatField(blank=True, null=True),
         ),
     ]

@@ -6,13 +6,12 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0038_presentation_quantity_means_pack'),
+        ("frontend", "0038_presentation_quantity_means_pack"),
     ]
 
     operations = [
-            # This SQL cannot run once the dmd tables have been deleted.
+        # This SQL cannot run once the dmd tables have been deleted.
         # migrations.RunSQL("""
         #  CREATE MATERIALIZED VIEW vw__medians_for_tariff AS (
         #     WITH recent_date AS (SELECT MAX(current_at) AS current_at FROM frontend_importlog where category = 'prescribing')
@@ -32,5 +31,5 @@ class Migration(migrations.Migration):
         #         ON rx.presentation_code::text = product.bnf_code
         #         AND rx.processing_date = dt.date
         #   GROUP BY dt.product_id, rx.processing_date );
-  # """)
+        # """)
     ]

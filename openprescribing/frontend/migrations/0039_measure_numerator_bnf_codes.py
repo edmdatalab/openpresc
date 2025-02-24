@@ -7,16 +7,17 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0038_presentation_quantity_means_pack'),
+        ("frontend", "0038_presentation_quantity_means_pack"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='numerator_bnf_codes',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=15), default=[], size=None),
+            model_name="measure",
+            name="numerator_bnf_codes",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=15), default=[], size=None
+            ),
             preserve_default=False,
         ),
     ]

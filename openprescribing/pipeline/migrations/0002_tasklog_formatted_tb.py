@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('pipeline', '0001_initial'),
+        ("pipeline", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='tasklog',
-            name='formatted_tb',
+            model_name="tasklog",
+            name="formatted_tb",
             field=models.TextField(null=True),
         ),
     ]

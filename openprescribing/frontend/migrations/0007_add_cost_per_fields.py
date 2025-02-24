@@ -6,20 +6,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0007_auto_20160908_0811'),
+        ("frontend", "0007_auto_20160908_0811"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measureglobal',
-            name='cost_per_denom',
+            model_name="measureglobal",
+            name="cost_per_denom",
             field=models.FloatField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='measureglobal',
-            name='cost_per_num',
+            model_name="measureglobal",
+            name="cost_per_num",
             field=models.FloatField(blank=True, null=True),
         ),
     ]

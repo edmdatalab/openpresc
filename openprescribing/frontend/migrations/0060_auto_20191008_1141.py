@@ -8,80 +8,228 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0059_auto_20190918_1100'),
+        ("frontend", "0059_auto_20190918_1100"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='chemical',
-            name='bnf_code',
-            field=models.CharField(max_length=9, primary_key=True, serialize=False, validators=[django.core.validators.RegexValidator('^[\\w]*$', code='Invalid name', message='name must be alphanumeric')]),
+            model_name="chemical",
+            name="bnf_code",
+            field=models.CharField(
+                max_length=9,
+                primary_key=True,
+                serialize=False,
+                validators=[
+                    django.core.validators.RegexValidator(
+                        "^[\\w]*$",
+                        code="Invalid name",
+                        message="name must be alphanumeric",
+                    )
+                ],
+            ),
         ),
         migrations.AlterField(
-            model_name='genericcodemapping',
-            name='from_code',
-            field=models.CharField(db_index=True, max_length=15, primary_key=True, serialize=False, validators=[django.core.validators.RegexValidator('^[\\w]*$', code='Invalid name', message='name must be alphanumeric')]),
+            model_name="genericcodemapping",
+            name="from_code",
+            field=models.CharField(
+                db_index=True,
+                max_length=15,
+                primary_key=True,
+                serialize=False,
+                validators=[
+                    django.core.validators.RegexValidator(
+                        "^[\\w]*$",
+                        code="Invalid name",
+                        message="name must be alphanumeric",
+                    )
+                ],
+            ),
         ),
         migrations.AlterField(
-            model_name='genericcodemapping',
-            name='to_code',
-            field=models.CharField(db_index=True, max_length=15, validators=[django.core.validators.RegexValidator('^[\\w]*$', code='Invalid name', message='name must be alphanumeric')]),
+            model_name="genericcodemapping",
+            name="to_code",
+            field=models.CharField(
+                db_index=True,
+                max_length=15,
+                validators=[
+                    django.core.validators.RegexValidator(
+                        "^[\\w]*$",
+                        code="Invalid name",
+                        message="name must be alphanumeric",
+                    )
+                ],
+            ),
         ),
         migrations.AlterField(
-            model_name='maillog',
-            name='event_type',
-            field=models.CharField(choices=[('autoresponded', 'autoresponded'), ('bounced', 'bounced'), ('clicked', 'clicked'), ('complained', 'complained'), ('deferred', 'deferred'), ('delivered', 'delivered'), ('failed', 'failed'), ('inbound', 'inbound'), ('inbound_failed', 'inbound_failed'), ('opened', 'opened'), ('queued', 'queued'), ('rejected', 'rejected'), ('sent', 'sent'), ('subscribed', 'subscribed'), ('unknown', 'unknown'), ('unsubscribed', 'unsubscribed')], db_index=True, max_length=15),
+            model_name="maillog",
+            name="event_type",
+            field=models.CharField(
+                choices=[
+                    ("autoresponded", "autoresponded"),
+                    ("bounced", "bounced"),
+                    ("clicked", "clicked"),
+                    ("complained", "complained"),
+                    ("deferred", "deferred"),
+                    ("delivered", "delivered"),
+                    ("failed", "failed"),
+                    ("inbound", "inbound"),
+                    ("inbound_failed", "inbound_failed"),
+                    ("opened", "opened"),
+                    ("queued", "queued"),
+                    ("rejected", "rejected"),
+                    ("sent", "sent"),
+                    ("subscribed", "subscribed"),
+                    ("unknown", "unknown"),
+                    ("unsubscribed", "unsubscribed"),
+                ],
+                db_index=True,
+                max_length=15,
+            ),
         ),
         migrations.AlterField(
-            model_name='measure',
-            name='tags_focus',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=30), blank=True, help_text='Indicates that this measure is an aggregate made up of all measures with the listed tags', null=True, size=None),
+            model_name="measure",
+            name="tags_focus",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=30),
+                blank=True,
+                help_text="Indicates that this measure is an aggregate made up of all measures with the listed tags",
+                null=True,
+                size=None,
+            ),
         ),
         migrations.AlterField(
-            model_name='pct',
-            name='code',
-            field=models.CharField(help_text='Primary care trust code', max_length=3, primary_key=True, serialize=False),
+            model_name="pct",
+            name="code",
+            field=models.CharField(
+                help_text="Primary care trust code",
+                max_length=3,
+                primary_key=True,
+                serialize=False,
+            ),
         ),
         migrations.AlterField(
-            model_name='pct',
-            name='org_type',
-            field=models.CharField(choices=[('CCG', 'CCG'), ('PCT', 'PCT'), ('H', 'Hub'), ('Unknown', 'Unknown')], default='Unknown', max_length=9),
+            model_name="pct",
+            name="org_type",
+            field=models.CharField(
+                choices=[
+                    ("CCG", "CCG"),
+                    ("PCT", "PCT"),
+                    ("H", "Hub"),
+                    ("Unknown", "Unknown"),
+                ],
+                default="Unknown",
+                max_length=9,
+            ),
         ),
         migrations.AlterField(
-            model_name='practice',
-            name='code',
-            field=models.CharField(help_text='Practice code', max_length=6, primary_key=True, serialize=False),
+            model_name="practice",
+            name="code",
+            field=models.CharField(
+                help_text="Practice code",
+                max_length=6,
+                primary_key=True,
+                serialize=False,
+            ),
         ),
         migrations.AlterField(
-            model_name='practice',
-            name='setting',
-            field=models.IntegerField(choices=[(-1, 'Unknown'), (0, 'Other'), (1, 'WIC Practice'), (2, 'OOH Practice'), (3, 'WIC + OOH Practice'), (4, 'GP Practice'), (8, 'Public Health Service'), (9, 'Community Health Service'), (10, 'Hospital Service'), (11, 'Optometry Service'), (12, 'Urgent & Emergency Care'), (13, 'Hospice'), (14, 'Care Home / Nursing Home'), (15, 'Border Force'), (16, 'Young Offender Institution'), (17, 'Secure Training Centre'), (18, "Secure Children's Home"), (19, 'Immigration Removal Centre'), (20, 'Court'), (21, 'Police Custody'), (22, 'Sexual Assault Referral Centre (SARC)'), (24, 'Other - Justice Estate'), (25, 'Prison')], default=-1),
+            model_name="practice",
+            name="setting",
+            field=models.IntegerField(
+                choices=[
+                    (-1, "Unknown"),
+                    (0, "Other"),
+                    (1, "WIC Practice"),
+                    (2, "OOH Practice"),
+                    (3, "WIC + OOH Practice"),
+                    (4, "GP Practice"),
+                    (8, "Public Health Service"),
+                    (9, "Community Health Service"),
+                    (10, "Hospital Service"),
+                    (11, "Optometry Service"),
+                    (12, "Urgent & Emergency Care"),
+                    (13, "Hospice"),
+                    (14, "Care Home / Nursing Home"),
+                    (15, "Border Force"),
+                    (16, "Young Offender Institution"),
+                    (17, "Secure Training Centre"),
+                    (18, "Secure Children's Home"),
+                    (19, "Immigration Removal Centre"),
+                    (20, "Court"),
+                    (21, "Police Custody"),
+                    (22, "Sexual Assault Referral Centre (SARC)"),
+                    (24, "Other - Justice Estate"),
+                    (25, "Prison"),
+                ],
+                default=-1,
+            ),
         ),
         migrations.AlterField(
-            model_name='practice',
-            name='status_code',
-            field=models.CharField(blank=True, choices=[('U', 'Unknown'), ('A', 'Active'), ('B', 'Retired'), ('C', 'Closed'), ('D', 'Dormant'), ('P', 'Proposed')], max_length=1, null=True),
+            model_name="practice",
+            name="status_code",
+            field=models.CharField(
+                blank=True,
+                choices=[
+                    ("U", "Unknown"),
+                    ("A", "Active"),
+                    ("B", "Retired"),
+                    ("C", "Closed"),
+                    ("D", "Dormant"),
+                    ("P", "Proposed"),
+                ],
+                max_length=1,
+                null=True,
+            ),
         ),
         migrations.AlterField(
-            model_name='prescription',
-            name='presentation_code',
-            field=models.CharField(max_length=15, validators=[django.core.validators.RegexValidator('^[\\w]*$', code='Invalid name', message='name must be alphanumeric')]),
+            model_name="prescription",
+            name="presentation_code",
+            field=models.CharField(
+                max_length=15,
+                validators=[
+                    django.core.validators.RegexValidator(
+                        "^[\\w]*$",
+                        code="Invalid name",
+                        message="name must be alphanumeric",
+                    )
+                ],
+            ),
         ),
         migrations.AlterField(
-            model_name='presentation',
-            name='bnf_code',
-            field=models.CharField(max_length=15, primary_key=True, serialize=False, validators=[django.core.validators.RegexValidator('^[\\w]*$', code='Invalid name', message='name must be alphanumeric')]),
+            model_name="presentation",
+            name="bnf_code",
+            field=models.CharField(
+                max_length=15,
+                primary_key=True,
+                serialize=False,
+                validators=[
+                    django.core.validators.RegexValidator(
+                        "^[\\w]*$",
+                        code="Invalid name",
+                        message="name must be alphanumeric",
+                    )
+                ],
+            ),
         ),
         migrations.AlterField(
-            model_name='product',
-            name='bnf_code',
-            field=models.CharField(max_length=11, primary_key=True, serialize=False, validators=[django.core.validators.RegexValidator('^[\\w]*$', code='Invalid name', message='name must be alphanumeric')]),
+            model_name="product",
+            name="bnf_code",
+            field=models.CharField(
+                max_length=11,
+                primary_key=True,
+                serialize=False,
+                validators=[
+                    django.core.validators.RegexValidator(
+                        "^[\\w]*$",
+                        code="Invalid name",
+                        message="name must be alphanumeric",
+                    )
+                ],
+            ),
         ),
         migrations.AlterField(
-            model_name='stp',
-            name='code',
+            model_name="stp",
+            name="code",
             field=models.CharField(max_length=3, null=True, unique=True),
         ),
     ]

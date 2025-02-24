@@ -6,19 +6,18 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0006_importlog_populate'),
+        ("frontend", "0006_importlog_populate"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='importlog',
-            options={'ordering': ['-current_at']},
+            name="importlog",
+            options={"ordering": ["-current_at"]},
         ),
         migrations.AlterField(
-            model_name='importlog',
-            name='category',
+            model_name="importlog",
+            name="category",
             field=models.CharField(db_index=True, max_length=50),
         ),
     ]

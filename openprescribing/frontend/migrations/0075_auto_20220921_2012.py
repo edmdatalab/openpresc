@@ -4,21 +4,20 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0074_auto_20210322_0849'),
+        ("frontend", "0074_auto_20210322_0849"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='measurevalue',
-            name='stp',
+            model_name="measurevalue",
+            name="stp",
         ),
         migrations.RemoveField(
-            model_name='pct',
-            name='stp',
+            model_name="pct",
+            name="stp",
         ),
         migrations.DeleteModel(
-            name='STP',
+            name="STP",
         ),
     ]

@@ -5,15 +5,19 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0078_stp_ons_code'),
+        ("frontend", "0078_stp_ons_code"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='orgbookmark',
-            name='stp',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='frontend.STP'),
+            model_name="orgbookmark",
+            name="stp",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                to="frontend.STP",
+            ),
         ),
     ]

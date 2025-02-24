@@ -6,20 +6,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0021_chemical_is_current'),
+        ("frontend", "0021_chemical_is_current"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='product',
-            name='is_current',
+            model_name="product",
+            name="is_current",
             field=models.BooleanField(default=True),
         ),
         migrations.AddField(
-            model_name='section',
-            name='is_current',
+            model_name="section",
+            name="is_current",
             field=models.BooleanField(default=True),
         ),
     ]

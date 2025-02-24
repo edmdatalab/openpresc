@@ -7,15 +7,19 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0025_genericcodemapping'),
+        ("frontend", "0025_genericcodemapping"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='ppusaving',
-            name='presentation',
-            field=models.ForeignKey(db_column='bnf_code', db_constraint=False, on_delete=django.db.models.deletion.CASCADE, to='frontend.Presentation'),
+            model_name="ppusaving",
+            name="presentation",
+            field=models.ForeignKey(
+                db_column="bnf_code",
+                db_constraint=False,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="frontend.Presentation",
+            ),
         ),
     ]

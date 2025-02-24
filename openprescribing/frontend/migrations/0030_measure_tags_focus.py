@@ -7,15 +7,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0029_merge'),
+        ("frontend", "0029_merge"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='tags_focus',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=30), blank=True, null=True, size=None),
+            model_name="measure",
+            name="tags_focus",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=30),
+                blank=True,
+                null=True,
+                size=None,
+            ),
         ),
     ]

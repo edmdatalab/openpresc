@@ -6,66 +6,65 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0044_presentation_dmd_name'),
+        ("frontend", "0044_presentation_dmd_name"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='measureglobal',
-            name='cost_per_denom',
+            model_name="measureglobal",
+            name="cost_per_denom",
         ),
         migrations.RemoveField(
-            model_name='measureglobal',
-            name='cost_per_num',
+            model_name="measureglobal",
+            name="cost_per_num",
         ),
         migrations.RemoveField(
-            model_name='measureglobal',
-            name='denom_cost',
+            model_name="measureglobal",
+            name="denom_cost",
         ),
         migrations.RemoveField(
-            model_name='measureglobal',
-            name='denom_items',
+            model_name="measureglobal",
+            name="denom_items",
         ),
         migrations.RemoveField(
-            model_name='measureglobal',
-            name='denom_quantity',
+            model_name="measureglobal",
+            name="denom_quantity",
         ),
         migrations.RemoveField(
-            model_name='measureglobal',
-            name='num_cost',
+            model_name="measureglobal",
+            name="num_cost",
         ),
         migrations.RemoveField(
-            model_name='measureglobal',
-            name='num_items',
+            model_name="measureglobal",
+            name="num_items",
         ),
         migrations.RemoveField(
-            model_name='measureglobal',
-            name='num_quantity',
+            model_name="measureglobal",
+            name="num_quantity",
         ),
         migrations.RemoveField(
-            model_name='measurevalue',
-            name='denom_cost',
+            model_name="measurevalue",
+            name="denom_cost",
         ),
         migrations.RemoveField(
-            model_name='measurevalue',
-            name='denom_items',
+            model_name="measurevalue",
+            name="denom_items",
         ),
         migrations.RemoveField(
-            model_name='measurevalue',
-            name='denom_quantity',
+            model_name="measurevalue",
+            name="denom_quantity",
         ),
         migrations.RemoveField(
-            model_name='measurevalue',
-            name='num_cost',
+            model_name="measurevalue",
+            name="num_cost",
         ),
         migrations.RemoveField(
-            model_name='measurevalue',
-            name='num_items',
+            model_name="measurevalue",
+            name="num_items",
         ),
         migrations.RemoveField(
-            model_name='measurevalue',
-            name='num_quantity',
+            model_name="measurevalue",
+            name="num_quantity",
         ),
     ]

@@ -7,20 +7,23 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0050_auto_20190627_1029'),
+        ("frontend", "0050_auto_20190627_1029"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='stp',
-            name='code',
+            model_name="stp",
+            name="code",
             field=models.CharField(max_length=3, null=True),
         ),
         migrations.AddField(
-            model_name='stp',
-            name='regional_team',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.PROTECT, to='frontend.RegionalTeam'),
+            model_name="stp",
+            name="regional_team",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                to="frontend.RegionalTeam",
+            ),
         ),
     ]

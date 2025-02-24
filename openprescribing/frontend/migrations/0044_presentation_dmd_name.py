@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0043_ncsoconcessionbookmark'),
+        ("frontend", "0043_ncsoconcessionbookmark"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='presentation',
-            name='dmd_name',
+            model_name="presentation",
+            name="dmd_name",
             field=models.CharField(max_length=255, null=True),
         ),
     ]

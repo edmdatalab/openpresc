@@ -4,18 +4,17 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0065_auto_20191205_1617'),
+        ("frontend", "0065_auto_20191205_1617"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='measure',
-            name='end_date',
+            model_name="measure",
+            name="end_date",
         ),
         migrations.RemoveField(
-            model_name='measure',
-            name='start_date',
+            model_name="measure",
+            name="start_date",
         ),
     ]

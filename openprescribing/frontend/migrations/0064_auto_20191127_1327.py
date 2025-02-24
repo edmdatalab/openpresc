@@ -6,22 +6,21 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0063_orgbookmark_pcn'),
+        ("frontend", "0063_orgbookmark_pcn"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='ncsoconcessionbookmark',
-            name='approved',
+            model_name="ncsoconcessionbookmark",
+            name="approved",
         ),
         migrations.RemoveField(
-            model_name='orgbookmark',
-            name='approved',
+            model_name="orgbookmark",
+            name="approved",
         ),
         migrations.RemoveField(
-            model_name='searchbookmark',
-            name='approved',
+            model_name="searchbookmark",
+            name="approved",
         ),
     ]

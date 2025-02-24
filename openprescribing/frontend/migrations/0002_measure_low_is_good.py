@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0001_initial'),
+        ("frontend", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='low_is_good',
+            model_name="measure",
+            name="low_is_good",
             field=models.NullBooleanField(),
         ),
     ]

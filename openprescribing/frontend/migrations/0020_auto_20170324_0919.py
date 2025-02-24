@@ -8,30 +8,44 @@ import frontend.models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0019_auto_20170303_1248'),
+        ("frontend", "0019_auto_20170303_1248"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='presentation',
-            name='replaced_by',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='frontend.Presentation'),
+            model_name="presentation",
+            name="replaced_by",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="frontend.Presentation",
+            ),
         ),
         migrations.AlterField(
-            model_name='prescription',
-            name='pct',
-            field=models.ForeignKey(db_constraint=False, null=True, on_delete=django.db.models.deletion.CASCADE, to='frontend.PCT'),
+            model_name="prescription",
+            name="pct",
+            field=models.ForeignKey(
+                db_constraint=False,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="frontend.PCT",
+            ),
         ),
         migrations.AlterField(
-            model_name='prescription',
-            name='practice',
-            field=models.ForeignKey(db_constraint=False, null=True, on_delete=django.db.models.deletion.CASCADE, to='frontend.Practice'),
+            model_name="prescription",
+            name="practice",
+            field=models.ForeignKey(
+                db_constraint=False,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="frontend.Practice",
+            ),
         ),
         migrations.AlterField(
-            model_name='searchbookmark',
-            name='name',
+            model_name="searchbookmark",
+            name="name",
             field=frontend.models.TruncatingCharField(max_length=200),
         ),
     ]

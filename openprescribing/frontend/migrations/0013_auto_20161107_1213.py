@@ -6,25 +6,24 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0012_auto_20160930_1545'),
+        ("frontend", "0012_auto_20160930_1545"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='profile',
-            name='emails_clicked',
+            model_name="profile",
+            name="emails_clicked",
             field=models.IntegerField(default=0),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='emails_opened',
+            model_name="profile",
+            name="emails_opened",
             field=models.IntegerField(default=0),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='emails_received',
+            model_name="profile",
+            name="emails_received",
             field=models.IntegerField(default=0),
         ),
     ]

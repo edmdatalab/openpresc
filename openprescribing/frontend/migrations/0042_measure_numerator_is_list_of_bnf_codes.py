@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0041_measure_numerator_bnf_codes_query'),
+        ("frontend", "0041_measure_numerator_bnf_codes_query"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='numerator_is_list_of_bnf_codes',
+            model_name="measure",
+            name="numerator_is_list_of_bnf_codes",
             field=models.BooleanField(default=True),
         ),
     ]

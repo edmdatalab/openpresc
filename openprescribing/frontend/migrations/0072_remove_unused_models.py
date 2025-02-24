@@ -4,19 +4,18 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0071_measure1'),
+        ("frontend", "0071_measure1"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='GenericCodeMapping',
+            name="GenericCodeMapping",
         ),
         migrations.DeleteModel(
-            name='Measure1',
+            name="Measure1",
         ),
         migrations.DeleteModel(
-            name='PPUSaving',
+            name="PPUSaving",
         ),
     ]

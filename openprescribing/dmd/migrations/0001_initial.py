@@ -7,628 +7,1552 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='AMP',
+            name="AMP",
             fields=[
-                ('id', models.BigIntegerField(db_column='apid', help_text=b'Identifier', primary_key=True, serialize=False)),
-                ('invalid', models.BooleanField(help_text=b'Invalid')),
-                ('nm', models.CharField(help_text=b'Name', max_length=255)),
-                ('abbrevnm', models.CharField(help_text=b'Abbreviated name', max_length=60, null=True)),
-                ('descr', models.CharField(help_text=b'Description', max_length=700)),
-                ('nmdt', models.DateField(help_text=b'Date of name applicability', null=True)),
-                ('nm_prev', models.CharField(help_text=b'Previous name', max_length=255, null=True)),
-                ('lic_authchangedt', models.DateField(help_text=b'Date of change of licensing authority', null=True)),
-                ('ema', models.BooleanField(help_text=b'EMA additional monitoring')),
-                ('parallel_import', models.BooleanField(help_text=b'Parallel import')),
+                (
+                    "id",
+                    models.BigIntegerField(
+                        db_column="apid",
+                        help_text=b"Identifier",
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("invalid", models.BooleanField(help_text=b"Invalid")),
+                ("nm", models.CharField(help_text=b"Name", max_length=255)),
+                (
+                    "abbrevnm",
+                    models.CharField(
+                        help_text=b"Abbreviated name", max_length=60, null=True
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=700)),
+                (
+                    "nmdt",
+                    models.DateField(
+                        help_text=b"Date of name applicability", null=True
+                    ),
+                ),
+                (
+                    "nm_prev",
+                    models.CharField(
+                        help_text=b"Previous name", max_length=255, null=True
+                    ),
+                ),
+                (
+                    "lic_authchangedt",
+                    models.DateField(
+                        help_text=b"Date of change of licensing authority", null=True
+                    ),
+                ),
+                ("ema", models.BooleanField(help_text=b"EMA additional monitoring")),
+                ("parallel_import", models.BooleanField(help_text=b"Parallel import")),
             ],
             options={
-                'verbose_name': 'Actual Medicinal Product',
+                "verbose_name": "Actual Medicinal Product",
             },
         ),
         migrations.CreateModel(
-            name='AMPP',
+            name="AMPP",
             fields=[
-                ('id', models.BigIntegerField(db_column='appid', help_text=b'Identifier', primary_key=True, serialize=False)),
-                ('invalid', models.BooleanField(help_text=b'Invalid')),
-                ('nm', models.CharField(help_text=b'Description', max_length=774)),
-                ('abbrevnm', models.CharField(help_text=b'Abbreviated name', max_length=60, null=True)),
-                ('subp', models.CharField(help_text=b'Sub pack info', max_length=30, null=True)),
-                ('discdt', models.DateField(help_text=b'Discontinued change date', null=True)),
-                ('amp', models.ForeignKey(db_column='apid', help_text=b'AMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMP')),
+                (
+                    "id",
+                    models.BigIntegerField(
+                        db_column="appid",
+                        help_text=b"Identifier",
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("invalid", models.BooleanField(help_text=b"Invalid")),
+                ("nm", models.CharField(help_text=b"Description", max_length=774)),
+                (
+                    "abbrevnm",
+                    models.CharField(
+                        help_text=b"Abbreviated name", max_length=60, null=True
+                    ),
+                ),
+                (
+                    "subp",
+                    models.CharField(
+                        help_text=b"Sub pack info", max_length=30, null=True
+                    ),
+                ),
+                (
+                    "discdt",
+                    models.DateField(help_text=b"Discontinued change date", null=True),
+                ),
+                (
+                    "amp",
+                    models.ForeignKey(
+                        db_column="apid",
+                        help_text=b"AMP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Actual Medicinal Product Pack',
+                "verbose_name": "Actual Medicinal Product Pack",
             },
         ),
         migrations.CreateModel(
-            name='ApInfo',
+            name="ApInfo",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('sz_weight', models.CharField(help_text=b'Size / weight', max_length=100, null=True)),
-                ('prod_order_no', models.CharField(help_text=b'Product order number', max_length=20, null=True)),
-                ('amp', models.OneToOneField(db_column='apid', help_text=b'AMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMP')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "sz_weight",
+                    models.CharField(
+                        help_text=b"Size / weight", max_length=100, null=True
+                    ),
+                ),
+                (
+                    "prod_order_no",
+                    models.CharField(
+                        help_text=b"Product order number", max_length=20, null=True
+                    ),
+                ),
+                (
+                    "amp",
+                    models.OneToOneField(
+                        db_column="apid",
+                        help_text=b"AMP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Appliance Product Information',
+                "verbose_name": "Appliance Product Information",
             },
         ),
         migrations.CreateModel(
-            name='ApIng',
+            name="ApIng",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('strnth', models.DecimalField(decimal_places=3, help_text=b'Pharmaceutical strength numerical value', max_digits=10, null=True)),
-                ('amp', models.ForeignKey(db_column='apid', help_text=b'AMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMP')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "strnth",
+                    models.DecimalField(
+                        decimal_places=3,
+                        help_text=b"Pharmaceutical strength numerical value",
+                        max_digits=10,
+                        null=True,
+                    ),
+                ),
+                (
+                    "amp",
+                    models.ForeignKey(
+                        db_column="apid",
+                        help_text=b"AMP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'TODO',
+                "verbose_name": "TODO",
             },
         ),
         migrations.CreateModel(
-            name='AvailabilityRestriction',
+            name="AvailabilityRestriction",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='BasisOfName',
+            name="BasisOfName",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=150)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=150)),
             ],
         ),
         migrations.CreateModel(
-            name='BasisOfStrnth',
+            name="BasisOfStrnth",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=150)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=150)),
             ],
         ),
         migrations.CreateModel(
-            name='Colour',
+            name="Colour",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='CombinationPackInd',
+            name="CombinationPackInd",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='CombinationProdInd',
+            name="CombinationProdInd",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='ControlDrugCategory',
+            name="ControlDrugCategory",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='ControlInfo',
+            name="ControlInfo",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('catdt', models.DateField(help_text=b'Date of applicability', null=True)),
-                ('cat', models.ForeignKey(db_column='catcd', help_text=b'Controlled Drug category', on_delete=django.db.models.deletion.CASCADE, to='dmd.ControlDrugCategory')),
-                ('cat_prev', models.ForeignKey(db_column='cat_prevcd', help_text=b'Previous Controlled Drug information', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.ControlDrugCategory')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "catdt",
+                    models.DateField(help_text=b"Date of applicability", null=True),
+                ),
+                (
+                    "cat",
+                    models.ForeignKey(
+                        db_column="catcd",
+                        help_text=b"Controlled Drug category",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.ControlDrugCategory",
+                    ),
+                ),
+                (
+                    "cat_prev",
+                    models.ForeignKey(
+                        db_column="cat_prevcd",
+                        help_text=b"Previous Controlled Drug information",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="+",
+                        to="dmd.ControlDrugCategory",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Controlled Drug Prescribing Information',
+                "verbose_name": "Controlled Drug Prescribing Information",
             },
         ),
         migrations.CreateModel(
-            name='DfIndicator',
+            name="DfIndicator",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=20)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=20)),
             ],
         ),
         migrations.CreateModel(
-            name='Dform',
+            name="Dform",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Dose Form',
+                "verbose_name": "Dose Form",
             },
         ),
         migrations.CreateModel(
-            name='DiscontinuedInd',
+            name="DiscontinuedInd",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='Dnd',
+            name="Dnd",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='Droute',
+            name="Droute",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Drug Route',
+                "verbose_name": "Drug Route",
             },
         ),
         migrations.CreateModel(
-            name='Dtinfo',
+            name="Dtinfo",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('price', models.IntegerField(help_text=b'Drug Tariff price', null=True)),
-                ('dt', models.DateField(help_text=b'Date from which applicable', null=True)),
-                ('prevprice', models.IntegerField(help_text=b'Previous price', null=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "price",
+                    models.IntegerField(help_text=b"Drug Tariff price", null=True),
+                ),
+                (
+                    "dt",
+                    models.DateField(
+                        help_text=b"Date from which applicable", null=True
+                    ),
+                ),
+                (
+                    "prevprice",
+                    models.IntegerField(help_text=b"Previous price", null=True),
+                ),
             ],
             options={
-                'verbose_name': 'Drug Tariff Category Information',
+                "verbose_name": "Drug Tariff Category Information",
             },
         ),
         migrations.CreateModel(
-            name='DtPaymentCategory',
+            name="DtPaymentCategory",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='Flavour',
+            name="Flavour",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='Form',
+            name="Form",
             fields=[
-                ('cd', models.BigIntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('cddt', models.DateField(help_text=b'Date code is applicable from', null=True)),
-                ('cdprev', models.BigIntegerField(help_text=b'Previous code', null=True)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.BigIntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                (
+                    "cddt",
+                    models.DateField(
+                        help_text=b"Date code is applicable from", null=True
+                    ),
+                ),
+                (
+                    "cdprev",
+                    models.BigIntegerField(help_text=b"Previous code", null=True),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='GTIN',
+            name="GTIN",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('gtin', models.BigIntegerField(help_text=b'GTIN')),
-                ('startdt', models.DateField(help_text=b'GTIN date')),
-                ('enddt', models.DateField(help_text=b'The date the GTIN became invalid', null=True)),
-                ('ampp', models.OneToOneField(db_column='appid', help_text=b'AMPP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMPP')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("gtin", models.BigIntegerField(help_text=b"GTIN")),
+                ("startdt", models.DateField(help_text=b"GTIN date")),
+                (
+                    "enddt",
+                    models.DateField(
+                        help_text=b"The date the GTIN became invalid", null=True
+                    ),
+                ),
+                (
+                    "ampp",
+                    models.OneToOneField(
+                        db_column="appid",
+                        help_text=b"AMPP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMPP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Global Trade Item Number',
+                "verbose_name": "Global Trade Item Number",
             },
         ),
         migrations.CreateModel(
-            name='Ing',
+            name="Ing",
             fields=[
-                ('id', models.BigIntegerField(db_column='isid', help_text=b'Identifier', primary_key=True, serialize=False)),
-                ('isiddt', models.DateField(help_text=b'Date identifier became valid', null=True)),
-                ('isidprev', models.BigIntegerField(help_text=b'Previous identifier', null=True)),
-                ('invalid', models.BooleanField(help_text=b'Invalid')),
-                ('nm', models.CharField(help_text=b'Name', max_length=255)),
+                (
+                    "id",
+                    models.BigIntegerField(
+                        db_column="isid",
+                        help_text=b"Identifier",
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                (
+                    "isiddt",
+                    models.DateField(
+                        help_text=b"Date identifier became valid", null=True
+                    ),
+                ),
+                (
+                    "isidprev",
+                    models.BigIntegerField(help_text=b"Previous identifier", null=True),
+                ),
+                ("invalid", models.BooleanField(help_text=b"Invalid")),
+                ("nm", models.CharField(help_text=b"Name", max_length=255)),
             ],
             options={
-                'verbose_name': 'TODO',
+                "verbose_name": "TODO",
             },
         ),
         migrations.CreateModel(
-            name='LegalCategory',
+            name="LegalCategory",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='LicensingAuthority',
+            name="LicensingAuthority",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='LicensingAuthorityChangeReason',
+            name="LicensingAuthorityChangeReason",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='LicRoute',
+            name="LicRoute",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('amp', models.ForeignKey(db_column='apid', help_text=b'AMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMP')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "amp",
+                    models.ForeignKey(
+                        db_column="apid",
+                        help_text=b"AMP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Licensed Route',
+                "verbose_name": "Licensed Route",
             },
         ),
         migrations.CreateModel(
-            name='NamechangeReason',
+            name="NamechangeReason",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=150)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=150)),
             ],
         ),
         migrations.CreateModel(
-            name='Ont',
+            name="Ont",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Ontology Drug Form & Route',
+                "verbose_name": "Ontology Drug Form & Route",
             },
         ),
         migrations.CreateModel(
-            name='OntFormRoute',
+            name="OntFormRoute",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='PackInfo',
+            name="PackInfo",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('reimb_statdt', models.DateField(help_text=b'Date appliance reimbursement status became effective', null=True)),
-                ('pack_order_no', models.CharField(help_text=b'Pack order number', max_length=20, null=True)),
-                ('ampp', models.OneToOneField(db_column='appid', help_text=b'AMPP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMPP')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "reimb_statdt",
+                    models.DateField(
+                        help_text=b"Date appliance reimbursement status became effective",
+                        null=True,
+                    ),
+                ),
+                (
+                    "pack_order_no",
+                    models.CharField(
+                        help_text=b"Pack order number", max_length=20, null=True
+                    ),
+                ),
+                (
+                    "ampp",
+                    models.OneToOneField(
+                        db_column="appid",
+                        help_text=b"AMPP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMPP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'TODO',
+                "verbose_name": "TODO",
             },
         ),
         migrations.CreateModel(
-            name='PrescribInfo',
+            name="PrescribInfo",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('sched_2', models.BooleanField(help_text=b'Schedule 2')),
-                ('acbs', models.BooleanField(help_text=b'ACBS')),
-                ('padm', models.BooleanField(help_text=b'Personally administered')),
-                ('fp10_mda', models.BooleanField(help_text=b'FP10 MDA Prescription')),
-                ('sched_1', models.BooleanField(help_text=b'Schedule 1')),
-                ('hosp', models.BooleanField(help_text=b'Hospital')),
-                ('nurse_f', models.BooleanField(help_text=b'Nurse formulary')),
-                ('enurse_f', models.BooleanField(help_text=b'Nurse extended formulary')),
-                ('dent_f', models.BooleanField(help_text=b'Dental formulary')),
-                ('ampp', models.OneToOneField(db_column='appid', help_text=b'AMPP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMPP')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("sched_2", models.BooleanField(help_text=b"Schedule 2")),
+                ("acbs", models.BooleanField(help_text=b"ACBS")),
+                ("padm", models.BooleanField(help_text=b"Personally administered")),
+                ("fp10_mda", models.BooleanField(help_text=b"FP10 MDA Prescription")),
+                ("sched_1", models.BooleanField(help_text=b"Schedule 1")),
+                ("hosp", models.BooleanField(help_text=b"Hospital")),
+                ("nurse_f", models.BooleanField(help_text=b"Nurse formulary")),
+                (
+                    "enurse_f",
+                    models.BooleanField(help_text=b"Nurse extended formulary"),
+                ),
+                ("dent_f", models.BooleanField(help_text=b"Dental formulary")),
+                (
+                    "ampp",
+                    models.OneToOneField(
+                        db_column="appid",
+                        help_text=b"AMPP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMPP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Product Prescribing Information',
+                "verbose_name": "Product Prescribing Information",
             },
         ),
         migrations.CreateModel(
-            name='PriceBasis',
+            name="PriceBasis",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='PriceInfo',
+            name="PriceInfo",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('price', models.IntegerField(help_text=b'Price', null=True)),
-                ('pricedt', models.DateField(help_text=b'Date of price validity', null=True)),
-                ('price_prev', models.IntegerField(help_text=b'Price prior to change date', null=True)),
-                ('ampp', models.OneToOneField(db_column='appid', help_text=b'AMPP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMPP')),
-                ('price_basis', models.ForeignKey(db_column='price_basiscd', help_text=b'Price basis', on_delete=django.db.models.deletion.CASCADE, to='dmd.PriceBasis')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("price", models.IntegerField(help_text=b"Price", null=True)),
+                (
+                    "pricedt",
+                    models.DateField(help_text=b"Date of price validity", null=True),
+                ),
+                (
+                    "price_prev",
+                    models.IntegerField(
+                        help_text=b"Price prior to change date", null=True
+                    ),
+                ),
+                (
+                    "ampp",
+                    models.OneToOneField(
+                        db_column="appid",
+                        help_text=b"AMPP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMPP",
+                    ),
+                ),
+                (
+                    "price_basis",
+                    models.ForeignKey(
+                        db_column="price_basiscd",
+                        help_text=b"Price basis",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.PriceBasis",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Medicinal Product Price',
+                "verbose_name": "Medicinal Product Price",
             },
         ),
         migrations.CreateModel(
-            name='ReimbInfo',
+            name="ReimbInfo",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('px_chrgs', models.IntegerField(help_text=b'Prescription charges', null=True)),
-                ('disp_fees', models.IntegerField(help_text=b'Dispensing fees', null=True)),
-                ('bb', models.BooleanField(help_text=b'Broken bulk')),
-                ('cal_pack', models.BooleanField(help_text=b'Calendar pack')),
-                ('fp34d', models.BooleanField(help_text=b'FP34D prescription item')),
-                ('ampp', models.OneToOneField(db_column='appid', help_text=b'AMPP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMPP')),
-                ('dnd', models.ForeignKey(db_column='dndcd', help_text=b'Discount not deducted', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.Dnd')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "px_chrgs",
+                    models.IntegerField(help_text=b"Prescription charges", null=True),
+                ),
+                (
+                    "disp_fees",
+                    models.IntegerField(help_text=b"Dispensing fees", null=True),
+                ),
+                ("bb", models.BooleanField(help_text=b"Broken bulk")),
+                ("cal_pack", models.BooleanField(help_text=b"Calendar pack")),
+                ("fp34d", models.BooleanField(help_text=b"FP34D prescription item")),
+                (
+                    "ampp",
+                    models.OneToOneField(
+                        db_column="appid",
+                        help_text=b"AMPP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.AMPP",
+                    ),
+                ),
+                (
+                    "dnd",
+                    models.ForeignKey(
+                        db_column="dndcd",
+                        help_text=b"Discount not deducted",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.Dnd",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Reimbursement Information',
+                "verbose_name": "Reimbursement Information",
             },
         ),
         migrations.CreateModel(
-            name='ReimbursementStatus',
+            name="ReimbursementStatus",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='Route',
+            name="Route",
             fields=[
-                ('cd', models.BigIntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('cddt', models.DateField(help_text=b'Date code is applicable from', null=True)),
-                ('cdprev', models.BigIntegerField(help_text=b'Previous code', null=True)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.BigIntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                (
+                    "cddt",
+                    models.DateField(
+                        help_text=b"Date code is applicable from", null=True
+                    ),
+                ),
+                (
+                    "cdprev",
+                    models.BigIntegerField(help_text=b"Previous code", null=True),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='SpecCont',
+            name="SpecCont",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='Supplier',
+            name="Supplier",
             fields=[
-                ('cd', models.BigIntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('cddt', models.DateField(help_text=b'Date code is applicable from', null=True)),
-                ('cdprev', models.BigIntegerField(help_text=b'Previous code', null=True)),
-                ('invalid', models.BooleanField(help_text=b'Invalid')),
-                ('descr', models.CharField(help_text=b'Description', max_length=80)),
+                (
+                    "cd",
+                    models.BigIntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                (
+                    "cddt",
+                    models.DateField(
+                        help_text=b"Date code is applicable from", null=True
+                    ),
+                ),
+                (
+                    "cdprev",
+                    models.BigIntegerField(help_text=b"Previous code", null=True),
+                ),
+                ("invalid", models.BooleanField(help_text=b"Invalid")),
+                ("descr", models.CharField(help_text=b"Description", max_length=80)),
             ],
         ),
         migrations.CreateModel(
-            name='UnitOfMeasure',
+            name="UnitOfMeasure",
             fields=[
-                ('cd', models.BigIntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('cddt', models.DateField(help_text=b'Date code is applicable from', null=True)),
-                ('cdprev', models.BigIntegerField(help_text=b'Previous code', null=True)),
-                ('descr', models.CharField(help_text=b'Description', max_length=150)),
+                (
+                    "cd",
+                    models.BigIntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                (
+                    "cddt",
+                    models.DateField(
+                        help_text=b"Date code is applicable from", null=True
+                    ),
+                ),
+                (
+                    "cdprev",
+                    models.BigIntegerField(help_text=b"Previous code", null=True),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=150)),
             ],
         ),
         migrations.CreateModel(
-            name='VirtualProductNonAvail',
+            name="VirtualProductNonAvail",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='VirtualProductPresStatus',
+            name="VirtualProductPresStatus",
             fields=[
-                ('cd', models.IntegerField(help_text=b'Code', primary_key=True, serialize=False)),
-                ('descr', models.CharField(help_text=b'Description', max_length=60)),
+                (
+                    "cd",
+                    models.IntegerField(
+                        help_text=b"Code", primary_key=True, serialize=False
+                    ),
+                ),
+                ("descr", models.CharField(help_text=b"Description", max_length=60)),
             ],
         ),
         migrations.CreateModel(
-            name='VMP',
+            name="VMP",
             fields=[
-                ('id', models.BigIntegerField(db_column='vpid', help_text=b'Identifier', primary_key=True, serialize=False)),
-                ('vpiddt', models.DateField(help_text=b'Date identifier became valid', null=True)),
-                ('vpidprev', models.BigIntegerField(help_text=b'Previous product identifier', null=True)),
-                ('invalid', models.BooleanField(help_text=b'Invalid')),
-                ('nm', models.CharField(help_text=b'Name', max_length=255)),
-                ('abbrevnm', models.CharField(help_text=b'Abbreviated name', max_length=60, null=True)),
-                ('nmdt', models.DateField(help_text=b'Date of name applicability', null=True)),
-                ('nmprev', models.CharField(help_text=b'Previous name', max_length=255, null=True)),
-                ('sug_f', models.BooleanField(help_text=b'Sugar free')),
-                ('glu_f', models.BooleanField(help_text=b'Gluten free')),
-                ('pres_f', models.BooleanField(help_text=b'Preservative free')),
-                ('cfc_f', models.BooleanField(help_text=b'CFC free')),
-                ('non_availdt', models.DateField(help_text=b'Non-availability status date', null=True)),
-                ('udfs', models.DecimalField(decimal_places=3, help_text=b'Unit dose form size', max_digits=10, null=True)),
-                ('basis', models.ForeignKey(db_column='basiscd', help_text=b'Basis of preferred name', on_delete=django.db.models.deletion.CASCADE, to='dmd.BasisOfName')),
-                ('basis_prev', models.ForeignKey(db_column='basis_prevcd', help_text=b'Basis of previous name', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.BasisOfName')),
-                ('combprod', models.ForeignKey(db_column='combprodcd', help_text=b'Combination product', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.CombinationProdInd')),
-                ('df_ind', models.ForeignKey(db_column='df_indcd', help_text=b'Dose form', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.DfIndicator')),
-                ('nmchange', models.ForeignKey(db_column='nmchangecd', help_text=b'Reason for name change', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.NamechangeReason')),
-                ('non_avail', models.ForeignKey(db_column='non_availcd', help_text=b'Non-availability', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.VirtualProductNonAvail')),
-                ('pres_stat', models.ForeignKey(db_column='pres_statcd', help_text=b'Prescribing status', on_delete=django.db.models.deletion.CASCADE, to='dmd.VirtualProductPresStatus')),
-                ('udfs_uom', models.ForeignKey(db_column='udfs_uomcd', help_text=b'Unit dose form units', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.UnitOfMeasure')),
-                ('unit_dose_uom', models.ForeignKey(db_column='unit_dose_uomcd', help_text=b'Unit dose unit of measure', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.UnitOfMeasure')),
+                (
+                    "id",
+                    models.BigIntegerField(
+                        db_column="vpid",
+                        help_text=b"Identifier",
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                (
+                    "vpiddt",
+                    models.DateField(
+                        help_text=b"Date identifier became valid", null=True
+                    ),
+                ),
+                (
+                    "vpidprev",
+                    models.BigIntegerField(
+                        help_text=b"Previous product identifier", null=True
+                    ),
+                ),
+                ("invalid", models.BooleanField(help_text=b"Invalid")),
+                ("nm", models.CharField(help_text=b"Name", max_length=255)),
+                (
+                    "abbrevnm",
+                    models.CharField(
+                        help_text=b"Abbreviated name", max_length=60, null=True
+                    ),
+                ),
+                (
+                    "nmdt",
+                    models.DateField(
+                        help_text=b"Date of name applicability", null=True
+                    ),
+                ),
+                (
+                    "nmprev",
+                    models.CharField(
+                        help_text=b"Previous name", max_length=255, null=True
+                    ),
+                ),
+                ("sug_f", models.BooleanField(help_text=b"Sugar free")),
+                ("glu_f", models.BooleanField(help_text=b"Gluten free")),
+                ("pres_f", models.BooleanField(help_text=b"Preservative free")),
+                ("cfc_f", models.BooleanField(help_text=b"CFC free")),
+                (
+                    "non_availdt",
+                    models.DateField(
+                        help_text=b"Non-availability status date", null=True
+                    ),
+                ),
+                (
+                    "udfs",
+                    models.DecimalField(
+                        decimal_places=3,
+                        help_text=b"Unit dose form size",
+                        max_digits=10,
+                        null=True,
+                    ),
+                ),
+                (
+                    "basis",
+                    models.ForeignKey(
+                        db_column="basiscd",
+                        help_text=b"Basis of preferred name",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.BasisOfName",
+                    ),
+                ),
+                (
+                    "basis_prev",
+                    models.ForeignKey(
+                        db_column="basis_prevcd",
+                        help_text=b"Basis of previous name",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="+",
+                        to="dmd.BasisOfName",
+                    ),
+                ),
+                (
+                    "combprod",
+                    models.ForeignKey(
+                        db_column="combprodcd",
+                        help_text=b"Combination product",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.CombinationProdInd",
+                    ),
+                ),
+                (
+                    "df_ind",
+                    models.ForeignKey(
+                        db_column="df_indcd",
+                        help_text=b"Dose form",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.DfIndicator",
+                    ),
+                ),
+                (
+                    "nmchange",
+                    models.ForeignKey(
+                        db_column="nmchangecd",
+                        help_text=b"Reason for name change",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.NamechangeReason",
+                    ),
+                ),
+                (
+                    "non_avail",
+                    models.ForeignKey(
+                        db_column="non_availcd",
+                        help_text=b"Non-availability",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.VirtualProductNonAvail",
+                    ),
+                ),
+                (
+                    "pres_stat",
+                    models.ForeignKey(
+                        db_column="pres_statcd",
+                        help_text=b"Prescribing status",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.VirtualProductPresStatus",
+                    ),
+                ),
+                (
+                    "udfs_uom",
+                    models.ForeignKey(
+                        db_column="udfs_uomcd",
+                        help_text=b"Unit dose form units",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="+",
+                        to="dmd.UnitOfMeasure",
+                    ),
+                ),
+                (
+                    "unit_dose_uom",
+                    models.ForeignKey(
+                        db_column="unit_dose_uomcd",
+                        help_text=b"Unit dose unit of measure",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="+",
+                        to="dmd.UnitOfMeasure",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Virtual Medicinal Product',
+                "verbose_name": "Virtual Medicinal Product",
             },
         ),
         migrations.CreateModel(
-            name='VMPP',
+            name="VMPP",
             fields=[
-                ('id', models.BigIntegerField(db_column='vppid', help_text=b'Identifier', primary_key=True, serialize=False)),
-                ('invalid', models.BooleanField(help_text=b'Invalid')),
-                ('nm', models.CharField(help_text=b'Description', max_length=420)),
-                ('qtyval', models.DecimalField(decimal_places=2, help_text=b'Quantity value', max_digits=10, null=True)),
-                ('combpack', models.ForeignKey(db_column='combpackcd', help_text=b'Combination pack', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.CombinationPackInd')),
-                ('qty_uom', models.ForeignKey(db_column='qty_uomcd', help_text=b'Quantity unit of measure', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.UnitOfMeasure')),
-                ('vmp', models.ForeignKey(db_column='vpid', help_text=b'VMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMP')),
+                (
+                    "id",
+                    models.BigIntegerField(
+                        db_column="vppid",
+                        help_text=b"Identifier",
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("invalid", models.BooleanField(help_text=b"Invalid")),
+                ("nm", models.CharField(help_text=b"Description", max_length=420)),
+                (
+                    "qtyval",
+                    models.DecimalField(
+                        decimal_places=2,
+                        help_text=b"Quantity value",
+                        max_digits=10,
+                        null=True,
+                    ),
+                ),
+                (
+                    "combpack",
+                    models.ForeignKey(
+                        db_column="combpackcd",
+                        help_text=b"Combination pack",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.CombinationPackInd",
+                    ),
+                ),
+                (
+                    "qty_uom",
+                    models.ForeignKey(
+                        db_column="qty_uomcd",
+                        help_text=b"Quantity unit of measure",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="+",
+                        to="dmd.UnitOfMeasure",
+                    ),
+                ),
+                (
+                    "vmp",
+                    models.ForeignKey(
+                        db_column="vpid",
+                        help_text=b"VMP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.VMP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Virtual Medicinal Product Pack',
+                "verbose_name": "Virtual Medicinal Product Pack",
             },
         ),
         migrations.CreateModel(
-            name='VPI',
+            name="VPI",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('bs_subid', models.BigIntegerField(help_text=b'Basis of strength substance identifier', null=True)),
-                ('strnt_nmrtr_val', models.DecimalField(decimal_places=3, help_text=b'Strength value numerator', max_digits=10, null=True)),
-                ('strnt_dnmtr_val', models.DecimalField(decimal_places=3, help_text=b'Strength value denominator', max_digits=10, null=True)),
-                ('basis_strnt', models.ForeignKey(db_column='basis_strntcd', help_text=b'Basis of pharmaceutical strength', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.BasisOfStrnth')),
-                ('ing', models.ForeignKey(db_column='isid', help_text=b'Ingredient', on_delete=django.db.models.deletion.CASCADE, to='dmd.Ing')),
-                ('strnt_dnmtr_uom', models.ForeignKey(db_column='strnt_dnmtr_uomcd', help_text=b'Strength value denominator unit', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.UnitOfMeasure')),
-                ('strnt_nmrtr_uom', models.ForeignKey(db_column='strnt_nmrtr_uomcd', help_text=b'Strength value numerator unit', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.UnitOfMeasure')),
-                ('vmp', models.ForeignKey(db_column='vpid', help_text=b'VMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMP')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "bs_subid",
+                    models.BigIntegerField(
+                        help_text=b"Basis of strength substance identifier", null=True
+                    ),
+                ),
+                (
+                    "strnt_nmrtr_val",
+                    models.DecimalField(
+                        decimal_places=3,
+                        help_text=b"Strength value numerator",
+                        max_digits=10,
+                        null=True,
+                    ),
+                ),
+                (
+                    "strnt_dnmtr_val",
+                    models.DecimalField(
+                        decimal_places=3,
+                        help_text=b"Strength value denominator",
+                        max_digits=10,
+                        null=True,
+                    ),
+                ),
+                (
+                    "basis_strnt",
+                    models.ForeignKey(
+                        db_column="basis_strntcd",
+                        help_text=b"Basis of pharmaceutical strength",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.BasisOfStrnth",
+                    ),
+                ),
+                (
+                    "ing",
+                    models.ForeignKey(
+                        db_column="isid",
+                        help_text=b"Ingredient",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.Ing",
+                    ),
+                ),
+                (
+                    "strnt_dnmtr_uom",
+                    models.ForeignKey(
+                        db_column="strnt_dnmtr_uomcd",
+                        help_text=b"Strength value denominator unit",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="+",
+                        to="dmd.UnitOfMeasure",
+                    ),
+                ),
+                (
+                    "strnt_nmrtr_uom",
+                    models.ForeignKey(
+                        db_column="strnt_nmrtr_uomcd",
+                        help_text=b"Strength value numerator unit",
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="+",
+                        to="dmd.UnitOfMeasure",
+                    ),
+                ),
+                (
+                    "vmp",
+                    models.ForeignKey(
+                        db_column="vpid",
+                        help_text=b"VMP",
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="dmd.VMP",
+                    ),
+                ),
             ],
             options={
-                'verbose_name': 'Virtual Product Ingredient',
+                "verbose_name": "Virtual Product Ingredient",
             },
         ),
         migrations.CreateModel(
-            name='VTM',
+            name="VTM",
             fields=[
-                ('id', models.BigIntegerField(db_column='vtmid', help_text=b'Identifier', primary_key=True, serialize=False)),
-                ('invalid', models.BooleanField(help_text=b'Invalid')),
-                ('nm', models.CharField(help_text=b'Name', max_length=255)),
-                ('abbrevnm', models.CharField(help_text=b'Abbreviated name', max_length=60, null=True)),
-                ('vtmidprev', models.BigIntegerField(help_text=b'Previous identifier', null=True)),
-                ('vtmiddt', models.DateField(help_text=b'VTM identifier date', null=True)),
+                (
+                    "id",
+                    models.BigIntegerField(
+                        db_column="vtmid",
+                        help_text=b"Identifier",
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("invalid", models.BooleanField(help_text=b"Invalid")),
+                ("nm", models.CharField(help_text=b"Name", max_length=255)),
+                (
+                    "abbrevnm",
+                    models.CharField(
+                        help_text=b"Abbreviated name", max_length=60, null=True
+                    ),
+                ),
+                (
+                    "vtmidprev",
+                    models.BigIntegerField(help_text=b"Previous identifier", null=True),
+                ),
+                (
+                    "vtmiddt",
+                    models.DateField(help_text=b"VTM identifier date", null=True),
+                ),
             ],
             options={
-                'verbose_name': 'Virtual Therapeutic Moiety',
+                "verbose_name": "Virtual Therapeutic Moiety",
             },
         ),
         migrations.AddField(
-            model_name='vmp',
-            name='vtm',
-            field=models.ForeignKey(db_column='vtmid', help_text=b'VTM', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.VTM'),
+            model_name="vmp",
+            name="vtm",
+            field=models.ForeignKey(
+                db_column="vtmid",
+                help_text=b"VTM",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.VTM",
+            ),
         ),
         migrations.AddField(
-            model_name='reimbinfo',
-            name='spec_cont',
-            field=models.ForeignKey(db_column='spec_contcd', help_text=b'Special container', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.SpecCont'),
+            model_name="reimbinfo",
+            name="spec_cont",
+            field=models.ForeignKey(
+                db_column="spec_contcd",
+                help_text=b"Special container",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.SpecCont",
+            ),
         ),
         migrations.AddField(
-            model_name='packinfo',
-            name='reimb_stat',
-            field=models.ForeignKey(db_column='reimb_statcd', help_text=b'Appliance reimbursement status', on_delete=django.db.models.deletion.CASCADE, to='dmd.ReimbursementStatus'),
+            model_name="packinfo",
+            name="reimb_stat",
+            field=models.ForeignKey(
+                db_column="reimb_statcd",
+                help_text=b"Appliance reimbursement status",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.ReimbursementStatus",
+            ),
         ),
         migrations.AddField(
-            model_name='packinfo',
-            name='reimb_statprev',
-            field=models.ForeignKey(db_column='reimb_statprevcd', help_text=b'Appliance reimbursement previous status', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.ReimbursementStatus'),
+            model_name="packinfo",
+            name="reimb_statprev",
+            field=models.ForeignKey(
+                db_column="reimb_statprevcd",
+                help_text=b"Appliance reimbursement previous status",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="+",
+                to="dmd.ReimbursementStatus",
+            ),
         ),
         migrations.AddField(
-            model_name='ont',
-            name='form',
-            field=models.ForeignKey(db_column='formcd', help_text=b'Form & Route', on_delete=django.db.models.deletion.CASCADE, to='dmd.OntFormRoute'),
+            model_name="ont",
+            name="form",
+            field=models.ForeignKey(
+                db_column="formcd",
+                help_text=b"Form & Route",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.OntFormRoute",
+            ),
         ),
         migrations.AddField(
-            model_name='ont',
-            name='vmp',
-            field=models.ForeignKey(db_column='vpid', help_text=b'VMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMP'),
+            model_name="ont",
+            name="vmp",
+            field=models.ForeignKey(
+                db_column="vpid",
+                help_text=b"VMP",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.VMP",
+            ),
         ),
         migrations.AddField(
-            model_name='licroute',
-            name='route',
-            field=models.ForeignKey(db_column='routecd', help_text=b'Licenced route', on_delete=django.db.models.deletion.CASCADE, to='dmd.Route'),
+            model_name="licroute",
+            name="route",
+            field=models.ForeignKey(
+                db_column="routecd",
+                help_text=b"Licenced route",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.Route",
+            ),
         ),
         migrations.AddField(
-            model_name='dtinfo',
-            name='pay_cat',
-            field=models.ForeignKey(db_column='pay_catcd', help_text=b'Drug Tariff payment category', on_delete=django.db.models.deletion.CASCADE, to='dmd.DtPaymentCategory'),
+            model_name="dtinfo",
+            name="pay_cat",
+            field=models.ForeignKey(
+                db_column="pay_catcd",
+                help_text=b"Drug Tariff payment category",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.DtPaymentCategory",
+            ),
         ),
         migrations.AddField(
-            model_name='dtinfo',
-            name='vmpp',
-            field=models.OneToOneField(db_column='vppid', help_text=b'VMPP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMPP'),
+            model_name="dtinfo",
+            name="vmpp",
+            field=models.OneToOneField(
+                db_column="vppid",
+                help_text=b"VMPP",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.VMPP",
+            ),
         ),
         migrations.AddField(
-            model_name='droute',
-            name='route',
-            field=models.ForeignKey(db_column='routecd', help_text=b'Route', on_delete=django.db.models.deletion.CASCADE, to='dmd.Route'),
+            model_name="droute",
+            name="route",
+            field=models.ForeignKey(
+                db_column="routecd",
+                help_text=b"Route",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.Route",
+            ),
         ),
         migrations.AddField(
-            model_name='droute',
-            name='vmp',
-            field=models.ForeignKey(db_column='vpid', help_text=b'VMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMP'),
+            model_name="droute",
+            name="vmp",
+            field=models.ForeignKey(
+                db_column="vpid",
+                help_text=b"VMP",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.VMP",
+            ),
         ),
         migrations.AddField(
-            model_name='dform',
-            name='form',
-            field=models.ForeignKey(db_column='formcd', help_text=b'Formulation', on_delete=django.db.models.deletion.CASCADE, to='dmd.Form'),
+            model_name="dform",
+            name="form",
+            field=models.ForeignKey(
+                db_column="formcd",
+                help_text=b"Formulation",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.Form",
+            ),
         ),
         migrations.AddField(
-            model_name='dform',
-            name='vmp',
-            field=models.OneToOneField(db_column='vpid', help_text=b'VMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMP'),
+            model_name="dform",
+            name="vmp",
+            field=models.OneToOneField(
+                db_column="vpid",
+                help_text=b"VMP",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.VMP",
+            ),
         ),
         migrations.AddField(
-            model_name='controlinfo',
-            name='vmp',
-            field=models.OneToOneField(db_column='vpid', help_text=b'VMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMP'),
+            model_name="controlinfo",
+            name="vmp",
+            field=models.OneToOneField(
+                db_column="vpid",
+                help_text=b"VMP",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.VMP",
+            ),
         ),
         migrations.AddField(
-            model_name='aping',
-            name='ing',
-            field=models.ForeignKey(db_column='isid', help_text=b'Ingredient', on_delete=django.db.models.deletion.CASCADE, to='dmd.Ing'),
+            model_name="aping",
+            name="ing",
+            field=models.ForeignKey(
+                db_column="isid",
+                help_text=b"Ingredient",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.Ing",
+            ),
         ),
         migrations.AddField(
-            model_name='aping',
-            name='uom',
-            field=models.ForeignKey(db_column='uomcd', help_text=b'Pharmaceutical Strength Unit of Measure', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.UnitOfMeasure'),
+            model_name="aping",
+            name="uom",
+            field=models.ForeignKey(
+                db_column="uomcd",
+                help_text=b"Pharmaceutical Strength Unit of Measure",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="+",
+                to="dmd.UnitOfMeasure",
+            ),
         ),
         migrations.AddField(
-            model_name='apinfo',
-            name='colour',
-            field=models.ForeignKey(db_column='colourcd', help_text=b'Colour', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.Colour'),
+            model_name="apinfo",
+            name="colour",
+            field=models.ForeignKey(
+                db_column="colourcd",
+                help_text=b"Colour",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.Colour",
+            ),
         ),
         migrations.AddField(
-            model_name='ampp',
-            name='combpack',
-            field=models.ForeignKey(db_column='combpackcd', help_text=b'Combination pack', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.CombinationPackInd'),
+            model_name="ampp",
+            name="combpack",
+            field=models.ForeignKey(
+                db_column="combpackcd",
+                help_text=b"Combination pack",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.CombinationPackInd",
+            ),
         ),
         migrations.AddField(
-            model_name='ampp',
-            name='disc',
-            field=models.ForeignKey(db_column='disccd', help_text=b'Discontinued', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.DiscontinuedInd'),
+            model_name="ampp",
+            name="disc",
+            field=models.ForeignKey(
+                db_column="disccd",
+                help_text=b"Discontinued",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.DiscontinuedInd",
+            ),
         ),
         migrations.AddField(
-            model_name='ampp',
-            name='legal_cat',
-            field=models.ForeignKey(db_column='legal_catcd', help_text=b'Legal category', on_delete=django.db.models.deletion.CASCADE, to='dmd.LegalCategory'),
+            model_name="ampp",
+            name="legal_cat",
+            field=models.ForeignKey(
+                db_column="legal_catcd",
+                help_text=b"Legal category",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.LegalCategory",
+            ),
         ),
         migrations.AddField(
-            model_name='ampp',
-            name='vmpp',
-            field=models.ForeignKey(db_column='vppid', help_text=b'VMPP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMPP'),
+            model_name="ampp",
+            name="vmpp",
+            field=models.ForeignKey(
+                db_column="vppid",
+                help_text=b"VMPP",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.VMPP",
+            ),
         ),
         migrations.AddField(
-            model_name='amp',
-            name='avail_restrict',
-            field=models.ForeignKey(db_column='avail_restrictcd', help_text=b'Restrictions on availability', on_delete=django.db.models.deletion.CASCADE, to='dmd.AvailabilityRestriction'),
+            model_name="amp",
+            name="avail_restrict",
+            field=models.ForeignKey(
+                db_column="avail_restrictcd",
+                help_text=b"Restrictions on availability",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.AvailabilityRestriction",
+            ),
         ),
         migrations.AddField(
-            model_name='amp',
-            name='combprod',
-            field=models.ForeignKey(db_column='combprodcd', help_text=b'Combination product', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.CombinationProdInd'),
+            model_name="amp",
+            name="combprod",
+            field=models.ForeignKey(
+                db_column="combprodcd",
+                help_text=b"Combination product",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.CombinationProdInd",
+            ),
         ),
         migrations.AddField(
-            model_name='amp',
-            name='flavour',
-            field=models.ForeignKey(db_column='flavourcd', help_text=b'Flavour', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.Flavour'),
+            model_name="amp",
+            name="flavour",
+            field=models.ForeignKey(
+                db_column="flavourcd",
+                help_text=b"Flavour",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.Flavour",
+            ),
         ),
         migrations.AddField(
-            model_name='amp',
-            name='lic_auth',
-            field=models.ForeignKey(db_column='lic_authcd', help_text=b'Current licensing authority', on_delete=django.db.models.deletion.CASCADE, to='dmd.LicensingAuthority'),
+            model_name="amp",
+            name="lic_auth",
+            field=models.ForeignKey(
+                db_column="lic_authcd",
+                help_text=b"Current licensing authority",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.LicensingAuthority",
+            ),
         ),
         migrations.AddField(
-            model_name='amp',
-            name='lic_auth_prev',
-            field=models.ForeignKey(db_column='lic_auth_prevcd', help_text=b'Previous licensing authority', null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='dmd.LicensingAuthority'),
+            model_name="amp",
+            name="lic_auth_prev",
+            field=models.ForeignKey(
+                db_column="lic_auth_prevcd",
+                help_text=b"Previous licensing authority",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="+",
+                to="dmd.LicensingAuthority",
+            ),
         ),
         migrations.AddField(
-            model_name='amp',
-            name='lic_authchange',
-            field=models.ForeignKey(db_column='lic_authchangecd', help_text=b'Reason for change of licensing authority', null=True, on_delete=django.db.models.deletion.CASCADE, to='dmd.LicensingAuthorityChangeReason'),
+            model_name="amp",
+            name="lic_authchange",
+            field=models.ForeignKey(
+                db_column="lic_authchangecd",
+                help_text=b"Reason for change of licensing authority",
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.LicensingAuthorityChangeReason",
+            ),
         ),
         migrations.AddField(
-            model_name='amp',
-            name='supp',
-            field=models.ForeignKey(db_column='suppcd', help_text=b'Supplier', on_delete=django.db.models.deletion.CASCADE, to='dmd.Supplier'),
+            model_name="amp",
+            name="supp",
+            field=models.ForeignKey(
+                db_column="suppcd",
+                help_text=b"Supplier",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.Supplier",
+            ),
         ),
         migrations.AddField(
-            model_name='amp',
-            name='vmp',
-            field=models.ForeignKey(db_column='vpid', help_text=b'VMP', on_delete=django.db.models.deletion.CASCADE, to='dmd.VMP'),
+            model_name="amp",
+            name="vmp",
+            field=models.ForeignKey(
+                db_column="vpid",
+                help_text=b"VMP",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.VMP",
+            ),
         ),
     ]

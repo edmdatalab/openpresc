@@ -13,16 +13,16 @@ def set_centroids_without_args(*args):
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0031_auto_20171004_1330'),
+        ("frontend", "0031_auto_20171004_1330"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='pct',
-            name='centroid',
+            model_name="pct",
+            name="centroid",
             field=django.contrib.gis.db.models.fields.PointField(
-                blank=True, null=True, srid=4326),
+                blank=True, null=True, srid=4326
+            ),
         ),
     ]

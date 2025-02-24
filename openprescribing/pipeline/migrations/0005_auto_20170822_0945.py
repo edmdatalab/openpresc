@@ -6,24 +6,23 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('pipeline', '0004_auto_20170822_0935'),
+        ("pipeline", "0004_auto_20170822_0935"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='tasklog',
-            name='run_id',
+            model_name="tasklog",
+            name="run_id",
         ),
         migrations.AlterField(
-            model_name='tasklog',
-            name='month',
+            model_name="tasklog",
+            name="month",
             field=models.IntegerField(),
         ),
         migrations.AlterField(
-            model_name='tasklog',
-            name='year',
+            model_name="tasklog",
+            name="year",
             field=models.IntegerField(),
         ),
     ]

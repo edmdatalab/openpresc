@@ -5,28 +5,46 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0075_auto_20220921_2012'),
+        ("frontend", "0075_auto_20220921_2012"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='STP',
+            name="STP",
             fields=[
-                ('code', models.CharField(max_length=3, primary_key=True, serialize=False)),
-                ('name', models.CharField(blank=True, max_length=200, null=True)),
-                ('regional_team', models.ForeignKey(null=True, on_delete=django.db.models.deletion.PROTECT, to='frontend.RegionalTeam')),
+                (
+                    "code",
+                    models.CharField(max_length=3, primary_key=True, serialize=False),
+                ),
+                ("name", models.CharField(blank=True, max_length=200, null=True)),
+                (
+                    "regional_team",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="frontend.RegionalTeam",
+                    ),
+                ),
             ],
         ),
         migrations.AddField(
-            model_name='measurevalue',
-            name='stp',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='frontend.STP'),
+            model_name="measurevalue",
+            name="stp",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="frontend.STP",
+            ),
         ),
         migrations.AddField(
-            model_name='pct',
-            name='stp',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.PROTECT, to='frontend.STP'),
+            model_name="pct",
+            name="stp",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                to="frontend.STP",
+            ),
         ),
     ]

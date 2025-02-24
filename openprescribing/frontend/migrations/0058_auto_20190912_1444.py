@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0057_auto_20190904_1924'),
+        ("frontend", "0057_auto_20190904_1924"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='analyse_url',
+            model_name="measure",
+            name="analyse_url",
             field=models.CharField(max_length=1000, null=True),
         ),
     ]

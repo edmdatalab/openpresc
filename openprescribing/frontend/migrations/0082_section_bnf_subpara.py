@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0081_jsonfield'),
+        ("frontend", "0081_jsonfield"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='section',
-            name='bnf_subpara',
+            model_name="section",
+            name="bnf_subpara",
             field=models.IntegerField(blank=True, null=True),
         ),
     ]

@@ -4,30 +4,31 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('dmd', '0003_auto_20191008_1141'),
+        ("dmd", "0003_auto_20191008_1141"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='dtinfo',
-            name='prevprice',
-            field=models.IntegerField(help_text='Previous price (pence)', null=True),
+            model_name="dtinfo",
+            name="prevprice",
+            field=models.IntegerField(help_text="Previous price (pence)", null=True),
         ),
         migrations.AlterField(
-            model_name='dtinfo',
-            name='price',
-            field=models.IntegerField(help_text='Drug Tariff price (pence)', null=True),
+            model_name="dtinfo",
+            name="price",
+            field=models.IntegerField(help_text="Drug Tariff price (pence)", null=True),
         ),
         migrations.AlterField(
-            model_name='priceinfo',
-            name='price',
-            field=models.IntegerField(help_text='Price (pence)', null=True),
+            model_name="priceinfo",
+            name="price",
+            field=models.IntegerField(help_text="Price (pence)", null=True),
         ),
         migrations.AlterField(
-            model_name='priceinfo',
-            name='price_prev',
-            field=models.IntegerField(help_text='Price prior to change date (pence)', null=True),
+            model_name="priceinfo",
+            name="price_prev",
+            field=models.IntegerField(
+                help_text="Price prior to change date (pence)", null=True
+            ),
         ),
     ]

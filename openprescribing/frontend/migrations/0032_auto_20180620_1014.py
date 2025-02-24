@@ -7,15 +7,20 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0031_auto_20171004_1330'),
+        ("frontend", "0031_auto_20171004_1330"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='measure',
-            name='tags_focus',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=30), blank=True, help_text=b'Indicates that this measure is an aggregate made up of all measures with the listed tags', null=True, size=None),
+            model_name="measure",
+            name="tags_focus",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=30),
+                blank=True,
+                help_text=b"Indicates that this measure is an aggregate made up of all measures with the listed tags",
+                null=True,
+                size=None,
+            ),
         ),
     ]

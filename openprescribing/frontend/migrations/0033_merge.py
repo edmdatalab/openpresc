@@ -6,11 +6,9 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0030_add_ccg_centroids'),
-        ('frontend', '0032_auto_20180620_1014'),
+        ("frontend", "0030_add_ccg_centroids"),
+        ("frontend", "0032_auto_20180620_1014"),
     ]
 
-    operations = [
-    ]
+    operations = []

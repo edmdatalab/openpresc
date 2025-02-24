@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0033_merge'),
+        ("frontend", "0033_merge"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='practice',
-            name='ccg_change_reason',
+            model_name="practice",
+            name="ccg_change_reason",
             field=models.TextField(blank=True, null=True),
         ),
     ]

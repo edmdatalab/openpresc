@@ -7,15 +7,16 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0051_auto_20190627_1536'),
+        ("frontend", "0051_auto_20190627_1536"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='practice',
-            name='boundary',
-            field=django.contrib.gis.db.models.fields.GeometryField(blank=True, null=True, srid=4326),
+            model_name="practice",
+            name="boundary",
+            field=django.contrib.gis.db.models.fields.GeometryField(
+                blank=True, null=True, srid=4326
+            ),
         ),
     ]

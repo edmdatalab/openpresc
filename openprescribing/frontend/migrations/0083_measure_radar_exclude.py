@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0082_section_bnf_subpara'),
+        ("frontend", "0082_section_bnf_subpara"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='radar_exclude',
+            model_name="measure",
+            name="radar_exclude",
             field=models.BooleanField(default=True),
         ),
     ]

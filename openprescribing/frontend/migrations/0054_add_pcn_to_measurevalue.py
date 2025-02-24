@@ -7,15 +7,19 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0053_add_pcn_model'),
+        ("frontend", "0053_add_pcn_model"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measurevalue',
-            name='pcn',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='frontend.PCN'),
+            model_name="measurevalue",
+            name="pcn",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="frontend.PCN",
+            ),
         ),
     ]

@@ -5,15 +5,19 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('dmd', '0004_auto_20220427_1829'),
+        ("dmd", "0004_auto_20220427_1829"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='gtin',
-            name='ampp',
-            field=models.ForeignKey(db_column='appid', help_text='AMPP', on_delete=django.db.models.deletion.CASCADE, to='dmd.AMPP'),
+            model_name="gtin",
+            name="ampp",
+            field=models.ForeignKey(
+                db_column="appid",
+                help_text="AMPP",
+                on_delete=django.db.models.deletion.CASCADE,
+                to="dmd.AMPP",
+            ),
         ),
     ]

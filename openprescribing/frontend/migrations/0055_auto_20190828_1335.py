@@ -6,7 +6,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [("frontend", "0054_add_pcn_to_measurevalue")]
 
     operations = [

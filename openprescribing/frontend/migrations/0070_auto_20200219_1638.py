@@ -5,15 +5,16 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0069_auto_20200218_1537'),
+        ("frontend", "0069_auto_20200218_1537"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='measure',
-            name='numerator_bnf_codes',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=15), null=True, size=None),
+            model_name="measure",
+            name="numerator_bnf_codes",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=15), null=True, size=None
+            ),
         ),
     ]

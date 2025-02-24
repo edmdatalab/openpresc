@@ -6,15 +6,14 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0061_measure_include_in_alerts'),
+        ("frontend", "0061_measure_include_in_alerts"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='pcn',
-            old_name='ons_code',
-            new_name='code',
+            model_name="pcn",
+            old_name="ons_code",
+            new_name="code",
         ),
     ]

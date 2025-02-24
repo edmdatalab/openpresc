@@ -6,11 +6,9 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0039_measure_numerator_bnf_codes'),
-        ('frontend', '0039_median_price_matview'),
+        ("frontend", "0039_measure_numerator_bnf_codes"),
+        ("frontend", "0039_median_price_matview"),
     ]
 
-    operations = [
-    ]
+    operations = []

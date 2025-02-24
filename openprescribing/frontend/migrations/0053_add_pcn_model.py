@@ -7,22 +7,29 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0052_add_boundary_to_practice'),
+        ("frontend", "0052_add_boundary_to_practice"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='PCN',
+            name="PCN",
             fields=[
-                ('ons_code', models.CharField(max_length=9, primary_key=True, serialize=False)),
-                ('name', models.CharField(blank=True, max_length=200, null=True)),
+                (
+                    "ons_code",
+                    models.CharField(max_length=9, primary_key=True, serialize=False),
+                ),
+                ("name", models.CharField(blank=True, max_length=200, null=True)),
             ],
         ),
         migrations.AddField(
-            model_name='practice',
-            name='pcn',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='frontend.PCN'),
+            model_name="practice",
+            name="pcn",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                to="frontend.PCN",
+            ),
         ),
     ]

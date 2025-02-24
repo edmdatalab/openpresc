@@ -6,13 +6,12 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0047_auto_20190514_1413'),
+        ("frontend", "0047_auto_20190514_1413"),
     ]
 
     operations = [
-        migrations.RunSQL('DROP MATERIALIZED VIEW IF EXISTS vw__medians_for_tariff'),
+        migrations.RunSQL("DROP MATERIALIZED VIEW IF EXISTS vw__medians_for_tariff"),
         migrations.RunSQL("""
         CREATE MATERIALIZED VIEW vw__medians_for_tariff AS (
             WITH
@@ -59,5 +58,5 @@ class Migration(migrations.Migration):
                 vmp.vpid,
                 rx.processing_date
         )
-      """)
+      """),
     ]

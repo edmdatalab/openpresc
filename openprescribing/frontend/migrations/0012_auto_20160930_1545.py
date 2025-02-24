@@ -6,20 +6,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0011_auto_20160930_1502'),
+        ("frontend", "0011_auto_20160930_1502"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='orgbookmark',
-            name='approved',
+            model_name="orgbookmark",
+            name="approved",
             field=models.BooleanField(default=False),
         ),
         migrations.AddField(
-            model_name='searchbookmark',
-            name='approved',
+            model_name="searchbookmark",
+            name="approved",
             field=models.BooleanField(default=False),
         ),
     ]

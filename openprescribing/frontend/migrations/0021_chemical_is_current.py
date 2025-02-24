@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0020_auto_20170324_0919'),
+        ("frontend", "0020_auto_20170324_0919"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='chemical',
-            name='is_current',
+            model_name="chemical",
+            name="is_current",
             field=models.BooleanField(default=True),
         ),
     ]

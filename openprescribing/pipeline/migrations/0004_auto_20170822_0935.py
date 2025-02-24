@@ -8,18 +8,17 @@ from django.db import migrations
 
 
 def set_year_and_month(apps, schema_editor):
-    TaskLog = apps.get_model('pipeline', 'TaskLog')
+    TaskLog = apps.get_model("pipeline", "TaskLog")
     for tl in TaskLog.objects.all():
-        dt = datetime.datetime.strptime(tl.run_id, '%Y-%m-%d')
+        dt = datetime.datetime.strptime(tl.run_id, "%Y-%m-%d")
         tl.year = dt.year
         tl.month = dt.month
         tl.save()
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('pipeline', '0003_auto_20170822_0935'),
+        ("pipeline", "0003_auto_20170822_0935"),
     ]
 
     operations = [

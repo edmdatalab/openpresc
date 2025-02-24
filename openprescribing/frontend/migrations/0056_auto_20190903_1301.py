@@ -6,22 +6,21 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0055_auto_20190828_1335'),
+        ("frontend", "0055_auto_20190828_1335"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='denominator_type',
-            field=models.CharField(default='CHANGEME', max_length=20),
+            model_name="measure",
+            name="denominator_type",
+            field=models.CharField(default="CHANGEME", max_length=20),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='measure',
-            name='numerator_type',
-            field=models.CharField(default='CHANGEME', max_length=20),
+            model_name="measure",
+            name="numerator_type",
+            field=models.CharField(default="CHANGEME", max_length=20),
             preserve_default=False,
         ),
     ]

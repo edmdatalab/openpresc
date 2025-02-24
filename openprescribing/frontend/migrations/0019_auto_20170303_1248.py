@@ -4,19 +4,22 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
-import frontend.models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0018_auto_20170302_1648'),
+        ("frontend", "0018_auto_20170302_1648"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='maillog',
-            name='message',
-            field=models.ForeignKey(db_constraint=False, null=True, on_delete=django.db.models.deletion.CASCADE, to='frontend.EmailMessage'),
+            model_name="maillog",
+            name="message",
+            field=models.ForeignKey(
+                db_constraint=False,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="frontend.EmailMessage",
+            ),
         ),
     ]

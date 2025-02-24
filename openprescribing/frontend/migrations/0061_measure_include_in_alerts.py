@@ -6,15 +6,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0060_auto_20191008_1141'),
+        ("frontend", "0060_auto_20191008_1141"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='include_in_alerts',
+            model_name="measure",
+            name="include_in_alerts",
             field=models.BooleanField(default=True),
         ),
     ]

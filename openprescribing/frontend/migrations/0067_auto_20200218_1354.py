@@ -4,20 +4,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0066_auto_20200218_1251'),
+        ("frontend", "0066_auto_20200218_1251"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='measure',
-            name='denominator_short',
+            model_name="measure",
+            name="denominator_short",
             field=models.CharField(max_length=100),
         ),
         migrations.AlterField(
-            model_name='measure',
-            name='numerator_short',
+            model_name="measure",
+            name="numerator_short",
             field=models.CharField(max_length=100),
         ),
     ]

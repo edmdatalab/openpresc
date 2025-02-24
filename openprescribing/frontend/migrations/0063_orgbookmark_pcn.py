@@ -7,15 +7,19 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0062_rename_pcn_ons_code_field_to_code'),
+        ("frontend", "0062_rename_pcn_ons_code_field_to_code"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='orgbookmark',
-            name='pcn',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.PROTECT, to='frontend.PCN'),
+            model_name="orgbookmark",
+            name="pcn",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.PROTECT,
+                to="frontend.PCN",
+            ),
         ),
     ]

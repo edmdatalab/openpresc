@@ -4,35 +4,34 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0080_replace_nullboolean'),
+        ("frontend", "0080_replace_nullboolean"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='maillog',
-            name='metadata',
+            model_name="maillog",
+            name="metadata",
             field=models.JSONField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='measureglobal',
-            name='cost_savings',
+            model_name="measureglobal",
+            name="cost_savings",
             field=models.JSONField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='measureglobal',
-            name='percentiles',
+            model_name="measureglobal",
+            name="percentiles",
             field=models.JSONField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='measurevalue',
-            name='cost_savings',
+            model_name="measurevalue",
+            name="cost_savings",
             field=models.JSONField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='practicestatistics',
-            name='star_pu',
+            model_name="practicestatistics",
+            name="star_pu",
             field=models.JSONField(blank=True, null=True),
         ),
     ]

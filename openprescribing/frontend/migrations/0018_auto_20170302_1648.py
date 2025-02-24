@@ -7,19 +7,22 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0017_emailmessage_maillog'),
+        ("frontend", "0017_emailmessage_maillog"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='maillog',
-            name='message_id',
+            model_name="maillog",
+            name="message_id",
         ),
         migrations.AddField(
-            model_name='maillog',
-            name='message',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='frontend.EmailMessage'),
+            model_name="maillog",
+            name="message",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="frontend.EmailMessage",
+            ),
         ),
     ]

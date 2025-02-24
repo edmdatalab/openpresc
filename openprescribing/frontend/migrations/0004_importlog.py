@@ -10,26 +10,34 @@ from common.utils import under_test
 def seed_log(apps, schema_editor):
     if not under_test():
         ImportLog.objects.create(
-            current_at='2016-03-01',
-            filename='dummy-initial-value',
-            category='prescribing')
+            current_at="2016-03-01",
+            filename="dummy-initial-value",
+            category="prescribing",
+        )
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0003_auto_20160714_1411'),
+        ("frontend", "0003_auto_20160714_1411"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ImportLog',
+            name="ImportLog",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('imported_at', models.DateTimeField(auto_now_add=True)),
-                ('current_at', models.DateField(db_index=True)),
-                ('filename', models.CharField(max_length=200)),
-                ('category', models.CharField(db_index=True, max_length=15)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("imported_at", models.DateTimeField(auto_now_add=True)),
+                ("current_at", models.DateField(db_index=True)),
+                ("filename", models.CharField(max_length=200)),
+                ("category", models.CharField(db_index=True, max_length=15)),
             ],
         ),
         migrations.RunPython(seed_log),

@@ -6,18 +6,17 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0002_measure_low_is_good'),
+        ("frontend", "0002_measure_low_is_good"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='measure',
-            name='denominator_description',
+            model_name="measure",
+            name="denominator_description",
         ),
         migrations.RemoveField(
-            model_name='measure',
-            name='numerator_description',
+            model_name="measure",
+            name="numerator_description",
         ),
     ]

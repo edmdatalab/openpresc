@@ -3,19 +3,17 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import frontend.models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0058_auto_20190912_1444'),
+        ("frontend", "0058_auto_20190912_1444"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='searchbookmark',
-            name='url',
+            model_name="searchbookmark",
+            name="url",
             field=models.CharField(max_length=1200),
         ),
     ]

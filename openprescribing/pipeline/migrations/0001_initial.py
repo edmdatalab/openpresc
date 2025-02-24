@@ -6,26 +6,28 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='TaskLog',
+            name="TaskLog",
             fields=[
-                ('id', models.AutoField(
-                    auto_created=True,
-                    primary_key=True,
-                    serialize=False,
-                    verbose_name='ID')),
-                ('run_id', models.CharField(max_length=100)),
-                ('task_name', models.CharField(max_length=100)),
-                ('started_at', models.DateTimeField(auto_now_add=True)),
-                ('ended_at', models.DateTimeField(null=True)),
-                ('status', models.CharField(max_length=100, null=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("run_id", models.CharField(max_length=100)),
+                ("task_name", models.CharField(max_length=100)),
+                ("started_at", models.DateTimeField(auto_now_add=True)),
+                ("ended_at", models.DateTimeField(null=True)),
+                ("status", models.CharField(max_length=100, null=True)),
             ],
         ),
     ]

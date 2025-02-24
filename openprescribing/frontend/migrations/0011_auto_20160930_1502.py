@@ -8,26 +8,31 @@ from django.utils.timezone import utc
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0010_create_user_profile'),
+        ("frontend", "0010_create_user_profile"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='searchbookmark',
-            name='low_is_good',
+            model_name="searchbookmark",
+            name="low_is_good",
         ),
         migrations.AddField(
-            model_name='orgbookmark',
-            name='created_at',
-            field=models.DateTimeField(auto_now_add=True, default=datetime.datetime(2016, 9, 30, 14, 2, 24, 557986, tzinfo=utc)),
+            model_name="orgbookmark",
+            name="created_at",
+            field=models.DateTimeField(
+                auto_now_add=True,
+                default=datetime.datetime(2016, 9, 30, 14, 2, 24, 557986, tzinfo=utc),
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='searchbookmark',
-            name='created_at',
-            field=models.DateTimeField(auto_now_add=True, default=datetime.datetime(2016, 9, 30, 14, 2, 30, 426508, tzinfo=utc)),
+            model_name="searchbookmark",
+            name="created_at",
+            field=models.DateTimeField(
+                auto_now_add=True,
+                default=datetime.datetime(2016, 9, 30, 14, 2, 30, 426508, tzinfo=utc),
+            ),
             preserve_default=False,
         ),
     ]

@@ -6,17 +6,16 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0015_remove_prescription_presentation_name'),
+        ("frontend", "0015_remove_prescription_presentation_name"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='SHA',
+            name="SHA",
         ),
         migrations.RemoveField(
-            model_name='prescription',
-            name='sha',
+            model_name="prescription",
+            name="sha",
         ),
     ]

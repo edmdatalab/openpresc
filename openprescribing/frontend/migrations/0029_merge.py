@@ -6,11 +6,9 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0024_measure_tags'),
-        ('frontend', '0028_prescription_net_cost'),
+        ("frontend", "0024_measure_tags"),
+        ("frontend", "0028_prescription_net_cost"),
     ]
 
-    operations = [
-    ]
+    operations = []

@@ -7,26 +7,27 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0056_auto_20190903_1301'),
+        ("frontend", "0056_auto_20190903_1301"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='denominator_bnf_codes',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=15), default=[], size=None),
+            model_name="measure",
+            name="denominator_bnf_codes",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=15), default=[], size=None
+            ),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='measure',
-            name='denominator_bnf_codes_query',
+            model_name="measure",
+            name="denominator_bnf_codes_query",
             field=models.CharField(max_length=10000, null=True),
         ),
         migrations.AddField(
-            model_name='measure',
-            name='denominator_is_list_of_bnf_codes',
+            model_name="measure",
+            name="denominator_is_list_of_bnf_codes",
             field=models.BooleanField(default=True),
         ),
     ]

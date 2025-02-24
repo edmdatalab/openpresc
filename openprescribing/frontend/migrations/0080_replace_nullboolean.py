@@ -4,35 +4,34 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0079_orgbookmark_stp'),
+        ("frontend", "0079_orgbookmark_stp"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='measure',
-            name='is_cost_based',
+            model_name="measure",
+            name="is_cost_based",
             field=models.BooleanField(null=True),
         ),
         migrations.AlterField(
-            model_name='measure',
-            name='is_percentage',
+            model_name="measure",
+            name="is_percentage",
             field=models.BooleanField(null=True),
         ),
         migrations.AlterField(
-            model_name='measure',
-            name='low_is_good',
+            model_name="measure",
+            name="low_is_good",
             field=models.BooleanField(null=True),
         ),
         migrations.AlterField(
-            model_name='presentation',
-            name='is_generic',
+            model_name="presentation",
+            name="is_generic",
             field=models.BooleanField(default=None, null=True),
         ),
         migrations.AlterField(
-            model_name='presentation',
-            name='quantity_means_pack',
+            model_name="presentation",
+            name="quantity_means_pack",
             field=models.BooleanField(default=None, null=True),
         ),
     ]

@@ -5,20 +5,23 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('frontend', '0067_auto_20200218_1354'),
+        ("frontend", "0067_auto_20200218_1354"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='measure',
-            name='denominator_bnf_codes_filter',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=16), null=True, size=None),
+            model_name="measure",
+            name="denominator_bnf_codes_filter",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=16), null=True, size=None
+            ),
         ),
         migrations.AddField(
-            model_name='measure',
-            name='numerator_bnf_codes_filter',
-            field=django.contrib.postgres.fields.ArrayField(base_field=models.CharField(max_length=16), null=True, size=None),
+            model_name="measure",
+            name="numerator_bnf_codes_filter",
+            field=django.contrib.postgres.fields.ArrayField(
+                base_field=models.CharField(max_length=16), null=True, size=None
+            ),
         ),
     ]
