@@ -66,7 +66,7 @@ for line in lines:
 
     options.append(("help_text", quote(line["descr"])))
 
-    print(f'    {line["field"]} = models.{line["type"]}(')
+    print(f"    {line['field']} = models.{line['type']}(")
 
     for k, v in options:
         print(f"        {k}={v},")

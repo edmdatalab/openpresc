@@ -257,9 +257,7 @@ def get_prescribing(db, bnf_codes, date):
     results = db.query(
         """
         SELECT bnf_code, quantity, net_cost FROM presentation WHERE bnf_code IN ({})
-        """.format(
-            ",".join("?" * len(bnf_codes))
-        ),
+        """.format(",".join("?" * len(bnf_codes))),
         bnf_codes,
     )
     for bnf_code, quantity, net_cost in results:

@@ -320,8 +320,7 @@ class Command(BaseCommand):
             filenames = reversed(
                 sorted(
                     glob.glob(
-                        "frontend/management/commands/"
-                        "presentation_replacements/*.txt"
+                        "frontend/management/commands/presentation_replacements/*.txt"
                     )
                 )
             )

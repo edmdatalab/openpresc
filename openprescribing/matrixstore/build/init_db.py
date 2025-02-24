@@ -4,6 +4,7 @@ statistics imported into it.
 
 Data on practices and presentations is obtained by connecting to BigQuery.
 """
+
 import logging
 import os
 import sqlite3

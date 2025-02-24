@@ -200,9 +200,7 @@ def _get_prescribing_for_bnf_codes(bnf_codes):
           presentation
         WHERE
           bnf_code IN ({})
-        """.format(
-            ",".join(["?"] * len(bnf_codes))
-        ),
+        """.format(",".join(["?"] * len(bnf_codes))),
         bnf_codes,
     )
 

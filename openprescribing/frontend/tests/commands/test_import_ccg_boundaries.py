@@ -9,9 +9,7 @@ class CommandsTestCase(TestCase):
     def test_import_ccg_boundaries(self):
         args = []
         opts = {
-            "filename": (
-                "frontend/tests/fixtures/commands/" "ccg_boundaries_04_2021.tab"
-            )
+            "filename": ("frontend/tests/fixtures/commands/ccg_boundaries_04_2021.tab")
         }
         call_command("import_ccg_boundaries", *args, **opts)
 

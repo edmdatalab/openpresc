@@ -15,8 +15,7 @@ class Command(BaseCommand):
         last_imported = kwargs["last_imported"]
         prescribing_date = "-".join(last_imported.split("_")) + "-01"
         date_condition = (
-            'month > TIMESTAMP(DATE_SUB(DATE "%s", '
-            "INTERVAL 5 YEAR))" % prescribing_date
+            'month > TIMESTAMP(DATE_SUB(DATE "%s", INTERVAL 5 YEAR))' % prescribing_date
         )
 
         path = os.path.join(settings.PIPELINE_METADATA_DIR, "smoketests")

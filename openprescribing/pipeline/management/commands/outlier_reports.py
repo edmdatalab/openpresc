@@ -72,7 +72,7 @@ class Command(BaseCommand):
 class MakeHtml:
     DEFINITIONS = {
         "Chemical Items": "number of prescribed items containing this chemical",
-        "Subparagraph Items": "count of all prescribed items " "from this subparagraph",
+        "Subparagraph Items": "count of all prescribed items from this subparagraph",
         "Ratio": "Ratio of chemical items to subparagraph items",
         "Mean": "Population mean number of chemical items prescribed",
         "std": "Standard Deviation",
@@ -521,9 +521,9 @@ class DatasetBuild:
         numerator_column: str = "chemical",
         denominator_column: str = "subpara",
     ) -> None:
-        assert isinstance(to_date, date) and isinstance(
-            from_date, date
-        ), "date args must be dates"
+        assert isinstance(to_date, date) and isinstance(from_date, date), (
+            "date args must be dates"
+        )
         assert to_date > from_date, "to date must be after from date"
         self.from_date = from_date
         self.to_date = to_date
@@ -733,7 +733,7 @@ class DatasetBuild:
         """
         sql = f"""
         SELECT
-        DISTINCT {'ons_' if entity_type == 'stp' else ''}code as `code`,
+        DISTINCT {"ons_" if entity_type == "stp" else ""}code as `code`,
         name
         FROM
         ebmdatalab.hscic.{entity_type}s
@@ -908,8 +908,7 @@ class Report:
         url_selected = "&selectedTab=summary"
 
         url_org = (
-            f"org={Report._format_entity(self.entity_type)}"
-            f"&orgIds={self.entity_code}"
+            f"org={Report._format_entity(self.entity_type)}&orgIds={self.entity_code}"
         )
 
         def build_url(x):
@@ -1582,7 +1581,7 @@ class TableOfContents:
                 relative_path = self._relative_path(output_path, file)
                 fullpath = self._full_path(relative_path)
                 toc = toc + (
-                    "\n" + f"  * [{relative_path}]" f"({self.url_prefix}{fullpath})"
+                    "\n" + f"  * [{relative_path}]({self.url_prefix}{fullpath})"
                 )
         return toc
 

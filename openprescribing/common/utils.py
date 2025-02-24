@@ -192,7 +192,7 @@ def constraint_and_index_reconstructor(table_name):
             logger.info("Recreating constraints")
             # restore foreign key constraints
             for name, cmd in constraints.items():
-                cmd = "ALTER TABLE %s " "ADD CONSTRAINT %s %s" % (table_name, name, cmd)
+                cmd = "ALTER TABLE %s ADD CONSTRAINT %s %s" % (table_name, name, cmd)
                 cursor.execute(cmd)
                 logger.info("Recreated constraint %s" % name)
             if cluster:

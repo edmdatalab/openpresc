@@ -46,8 +46,9 @@ def setup_sudo():
     if check_setup.failed:
         # Test the format of the file, to prevent locked-out-disasters
         run(
-            'echo "%fabric ALL = (root) '
-            'NOPASSWD: {}/deploy/fab_scripts/" > {}'.format(env.path, sudoer_file_test)
+            'echo "%fabric ALL = (root) NOPASSWD: {}/deploy/fab_scripts/" > {}'.format(
+                env.path, sudoer_file_test
+            )
         )
         run("/usr/sbin/visudo -cf {}".format(sudoer_file_test))
         # Copy it to the right place
@@ -163,9 +164,7 @@ def deploy_static():
     bootstrap_environ = {"MAILGUN_WEBHOOK_USER": "foo", "MAILGUN_WEBHOOK_PASS": "foo"}
     with shell_env(**bootstrap_environ):
         with prefix("source .venv/bin/activate"):
-            run(
-                "cd openprescribing/ && " "python manage.py collectstatic -v0 --noinput"
-            )
+            run("cd openprescribing/ && python manage.py collectstatic -v0 --noinput")
 
 
 def run_migrations():

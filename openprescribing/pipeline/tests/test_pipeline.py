@@ -258,9 +258,7 @@ You should save it at:
     {data_basedir}/source_a/YYYY_MM
 The last imported data can be found at:
     {data_basedir}/source_a/2017_02/source_a.csv
-""".strip().format(
-            data_basedir=settings.PIPELINE_DATA_BASEDIR
-        )
+""".strip().format(data_basedir=settings.PIPELINE_DATA_BASEDIR)
         output = task.manual_fetch_instructions()
         self.assertEqual(output, expected_output)
 
@@ -273,9 +271,7 @@ You should save it at:
 The last imported data can be found at:
     <never imported>
     {data_basedir}/source_c/2017_02/source_c2.csv
-""".strip().format(
-            data_basedir=settings.PIPELINE_DATA_BASEDIR
-        )
+""".strip().format(data_basedir=settings.PIPELINE_DATA_BASEDIR)
         output = task.manual_fetch_instructions()
         self.assertEqual(output, expected_output)
 

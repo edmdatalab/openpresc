@@ -2,6 +2,7 @@
 Download prescribing data from BigQuery to gzipped CSV files in the
 `settings.MATRIXSTORE_IMPORT_DIR` directory
 """
+
 import glob
 import logging
 import os

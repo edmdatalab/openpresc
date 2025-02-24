@@ -1,6 +1,7 @@
 """
 Import practice statistics from downloaded CSV files into SQLite
 """
+
 import csv
 import gzip
 import json

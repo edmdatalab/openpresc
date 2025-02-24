@@ -89,7 +89,7 @@ class GetBookmarksTestCase(TestCase):
         self.assertEqual(bookmarks[0].practice.code, "P87629")
 
     def test_get_org_bookmarks_with_skip_file(self):
-        skip_file = "frontend/tests/fixtures/commands/" "skip_alerts_recipients.txt"
+        skip_file = "frontend/tests/fixtures/commands/skip_alerts_recipients.txt"
         bookmarks = Command().get_org_bookmarks(
             self.now_month,
             skip_email_file=skip_file,
@@ -272,9 +272,7 @@ class OrgEmailTestCase(TestCase):
         self.assertRegex(html, "It also slipped:")
         self.assertRegex(
             html,
-            re.compile(
-                "<ul.*<li>considerably on.*" "<li>moderately on.*</ul>", re.DOTALL
-            ),
+            re.compile("<ul.*<li>considerably on.*<li>moderately on.*</ul>", re.DOTALL),
         )
 
     def test_email_body_worst(self, attach_image, finder):
@@ -305,9 +303,7 @@ class OrgEmailTestCase(TestCase):
         self.assertRegex(html, "It was also in the worst 10% on:")
         self.assertRegex(
             html,
-            re.compile(
-                "<ul.*<li>.*Desogestrel.*" "<li>.*Desogestrel.*</ul>", re.DOTALL
-            ),
+            re.compile("<ul.*<li>.*Desogestrel.*<li>.*Desogestrel.*</ul>", re.DOTALL),
         )
 
     def test_email_body_two_savings(self, attach_image, finder):
@@ -317,7 +313,7 @@ class OrgEmailTestCase(TestCase):
         )
         message = mail.outbox[-1].alternatives[0]
         html = message[0]
-        self.assertIn("These add up to around <b>£10</b> of " "potential savings", html)
+        self.assertIn("These add up to around <b>£10</b> of potential savings", html)
         self.assertRegex(
             html,
             '<li.*>\n<b>£10</b> on <a href=".*/practice/P87629'

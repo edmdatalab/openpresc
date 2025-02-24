@@ -158,9 +158,7 @@ class ManualFetchTask(Task):
                 print(" * {}".format(path))
         else:
             print("No new files were found at {}".format(self.source.data_dir))
-        input(
-            "Press return to confirm, or Ctrl+C to cancel " "and resolve any problems"
-        )
+        input("Press return to confirm, or Ctrl+C to cancel and resolve any problems")
 
     def manual_fetch_instructions(self):
         source = self.source
@@ -170,8 +168,7 @@ class ManualFetchTask(Task):
         output = []
         output.append("~" * 80)
         output.append(
-            "You should now locate the latest data for %s, if "
-            "available" % source.name
+            "You should now locate the latest data for %s, if available" % source.name
         )
         output.append("You should save it at:")
         output.append("    %s" % expected_location)

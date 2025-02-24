@@ -310,7 +310,7 @@ class TagsFilter(admin.SimpleListFilter):
         tags = model_admin.model.objects.order_by().values("tags").distinct()
         with connection.cursor() as cursor:
             cursor.execute(
-                "SELECT UNNEST(tags) AS tag " "FROM frontend_maillog " "GROUP BY tag"
+                "SELECT UNNEST(tags) AS tag FROM frontend_maillog GROUP BY tag"
             )
             tags = cursor.fetchall()
             return ((t[0], t[0]) for t in tags)

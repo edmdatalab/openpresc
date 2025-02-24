@@ -1,6 +1,7 @@
 """
 Import prescribing data from CSV files into SQLite
 """
+
 from collections import namedtuple
 import csv
 from itertools import groupby

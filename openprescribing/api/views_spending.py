@@ -503,9 +503,7 @@ def _get_prescribing_for_codes(db, bnf_code_prefixes):
                 presentation
             WHERE
                 {}
-            """.format(
-            where_clause
-        )
+            """.format(where_clause)
     else:
         # As summing over all presentations can be quite slow we use the
         # precalculated results table

@@ -101,8 +101,9 @@ def get_header_line(filenames):
         other_line = header_lines[n]
         if other_line != header_line:
             raise InvalidHeaderError(
-                "Input files do not have identical headers:\n\n"
-                "{}: {}\n{}: {}".format(filenames[0], header_line, filename, other_line)
+                "Input files do not have identical headers:\n\n{}: {}\n{}: {}".format(
+                    filenames[0], header_line, filename, other_line
+                )
             )
     return header_line
 

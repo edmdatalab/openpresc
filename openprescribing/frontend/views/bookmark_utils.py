@@ -167,9 +167,7 @@ class CUSUM(object):
         target_means:     {target_means}
         alert_thresholds: {alert_thresholds}"
         alert_incides:    {alert_indices}"
-        """.format(
-            **self.__dict__
-        )
+        """.format(**self.__dict__)
 
     def record_alert(self, datum, i):
         if self.cusum_above_alert_threshold():
@@ -569,7 +567,7 @@ def getIntroText(stats, org_type):
                     pretty_good > 1 and "s" or "",
                 )
             else:
-                msg = "We've found %s prescribing measure%s where " "this %s " % (
+                msg = "We've found %s prescribing measure%s where this %s " % (
                     apnumber(pretty_good),
                     pretty_good > 1 and "s" or "",
                     org_type,

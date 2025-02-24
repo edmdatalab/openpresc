@@ -771,12 +771,12 @@ class TestAPISpendingViewsGhostGenerics(TestCase):
                     if possible_saving <= (
                         -MIN_GHOST_GENERIC_DELTA / 100
                     ) or possible_saving >= (MIN_GHOST_GENERIC_DELTA / 100):
-                        practice_savings[practice.code][
-                            rx.presentation_code
-                        ] = possible_saving
-                        ccg_savings[practice.ccg.code][
-                            rx.presentation_code
-                        ] += possible_saving
+                        practice_savings[practice.code][rx.presentation_code] = (
+                            possible_saving
+                        )
+                        ccg_savings[practice.ccg.code][rx.presentation_code] += (
+                            possible_saving
+                        )
         return {
             "practice_savings": practice_savings,
             "ccg_savings": ccg_savings,

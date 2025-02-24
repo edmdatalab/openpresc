@@ -16,7 +16,7 @@ class GeneralFrontendTest(SeleniumTestCase):
         with patch("requests.get") as mock_response:
             # Mock the text fetched from Google Docs
             text = PropertyMock(
-                return_value=("<head><style></style></head>" "<body>some text</body>")
+                return_value=("<head><style></style></head><body>some text</body>")
             )
             type(mock_response.return_value).text = text
             url = self.live_server_url + "/docs/analyse/"
@@ -54,7 +54,7 @@ class GeneralFrontendTest(SeleniumTestCase):
     def test_drug_name_typeahead(self):
         self.browser.get(self.live_server_url + "/analyse/")
         el = self.find_by_xpath(
-            '//div[@id="numIds-wrapper"]' '//input[@class="select2-search__field"]'
+            '//div[@id="numIds-wrapper"]//input[@class="select2-search__field"]'
         )
         el.send_keys("chl")
         # This should succeed; if not, the JSON dropdown-filling has not:
@@ -65,7 +65,7 @@ class GeneralFrontendTest(SeleniumTestCase):
         self.find_by_xpath('//span[@id="select2-org-container"]').click()
         self.find_by_xpath('//li[contains(text(), "Practices")]').click()
         el = self.find_by_xpath(
-            '//div[@id="orgIds-container"]' '//input[@class="select2-search__field"]'
+            '//div[@id="orgIds-container"]//input[@class="select2-search__field"]'
         )
         el.send_keys("ains")
         # This should succeed; if not, the JSON dropdown-filling has not:

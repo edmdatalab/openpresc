@@ -458,9 +458,7 @@ def build_bnf_codes_query(base_query, filter_):
         SELECT bnf_code
         FROM subquery
         WHERE {}
-        """.format(
-            base_query, where_clause
-        )
+        """.format(base_query, where_clause)
 
     return query
 

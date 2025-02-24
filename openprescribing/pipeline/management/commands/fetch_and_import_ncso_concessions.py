@@ -370,7 +370,7 @@ def format_message(inserted):
 
     # Warn about cases where we couldn't match the drug name and pack size to a VMPP
     if unmatched:
-        msg += "\n\n" "The following concessions will need to be manually matched:\n"
+        msg += "\n\nThe following concessions will need to be manually matched:\n"
         for item in unmatched:
             msg += f"Name: {item['drug']} {item['pack_size']}\n"
 

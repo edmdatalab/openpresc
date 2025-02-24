@@ -2,6 +2,7 @@
 Downloads practice statistics data from BigQuery into the
 `settings.MATRIXSTORE_IMPORT_DIR` directory
 """
+
 import csv
 import gzip
 import logging

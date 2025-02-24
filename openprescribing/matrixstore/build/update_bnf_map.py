@@ -2,6 +2,7 @@
 Update the prescribing data in a SQLite file using the `bnf_map` table in
 BigQuery which maps old BNF codes to their current versions
 """
+
 import logging
 import os.path
 import sqlite3

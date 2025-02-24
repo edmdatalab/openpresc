@@ -6,6 +6,7 @@ and they're slightly too expensive to calculate at runtime (45-60 seconds).
 The resulting matrices are the same shape as the rest of the matrices and thus
 contain individual totals for each practice and month.
 """
+
 import logging
 import os.path
 import sqlite3

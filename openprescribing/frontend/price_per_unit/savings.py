@@ -209,9 +209,7 @@ def get_quantities_and_net_costs_at_date(db, substitution_set, date):
           presentation
         WHERE
           bnf_code IN ({})
-        """.format(
-            ",".join("?" * len(bnf_codes))
-        ),
+        """.format(",".join("?" * len(bnf_codes))),
         bnf_codes,
     )
 

@@ -41,9 +41,7 @@ def get_prescribing(generic_code, date):
           presentation
         WHERE
           bnf_code IN ({})
-        """.format(
-            ",".join("?" * len(bnf_codes))
-        ),
+        """.format(",".join("?" * len(bnf_codes))),
         bnf_codes,
     )
     return {

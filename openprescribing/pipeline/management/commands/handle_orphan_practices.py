@@ -180,9 +180,7 @@ class Command(BaseCommand):
 All active practices previously in Sub-ICB Location {} ({}) are now in multiple Sub-ICB Locations:
 Check whether inactive practices remaining in Sub-ICB Location should have moved.
 See instructions in handle_orphan_practices.py.
-            """.format(
-                ccg, name
-            ).strip()
+            """.format(ccg, name).strip()
             for new_ccg, count in new_ccgs.most_common():
                 new_ccg_name = self.ccg_to_name[new_ccg]
                 msg += "\n{:3} {} ({})".format(count, new_ccg, new_ccg_name)
@@ -201,7 +199,5 @@ See instructions in handle_orphan_practices.py.
 Practices have left Sub-ICB Location {} ({}) and some remaining practices are not active.
 Check whether these inactive practices should have moved.
 See instructions in handle_orphan_practices.py.
-            """.format(
-                ccg, name
-            ).strip()
+            """.format(ccg, name).strip()
             notify_slack(msg)
